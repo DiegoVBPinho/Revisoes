@@ -19,3 +19,26 @@
    20
 ==================================================
 */
+
+#include <iostream>
+
+int main()
+{
+
+   int numero = 10;
+   int *pnum = nullptr;
+   pnum = &numero;
+
+   std::cout << "O Valor apontado pelo ponteiro é: " << *pnum << std::endl;
+
+   std::cout << "O Endereço da variável onde o ponteiro está é : " << pnum << std::endl;
+
+   // alterando o valor
+   *pnum = 20;
+
+   // imprimindo novo valor do ponteiro
+
+   std::cout << "O Novo valor apontado pelo ponteiro é: " << *pnum << std::endl;
+
+   return 0;
+}
