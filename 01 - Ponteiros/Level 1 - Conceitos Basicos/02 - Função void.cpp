@@ -11,3 +11,25 @@
 4. Chame a função e mostre o novo valor de x.
 ==================================================
 */
+
+#include <iostream>
+
+void somar(int *a, int *b)
+{
+   *a = *a + *b;
+}
+
+int main()
+{
+   int x = 5, y = 10;
+   int *px, *py = nullptr;
+   px = &x;
+   py = &y;
+
+   std::cout << "Valor Atual de X:" << *px << std::endl;
+
+   somar(px, py);
+   std::cout << "Novo valor de X:" << *px << std::endl;
+
+   return 0;
+}
