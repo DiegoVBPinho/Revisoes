@@ -20,3 +20,25 @@ SAÍDA ESPERADA:
 Apos acionar: 1
 --------------------------------------------------
 */
+
+#include <iostream>
+
+void acionar(bool *estado)
+{
+   *estado = !*estado;
+}
+
+int main()
+{
+   bool ligado = false;
+   bool *pligado = &ligado;
+
+   std::cout << "Antes de Acionar: " << ligado << std::endl;
+
+   // chamando função para mudar o estado;
+   acionar(pligado);
+
+   std::cout << "Apos acionar: " << ligado << std::endl;
+
+   return 0;
+}
