@@ -6,7 +6,7 @@
 | [x] | 02 | 🤫 | A Soma Silenciosa | Somar via função |
 | [x] | 03 | 🏠 | O Vizinho | Comparar Endereços |
 | [x] | 04 | 👻 | Calc. Fantasma | Lógica só com ponteiro |
-| [ ] | 05 | 🛡️ | O Guardião | Segurança (nullptr) |
+| [x] | 05 | 🛡️ | O Guardião | Segurança (nullptr) |
 | [ ] | 06 | 🆙 | O Upgrade | Precedência (*p)++ |
 | [ ] | 07 | 🔄 | O Trocador | Swap (Troca) |
 | [ ] | 08 | 🎁 | Cálculo Duplo | Retorno duplo |

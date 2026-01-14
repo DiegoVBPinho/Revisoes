@@ -27,3 +27,30 @@
    Valor do Cofre: 1000
 ==================================================
 */
+
+#include <iostream>
+
+int main()
+{
+   int cofre = 1000; // VAR COFRE
+   int *p = nullptr; // ponteiro null
+   int resposta = 0; // resposta do segurança
+
+   // perguntando ao usuário se deseja conectar ao cofre
+   std::cout << "Deseja conectar o ponteiro? (1 = Sim, 0 = Nao)" << std::endl;
+   std::cin >> resposta;
+
+   if (resposta == 1)
+   {
+      p = &cofre; // conectou
+   }
+
+   // tentando imprimir *P
+
+   if (p != nullptr)
+      std::cout << "Valor do Cofre: " << *p;
+   else
+      std::cout << "Erro: Ponteiro desconectado" << std::endl;
+
+   return 0;
+}
