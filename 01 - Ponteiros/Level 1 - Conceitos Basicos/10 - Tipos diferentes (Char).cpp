@@ -20,3 +20,18 @@ SAÍDA ESPERADA:
 Letra atual: B
 --------------------------------------------------
 */
+
+#include <iostream>
+
+int main()
+{
+
+   char letra = 'A';
+   char *pletra = &letra;
+
+   (*pletra)++;
+
+   std::cout << " Letra atual: " << letra << std::endl;
+
+   return 0;
+}

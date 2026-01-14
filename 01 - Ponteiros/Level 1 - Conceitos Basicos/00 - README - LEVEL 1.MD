@@ -29,7 +29,7 @@ O que eu preciso dominar para zerar os 10 exercícios.
 [x] Acessar (Dereferenciar): Sei usar o * para ler o valor apontado (cout << *ptr).
 [x] Alterar: Sei mudar o valor da variável original usando só o ponteiro (*ptr = 20;).
 [x] Matemática: Sei fazer contas no valor apontado (*ptr = *ptr + 10;).
-[ ] ASCII: Sei que somar +1 num ponteiro de char muda a letra ('A' vira 'B').
+[x] ASCII: Sei que somar +1 num ponteiro de char muda a letra ('A' vira 'B').
 
 🔄 3. FUNÇÕES & PODERES (O Pulo do Gato) - Necessário para os Exercícios 7, 8 e 9.
 
@@ -37,7 +37,7 @@ O que eu preciso dominar para zerar os 10 exercícios.
 [x] Receber Ponteiro: Sei declarar o parâmetro da função como ponteiro (void funcao(int* p)).
 [x] Retorno Múltiplo: Sei usar ponteiros para fazer uma função "devolver" 2 ou mais resultados (modificando as variáveis originais).
 [x] Swap (Troca): Sei usar uma variável auxiliar temp para trocar valores entre dois ponteiros.
-[ ] Lógica Booleana: Sei usar o operador ! (NOT) para alterar estados (true/false) em ponteiros.
+[x] Lógica Booleana: Sei usar o operador ! (NOT) para alterar estados (true/false) em ponteiros.
 
 🛡️ 4. SEGURANÇA & SINTAXE (Para não travar) - Necessário para os Exercícios 5 e 6.
 
