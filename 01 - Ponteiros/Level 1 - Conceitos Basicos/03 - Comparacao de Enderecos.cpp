@@ -26,3 +26,29 @@ Endereco de B: 0x7ffee4b4
 A tem endereco maior.
 --------------------------------------------------
 */
+
+#include <iostream>
+
+int main()
+{
+
+   // 1 - declaração de variáveis:
+   int a = 10, b = 20;
+
+   // 2 - criação de ponteiros
+   int *pa, *pb = nullptr;
+   pa = &a;
+   pb = &b;
+
+   // 3 - Comparando Endereços "Maiores"
+
+   std::cout << "Endereço de A: " << pa << std::endl;
+   std::cout << "Endereço de B: " << pb << std::endl;
+
+   if (pa > pb)
+      std::cout << "A tem o endereço maior";
+   else
+      std::cout << "B tem o endereço maior";
+
+   return 0;
+}
