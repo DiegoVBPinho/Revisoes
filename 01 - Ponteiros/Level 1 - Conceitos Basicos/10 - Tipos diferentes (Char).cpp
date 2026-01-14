@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 LEVEL 1 - EXERCÍCIO 10/5: A CRIPTOGRAFIA
+📘 LEVEL 1 - EXERCÍCIO 10/10: A CRIPTOGRAFIA
 ==================================================
 
 🎯 OBJETIVO:
@@ -10,5 +10,13 @@
    (*pLetra = *pLetra + 1).
 4. Imprima a variável 'letra'.
    (O resultado deve ser 'B', pois somou no código ASCII).
-==================================================
+
+🔹 TESTES (Entrada e Saída Esperadas)
+--------------------------------------------------
+ENTRADA:
+letra = 'A'
+
+SAÍDA ESPERADA:
+Letra atual: B
+--------------------------------------------------
 */

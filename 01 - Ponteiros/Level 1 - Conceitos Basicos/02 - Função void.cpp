@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 LEVEL 1 - EXERCÍCIO 2/5: A SOMA SILENCIOSA
+📘 LEVEL 1 - EXERCÍCIO 2/10: A SOMA SILENCIOSA
 ==================================================
 
 🎯 OBJETIVO:
@@ -9,6 +9,13 @@
    (ex: *a = *a + *b).
 3. No main, declare x=5, y=10.
 4. Chame a função e mostre o novo valor de x.
+
+📥 ENTRADA ESPERADA:
+   <Nenhuma> (Valores fixos: x=5, y=10)
+
+📤 SAÍDA ESPERADA:
+   15
+
 ==================================================
 */
 

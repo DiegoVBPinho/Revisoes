@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 LEVEL 1 - EXERCÍCIO 8/5: CALCULO DUPLO
+📘 LEVEL 1 - EXERCÍCIO 8/10: CALCULO DUPLO
 ==================================================
 
 🎯 OBJETIVO:
@@ -12,5 +12,14 @@ Retornar duas coisas ao mesmo tempo.
    ela grava o dobro e o triplo desse número.
 3. No main, declare as variáveis para receber isso
    e chame a função.
-==================================================
+
+🔹 TESTES (Entrada e Saída Esperadas)
+--------------------------------------------------
+ENTRADA:
+n = 5
+
+SAÍDA ESPERADA:
+Dobro: 10
+Triplo: 15
+--------------------------------------------------
 */

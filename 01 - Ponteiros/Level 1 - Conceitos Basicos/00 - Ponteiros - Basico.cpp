@@ -1,12 +1,13 @@
 /*
 ==================================================
-📘 EXERCÍCIO DE FIXAÇÃO – PONTEIROS BÁSICOS
+📘 EXERCÍCIO DE FIXAÇÃO – 0/10 - PONTEIROS BÁSICOS
 ==================================================
 
 🎯 OBJETIVO:
 Declarar, inicializar e utilizar um ponteiro para
 alterar o valor de uma variável indiretamente.
-==================================================
+
+
 */
 
 #include <iostream>
