@@ -2,9 +2,8 @@
 
 | Status | ID | Ícone | Nome | Foco |
 
-| [X] | 00 | 🧱 | Fixação Básica | Criar e apontar |
 | [X] | 01 | 🪞 | O Espelho | Valor vs Endereço |
-| [ ] | 02 | 🤫 | A Soma Silenciosa | Somar via função |
+| [x] | 02 | 🤫 | A Soma Silenciosa | Somar via função |
 | [ ] | 03 | 🏠 | O Vizinho | Comparar Endereços |
 | [ ] | 04 | 👻 | Calc. Fantasma | Lógica só com ponteiro |
 | [ ] | 05 | 🛡️ | O Guardião | Segurança (nullptr) |
@@ -18,7 +17,7 @@
 🧠 CHECKLIST DE COMPETÊNCIAS: LEVEL 1
 O que eu preciso dominar para zerar os 10 exercícios.
 
-📌 1. FUNDAMENTOS (O Básico) - Necessário para os Exercícios 0, 1 e 3.
+📌 1. FUNDAMENTOS (O Básico) - Necessário para os Exercícios  1 e 3.
 
 [ ] Declarar: Sei criar um ponteiro (int *ptr;).
 [ ] Endereçar: Sei usar o & para pegar o endereço de uma variável (ptr = &numero;).
