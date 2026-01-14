@@ -5,7 +5,7 @@
 
 | Status | ID | Ícone | Nome                | Foco                             |
 | :----: | :- | :---: | :------------------ | :------------------------------- |
-|  [ ]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
+|  [x]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
 |  [ ]   | 02 |  🧭   | O Navegador         | Iteração Incremental p++         |
 |  [ ]   | 03 |  🔙   | A Marcha Ré         | Iteração Decremental p--         |
 |  [ ]   | 04 |  🦘   | O Canguru           | Incremento Não-Unitário p+=2     |
@@ -25,7 +25,7 @@ O que eu preciso dominar para zerar os 10 exercícios de Aritmética.
 📌 1. NAVEGAÇÃO BÁSICA (Caminhando na Memória)
    Necessário para os Exercícios 1, 2, 3 e 4.
 
-[ ] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
+[x] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
     usando matemática: *(p + 2).
 [ ] Incremento: Sei usar p++ para mover o ponteiro para a próxima casa do array.
 [ ] Decremento: Sei usar p-- para voltar casas na memória.

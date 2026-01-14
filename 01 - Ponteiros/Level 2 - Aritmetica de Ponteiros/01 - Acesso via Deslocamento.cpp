@@ -19,3 +19,21 @@ SAÍDA ESPERADA:
 3o: 30
 --------------------------------------------------
 */
+
+#include <iostream>
+
+int main()
+{
+   int numeros[] = {10, 20, 30, 40};
+   int *p = numeros;
+
+   // impressão
+
+   std::cout << "1º : " << *(p + 0) << std::endl; // ande, depois aponte
+   std::cout << "3º : " << *(p + 2) << std::endl; // ande, depois aponte
+
+   return 0;
+}
+
+// o trick deste exercício é a forma que o vc usa o ponteiro para andar dentro do vetor.
+// o Parenteses importa muito.
