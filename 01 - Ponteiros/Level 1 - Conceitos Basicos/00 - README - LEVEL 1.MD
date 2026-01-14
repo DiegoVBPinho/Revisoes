@@ -10,8 +10,8 @@
 | [x] | 06 | 🆙 | O Upgrade | Precedência (*p)++ |
 | [x] | 07 | 🔄 | O Trocador | Swap (Troca) |
 | [x] | 08 | 🎁 | Cálculo Duplo | Retorno duplo |
-| [] | 09 | 💡 | O Interruptor | Inverter Boolean |
-| [] | 10 | 🔐 | A Criptografia | Aritmética Char |
+| [x] | 09 | 💡 | O Interruptor | Inverter Boolean |
+| [x] | 10 | 🔐 | A Criptografia | Aritmética Char |
 
 
 🧠 CHECKLIST DE COMPETÊNCIAS: LEVEL 1
