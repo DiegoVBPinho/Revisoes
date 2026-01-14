@@ -4,8 +4,8 @@
 
 | [X] | 01 | 🪞 | O Espelho | Valor vs Endereço |
 | [x] | 02 | 🤫 | A Soma Silenciosa | Somar via função |
-| [ ] | 03 | 🏠 | O Vizinho | Comparar Endereços |
-| [ ] | 04 | 👻 | Calc. Fantasma | Lógica só com ponteiro |
+| [x] | 03 | 🏠 | O Vizinho | Comparar Endereços |
+| [x] | 04 | 👻 | Calc. Fantasma | Lógica só com ponteiro |
 | [ ] | 05 | 🛡️ | O Guardião | Segurança (nullptr) |
 | [ ] | 06 | 🆙 | O Upgrade | Precedência (*p)++ |
 | [ ] | 07 | 🔄 | O Trocador | Swap (Troca) |
