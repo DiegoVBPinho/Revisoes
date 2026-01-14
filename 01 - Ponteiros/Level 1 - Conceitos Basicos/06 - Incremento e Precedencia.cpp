@@ -21,3 +21,29 @@ SAÍDA ESPERADA:
 Nivel final: 4
 --------------------------------------------------
 */
+
+#include <iostream>
+
+void upar(int *p)
+{
+   (*p)++; // precisa usar parenteses. PQ?
+
+   // PRECEDÊNCIA: O PARENTESES É PRIORIDADE:
+   //"Primeiro, resolva o *p (entre na casa e pegue o valor).
+   //  AGORA que você tem o valor na mão, faça o ++ nele."
+}
+
+int main()
+{
+   int nivel = 1;
+   int *pnivel = nullptr;
+   pnivel = &nivel;
+
+   upar(pnivel); // chamada 1 - nivel = 2
+   upar(pnivel); // chamada 2 - nivel = 3
+   upar(pnivel); // chamada 3 - nivel = 4
+
+   std::cout << "Nivel Final: " << nivel << std::endl; // resposta deveria ser 4;
+
+   return 0;
+}
