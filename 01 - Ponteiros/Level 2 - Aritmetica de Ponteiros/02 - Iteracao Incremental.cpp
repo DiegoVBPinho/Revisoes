@@ -18,3 +18,23 @@ SAÍDA ESPERADA:
 1 2 3 4 5
 --------------------------------------------------
 */
+
+#include <iostream>
+
+int main()
+
+{
+   // declarações:
+
+   int arr[] = {1, 2, 3, 4, 5};
+   int *p = arr;
+
+   // criando for:
+   for (int i = 0; i < 5; i++)
+   {
+      std::cout << *p << " ";
+      (p++);
+   }
+
+   return 0;
+}
