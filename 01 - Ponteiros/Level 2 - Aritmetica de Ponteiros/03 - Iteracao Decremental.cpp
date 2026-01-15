@@ -2,7 +2,7 @@
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 3/10: A MARCHA RÉ
 ==================================================
-STATUS: TO DO
+STATUS: DONE
 
 COMPETENCIAS:
 - PTR_DECREMENTO

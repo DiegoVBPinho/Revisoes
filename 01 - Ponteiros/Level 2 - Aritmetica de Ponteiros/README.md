@@ -7,7 +7,7 @@
 | :----: | :- | :---: | :------------------ | :------------------------------- |
 |  [x]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
 |  [x]   | 02 |  🧭   | O Navegador         | Iteração Incremental p++         |
-|  [ ]   | 03 |  🔙   | A Marcha Ré         | Iteração Decremental p--         |
+|  [x]   | 03 |  🔙   | A Marcha Ré         | Iteração Decremental p--         |
 |  [ ]   | 04 |  🦘   | O Canguru           | Incremento Não-Unitário p+=2     |
 |  [ ]   | 05 |  📏   | A Régua             | Diferença de Ponteiros           |
 |  [ ]   | 06 |  🧱   | O Preenchimento     | Atribuição em Massa              |
@@ -28,7 +28,7 @@ O que eu preciso dominar para zerar os 10 exercícios de Aritmética.
 [x] [ID:01] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
     usando matemática: *(p + 2).
 [x] [ID:02] Incremento: Sei usar p++ para mover o ponteiro para a próxima casa do array.
-[ ] [ID:03] Decremento: Sei usar p-- para voltar casas na memória.
+[x] [ID:03] Decremento: Sei usar p-- para voltar casas na memória.
 [ ] [ID:04] Salto: Sei usar p += 2 (ou mais) para pular casas e acessar índices específicos.
 
 

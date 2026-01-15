@@ -1,15 +1,15 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-## 🌍 PROGRESSO GLOBAL: 12/130 (9.2%)
-`[█░░░░░░░░░░░░░░░░░░░]`
+## 🌍 PROGRESSO GLOBAL: 13/130 (10.0%)
+`[██░░░░░░░░░░░░░░░░░░]`
 
 ---
 
-## 📂 01 - Ponteiros [60%] - 🔥 EM ANDAMENTO
+## 📂 01 - Ponteiros [65%] - 🔥 EM ANDAMENTO
 | Nível | Progresso | Status |
 | :--- | :---: | :---: |
 | Level 1 - Conceitos Basicos | 10/10 | ✅ |
-| Level 2 - Aritmetica de Ponteiros | 2/10 | 🔨 |
+| Level 2 - Aritmetica de Ponteiros | 3/10 | 🔨 |
 
 ## 📂 02 - Recursão [0%] - 💤 AGUARDANDO
 | Nível | Progresso | Status |
