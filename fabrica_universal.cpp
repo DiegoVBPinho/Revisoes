@@ -9,7 +9,7 @@ using namespace std;
 namespace fs = std::filesystem;
 
 // ==========================================
-// 🏗️ ESTRUTURAS DE DADOS (NÃO MEXA AQUI)
+// 🏗️ ESTRUTURAS DE DADOS
 // ==========================================
 struct Exercicio
 {
@@ -17,47 +17,52 @@ struct Exercicio
     string icon;
     string nome;
     string foco;
-    string objetivo;  // Vai para o cabeçalho do CPP
-    string checklist; // Vai para o README
-    string teste;     // Input/Output esperado
+    string tags_tecnicas;
+    string objetivo;
+    string checklist;
+    string teste;
 };
 
 struct Level
 {
-    string pasta;  // Nome da pasta (ex: Level 1 - Basico)
-    string titulo; // Titulo no README
+    string pasta;
+    string titulo;
     vector<Exercicio> exercicios;
 };
 
 struct Tema
 {
-    string nomePastaRaiz; // Ex: 03 - Listas
+    string nomePastaRaiz;
     vector<Level> niveis;
 };
 
 // ==========================================
-// ⚙️ MOTOR GERADOR (NÃO MEXA AQUI)
+// ⚙️ MOTOR GERADOR (AGORA COPIA O TRACKER!)
 // ==========================================
 
 string gerarCPP(string nivelTitulo, Exercicio ex)
 {
     string s = "/*\n";
     s += "==================================================\n";
-    s += "📘 " + nivelTitulo + " - EXERCÍCIO " + ex.id + "/10: " + ex.nome + " " + ex.icon + "\n";
+    s += "📘 " + nivelTitulo + " - EXERCICIO " + ex.id + "/10: " + ex.nome + "\n";
     s += "==================================================\n\n";
+
+    s += "STATUS: TO DO\n\n";
+
+    s += "COMPETENCIAS:\n";
+    s += ex.tags_tecnicas + "\n\n";
+
     s += "🎯 OBJETIVO:\n" + ex.objetivo + "\n\n";
-    s += "🔹 TESTES (Entrada e Saída Esperadas)\n";
+
+    s += "🔹 TESTES (Entrada e Saida Esperadas)\n";
     s += "--------------------------------------------------\n";
     s += ex.teste + "\n";
     s += "--------------------------------------------------\n";
     s += "*/\n\n";
     s += "#include <iostream>\n";
-    s += "#include <string>\n";
-    s += "#include <vector>\n";
     s += "using namespace std;\n\n";
     s += "int main() {\n";
     s += "    // SEU CODIGO AQUI\n\n";
-    s += "    // STATUS: TO DO\n";
     s += "    return 0;\n";
     s += "}\n";
     return s;
@@ -69,14 +74,14 @@ string gerarREADME(string nivelTitulo, vector<Exercicio> &lista)
     s += "================================================================================\n";
     s += "# 📝 TRACKER " + nivelTitulo + "\n";
     s += "================================================================================\n\n";
-    s += "| Status | ID | Ícone | Nome | Foco |\n";
+    s += "| Status | ID | Icone | Nome | Foco |\n";
     s += "| :----: | :- | :---: | :--- | :--- |\n";
     for (auto &ex : lista)
     {
         s += "|  [ ]   | " + ex.id + " |  " + ex.icon + "   | " + ex.nome + " | " + ex.foco + " |\n";
     }
     s += "\n\n================================================================================\n";
-    s += "🧠 CHECKLIST DE COMPETÊNCIAS: " + nivelTitulo + "\n";
+    s += "🧠 CHECKLIST DE COMPETENCIAS: " + nivelTitulo + "\n";
     s += "================================================================================\n\n";
     for (auto &ex : lista)
     {
@@ -87,127 +92,151 @@ string gerarREADME(string nivelTitulo, vector<Exercicio> &lista)
 }
 
 // ==========================================
-// 💾 CARTUCHO DE DADOS (AQUI VOCÊ EDITA!)
-// ==========================================
-// Quando quiser um novo tema, peça pro Gemini:
-// "Gere o void carregarDados(Tema& t) para o assunto X"
+// 💾 CARTUCHO DE DADOS: PONTEIROS (LEVEL 1 CORRIGIDO)
 // ==========================================
 
 void carregarDados(Tema &t)
 {
 
-    // 1. NOME DA PASTA RAIZ DO TEMA
-    t.nomePastaRaiz = "03 - Lista";
+    t.nomePastaRaiz = "01 - Ponteiros";
 
-    // ---------------------------------------------------------
-    // LEVEL 1
-    // ---------------------------------------------------------
+    // --- LEVEL 1 ---
     Level l1;
-    l1.pasta = "Level 1 - Listas Sequenciais";
-    l1.titulo = "LEVEL 1 - LISTAS SEQUENCIAIS (ARRAYS)";
+    l1.pasta = "Level 1 - Conceitos Basicos";
+    l1.titulo = "LEVEL 1 - CONCEITOS BASICOS";
     l1.exercicios = {
-        {"01", "🆕", "A Criação", "Inicialização", "Crie um array estático de 5 inteiros preenchido manualmente.", "Inicialização: Sei declarar e iniciar array.", "Entrada: N/A\nSaida: 1, 2, 3, 4, 5"},
-        {"02", "🔍", "O Buscador", "Busca Linear", "Percorra array buscando valor X.", "Busca: Sei iterar para achar valor.", "Entrada: 10\nSaida: Achei"},
-        {"03", "✏️", "A Edição", "Update Indice", "Atualize o valor do índice informado.", "Acesso: Sei alterar valor por indice.", "Entrada: Indice 2, Val 99\nSaida: Ok"},
-        {"04", "➕", "Push Back Manual", "Inserir Fim", "Controle o tamanho lógico para inserir no fim.", "Controle: Diferencio capacidade de tamanho.", "Entrada: Insere 5\nSaida: Tam 1"},
-        {"05", "➖", "Pop Back Manual", "Remover Fim", "Diminua o contador de tamanho.", "Logica: Remover é diminuir contador.", "Entrada: Remove\nSaida: Tam diminuiu"},
-        {"06", "🚚", "Shift Right", "Inserir Inicio", "Mova elementos para direita para inserir no zero.", "Algoritmo: Sei fazer shift right.", "Entrada: Insere 9\nSaida: 9, 1, 2..."},
-        {"07", "🗑️", "Shift Left", "Remover Inicio", "Mova elementos para esquerda para tapar buraco.", "Algoritmo: Sei fazer shift left.", "Entrada: Remove 0\nSaida: 2 virou 1"},
-        {"08", "🔄", "Inversão", "Swap In-Place", "Inverta o array usando ponteiros inicio/fim.", "Swap: Sei inverter array in-place.", "Entrada: 1,2,3\nSaida: 3,2,1"},
-        {"09", "🔗", "Merge", "Juntar Arrays", "Crie array C juntando A e B.", "Merge: Sei copiar de duas fontes.", "Entrada: A+B\nSaida: C"},
-        {"10", "🧹", "Clear", "Limpeza Logica", "Resete o contador de tamanho para zero.", "Reset: Sei zerar a lista logicamente.", "Entrada: Clear\nSaida: Tam 0"}};
+        {"01", "🪞", "O Espelho", "Valor vs Endereco", "- PTR_DECLARACAO\n- PTR_ENDERECO (&)",
+         "1. Declare uma variavel inteira 'numero' = 10.\n2. Declare um ponteiro 'pNum' apontando para ela.\n3. Imprima o VALOR de 'numero' usando o ponteiro.\n4. Imprima o ENDERECO de 'numero' usando o ponteiro.\n5. Mude o valor para 20 usando apenas o ponteiro.",
+         "Fundamentos: Sei criar ponteiro e pegar endereco com &.", "Entrada: <Nenhuma>\nSaida: 10\n0x7ffd1a... (Endereco muda)\n20"},
+
+        {"02", "🤫", "A Soma Silenciosa", "Somar via funcao", "- PTR_DEREFERENCIA (*)\n- PTR_MODIFICACAO",
+         "1. Crie uma funcao que recebe ponteiro.\n2. Some +10 ao valor original dentro da funcao.",
+         "Manipulacao: Sei alterar valor original via *ptr.", "Entrada: 10\nSaida: 20"},
+
+        {"03", "🏠", "O Vizinho", "Comparar Enderecos", "- PTR_COMPARACAO\n- MEMORIA_STACK",
+         "1. Declare duas variaveis int a, b.\n2. Compare seus enderecos para ver quem vem primeiro.",
+         "Fundamentos: Sei comparar enderecos memoria.", "Entrada: &a, &b\nSaida: a < b"},
+
+        {"04", "👻", "Calc. Fantasma", "Logica so com ponteiro", "- PTR_ARITMETICA_VALOR\n- VARIAVEL_OCULTA",
+         "1. Declare dois numeros.\n2. Faca a soma usando APENAS os ponteiros (*p1 + *p2).",
+         "Manipulacao: Matematica com dereferencia (*p).", "Entrada: 5, 5\nSaida: 10"},
+
+        {"05", "🛡️", "O Guardiao", "Seguranca (nullptr)", "- PTR_NULLPTR\n- PTR_VALIDACAO",
+         "1. Inicialize ponteiro com nullptr.\n2. Faca if(p != nullptr) antes de usar.",
+         "Seguranca: Sei evitar crash com nullptr.", "Entrada: null\nSaida: Seguro"},
+
+        {"06", "🆙", "O Upgrade", "Precedencia (*p)++", "- PTR_PRECEDENCIA\n- PTR_INCREMENTO_VALOR",
+         "1. Mostre a diferenca entre (*p)++ e *p++ na pratica.",
+         "Sintaxe: Entendo precedencia de operadores.", "Entrada: 10\nSaida: 11"},
+
+        {"07", "🔄", "O Trocador", "Swap (Troca)", "- PTR_SWAP\n- PTR_AUXILIAR",
+         "1. Crie funcao void troca(int* a, int* b).\n2. Troque os valores originais.",
+         "Funcoes: Sei fazer Swap com ponteiros.", "Entrada: 1, 2\nSaida: 2, 1"},
+
+        {"08", "🎁", "Calculo Duplo", "Retorno duplo", "- PTR_RETORNO_MULTIPLO\n- FUNC_PARAM_PTR",
+         "1. Funcao que retorna void mas 'devolve' soma e dobro via ponteiros.",
+         "Funcoes: Retorno multiplo via ponteiro.", "Entrada: 10\nSaida: 10, 20"},
+
+        {"09", "💡", "O Interruptor", "Inverter Boolean", "- PTR_BOOL\n- PTR_LOGICA",
+         "1. Funcao que inverte estado de bool via ponteiro.",
+         "Logica: Manipular flags booleanas.", "Entrada: true\nSaida: false"},
+
+        {"10", "🔐", "A Criptografia", "Aritmetica Char", "- PTR_CHAR\n- ASCII_MATH",
+         "1. Some +1 ao valor de um char via ponteiro para mudar a letra.",
+         "ASCII: Manipular char como numero.", "Entrada: 'A'\nSaida: 'B'"}};
     t.niveis.push_back(l1);
 
-    // ---------------------------------------------------------
-    // LEVEL 2
-    // ---------------------------------------------------------
+    // --- LEVEL 2 ---
     Level l2;
-    l2.pasta = "Level 2 - Estruturas Restritas";
-    l2.titulo = "LEVEL 2 - PILHAS E FILAS";
+    l2.pasta = "Level 2 - Aritmetica de Ponteiros";
+    l2.titulo = "LEVEL 2 - ARITMETICA DE PONTEIROS";
     l2.exercicios = {
-        {"01", "📚", "Stack Push/Pop", "LIFO", "Implemente pilha (ultimo entra, primeiro sai).", "LIFO: Entendo o conceito de Pilha.", "Entrada: Push 1, Pop\nSaida: 1"},
-        {"02", "👀", "Stack Top", "Peek", "Olhe o topo sem remover.", "Peek: Sei consultar sem deletar.", "Entrada: Top\nSaida: Valor"},
-        {"03", "🚶", "Queue Enqueue", "FIFO", "Implemente fila (primeiro entra, primeiro sai).", "FIFO: Entendo o conceito de Fila.", "Entrada: Fila\nSaida: Ok"},
-        {"04", "🔄", "Fila Circular", "Mod", "Use % para fila circular.", "Math: Sei usar resto de divisao.", "Entrada: Loop\nSaida: Circular"},
-        {"05", "🃏", "Hanoi Simples", "Logic", "Ordene usando duas pilhas.", "Logica: Manipular pilhas.", "Entrada: 3,1,2\nSaida: 1,2,3"},
-        {"06", "📉", "Overflow", "Check", "Valide pilha cheia.", "Erro: Tratar limites.", "Entrada: Cheia\nSaida: Erro"},
-        {"07", "↔️", "Palindromo", "String", "Use pilha para checar palindromo.", "App: Inverter string.", "Entrada: ARARA\nSaida: Sim"},
-        {"08", "🌡️", "Priority Q", "Ordenado", "Insira na ordem certa na fila.", "Sort: Inserção ordenada.", "Entrada: 5, 1\nSaida: 1, 5"},
-        {"09", "🥞", "Resize", "Dinâmico", "Dobre array se encher.", "Memoria: Realocação.", "Entrada: Full\nSaida: Dobrou"},
-        {"10", "🔚", "Destructor", "Limpeza", "Libere memória no fim.", "Memoria: Delete.", "Entrada: Fim\nSaida: Limpo"}};
+        {"01", "🔭", "O Salto", "Acesso *(p+n)", "- PTR_OFFSET\n- ARRAY_ACCESS", "Acesse indices do array usando soma no ponteiro.", "Offset: Sei acessar *(p+i).", "Entrada: array[2]\nSaida: Valor"},
+        {"02", "🧭", "O Navegador", "Loop p++", "- PTR_ITERACAO\n- LOOP_WHILE", "Percorra um array incrementando o ponteiro.", "Iteracao: Sei usar p++ em loop.", "Entrada: Loop\nSaida: Todos elementos"},
+        {"03", "🔙", "A Marcha Re", "Loop p--", "- PTR_DECREMENTO\n- LOOP_REVERSE", "Percorra de tras para frente decrementando.", "Iteracao: Sei usar p--.", "Entrada: Loop\nSaida: Reverso"},
+        {"04", "🦘", "O Canguru", "Salto p+=2", "- PTR_ARITMETICA_AVANCADA\n- STEP_ITERATION", "Percorra pulando de 2 em 2.", "Passo: Sei usar p+=n.", "Entrada: Loop\nSaida: 0, 2, 4..."},
+        {"05", "📏", "A Regua", "Subtracao P-P", "- PTR_DIFERENCA\n- ARRAY_SIZE_CALC", "Calcule a distancia entre dois ponteiros.", "Distancia: Sei que p2-p1 da numero de elementos.", "Entrada: &arr[5]-&arr[0]\nSaida: 5"},
+        {"06", "🧱", "O Preenchimento", "Fill", "- PTR_WRITE\n- BULK_OPERATION", "Preencha um array usando ponteiros.", "Write: Sei escrever em massa.", "Entrada: Loop\nSaida: Array cheio"},
+        {"07", "📠", "O Copiador", "Copy", "- PTR_COPY\n- DUAL_POINTER_LOOP", "Copie dados de um array para outro via ponteiros.", "Copy: Sei clonar arrays.", "Entrada: A->B\nSaida: Iguais"},
+        {"08", "🚨", "O Sentinela", "Busca", "- PTR_SENTINEL\n- SEARCH_LOOP", "Pare o loop ao encontrar valor especifico.", "Stop: Sei usar condicao de parada.", "Entrada: Ate -1\nSaida: Parou"},
+        {"09", "🎯", "O Rastreador", "Max Pointer", "- PTR_TRACKING\n- CONDITIONAL_ASSIGN", "Guarde o ENDERECO do maior valor, nao so o valor.", "Rastreio: Sei guardar referencia do alvo.", "Entrada: 1, 5, 2\nSaida: Endereco do 5"},
+        {"10", "🤐", "A String", "Char*", "- C_STRING\n- NULL_TERMINATOR", "Percorra char* ate achar '\\0'.", "C-String: Sei iterar texto cru.", "Entrada: 'Oi'\nSaida: O, i"}};
     t.niveis.push_back(l2);
 
-    // ---------------------------------------------------------
-    // LEVEL 3
-    // ---------------------------------------------------------
+    // --- LEVEL 3 ---
     Level l3;
-    l3.pasta = "Level 3 - Bibliotecas STL";
-    l3.titulo = "LEVEL 3 - VECTOR E LIST (STL)";
+    l3.pasta = "Level 3 - Memoria Dinamica";
+    l3.titulo = "LEVEL 3 - ARRAYS E SEGMENTOS DE MEMORIA";
     l3.exercicios = {
-        {"01", "📦", "Vector Basic", "std::vector", "Use vector em vez de array.", "STL: Sei usar vector basico.", "Entrada: push\nSaida: ok"},
-        {"02", "📏", "Capacity", "Memoria", "Analise size vs capacity.", "STL: Entendo alocação vector.", "Entrada: loop\nSaida: info"},
-        {"03", "🔗", "List Basic", "std::list", "Use lista duplamente encadeada da STL.", "STL: Sei usar list.", "Entrada: push\nSaida: ok"},
-        {"04", "🗺️", "Map Basic", "std::map", "Crie dicionario chave-valor.", "STL: Sei usar map.", "Entrada: chave\nSaida: valor"},
-        {"05", "🥞", "Stack Adapter", "std::stack", "Use adaptador stack.", "STL: Sei usar stack pronta.", "Entrada: push\nSaida: ok"},
-        {"06", "🚶", "Queue Adapter", "std::queue", "Use adaptador queue.", "STL: Sei usar queue pronta.", "Entrada: push\nSaida: ok"},
-        {"07", "🔢", "Iterator", "Navegação", "Use iteradores para loop.", "STL: Sei usar iterators.", "Entrada: it\nSaida: valor"},
-        {"08", "🔍", "Find", "Algoritmo", "Use std::find.", "Algo: Busca pronta.", "Entrada: find\nSaida: it"},
-        {"09", "📶", "Sort", "Algoritmo", "Use std::sort.", "Algo: Ordenação pronta.", "Entrada: sort\nSaida: ordenado"},
-        {"10", "🐑", "Lambda", "Modern C++", "Use for_each com lambda.", "Modern: Sintaxe lambda.", "Entrada: []\nSaida: print"}};
+        {"01", "📊", "Matriz Linear", "Indexacao 2D", "- MEM_MAPPING\n- MATH_INDEX", "Trate array 1D como 2D (linha*coluna).", "Mapping: Sei linearizar matrizes.", "Entrada: 2x2\nSaida: Flat"},
+        {"02", "🔪", "O Fatiador", "Slice", "- PTR_SLICE\n- SUB_ARRAY", "Crie um ponteiro que aponta para o meio do array.", "Sub-array: Sei criar 'views' de memoria.", "Entrada: &arr[5]\nSaida: Sub-lista"},
+        {"03", "🧵", "String Copy", "Implementacao", "- C_STR_MANIP\n- PTR_COPY", "Recrie a funcao strcpy usando ponteiros.", "Algoritmo: Sei manipular char*.", "Entrada: 'Ola'\nSaida: Copia feita"},
+        {"04", "📏", "String Len", "Implementacao", "- C_STR_COUNT\n- PTR_WHILE", "Recrie strlen usando while e ponteiro.", "Algoritmo: Contar ate \\0.", "Entrada: 'Test'\nSaida: 4"},
+        {"05", "🔄", "String Rev", "In-Place", "- TWO_POINTERS\n- SWAP_CHAR", "Inverta string usando dois ponteiros (begin/end).", "Algoritmo: Dois ponteiros convergentes.", "Entrada: 'Roma'\nSaida: 'amor'"},
+        {"06", "🥞", "A Pilha (Stack)", "Variaveis Locais", "- STACK_ADDR\n- MEM_GROWTH", "Mostre que enderecos locais crescem/decrescem na Stack.", "Memoria: Entendo regiao de Stack.", "Entrada: &a, &b\nSaida: Enderecos"},
+        {"07", "📦", "O Heap (Intro)", "Intro New", "- HEAP_ALLOC\n- NEW_DELETE", "Apenas declare um 'new int' e delete.", "Heap: Primeiro contato com memoria dinamica.", "Entrada: new\nSaida: Ok"},
+        {"08", "👻", "Dangling Ptr", "Perigo", "- DANGLING_PTR\n- MEM_ERROR", "Simule o erro de acessar memoria deletada (com cuidado!).", "Erro: Entendo o risco de ponteiro solto.", "Entrada: delete, usa\nSaida: Lixo/Crash"},
+        {"09", "🧟", "Memory Leak", "Perigo", "- MEM_LEAK\n- BAD_PRACTICE", "Aloque num loop sem deletar (conceitual).", "Erro: Entendo vazamento de memoria.", "Entrada: Loop new\nSaida: RAM sobe"},
+        {"10", "🛡️", "Safe Delete", "Padrao", "- SAFE_DELETE\n- MACRO_FUNC", "Crie macro/funcao que deleta e seta nullptr.", "Seguranca: Padrao de limpeza segura.", "Entrada: SafeDel(p)\nSaida: p e null"}};
     t.niveis.push_back(l3);
 
-    // ---------------------------------------------------------
-    // LEVEL 4
-    // ---------------------------------------------------------
+    // --- LEVEL 4 ---
     Level l4;
-    l4.pasta = "Level 4 - Lista Encadeada Simples";
-    l4.titulo = "LEVEL 4 - LISTAS ENCADEADAS (PONTEIROS)";
+    l4.pasta = "Level 4 - Ponteiro de Ponteiro";
+    l4.titulo = "LEVEL 4 - HEAP E GESTAO DE RECURSOS";
     l4.exercicios = {
-        {"01", "📦", "Node Struct", "Estrutura", "Crie struct Node {val, prox}.", "Struct: Sei criar Nó.", "Entrada: N/A\nSaida: Ok"},
-        {"02", "🔗", "Manual Link", "Ligação", "Ligue 3 nós na mão.", "Link: Entendo ponteiros.", "Entrada: n1->prox\nSaida: n2"},
-        {"03", "➕", "Head Insert", "Inicio", "Insira atualizando head.", "Head: Mudar inicio.", "Entrada: Insere\nSaida: Novo head"},
-        {"04", "🔚", "Tail Insert", "Fim", "Percorra até null e insira.", "Travessia: Ir até o fim.", "Entrada: Insere\nSaida: Novo fim"},
-        {"05", "📠", "Print List", "Loop", "Imprima while != nullptr.", "Loop: Iterar lista.", "Entrada: Print\nSaida: Lista"},
-        {"06", "🔍", "Search Node", "Busca", "Retorne endereço do nó.", "Busca: Achar ponteiro.", "Entrada: Valor\nSaida: Endereço"},
-        {"07", "❌", "Delete Head", "Remover", "Delete head e avance.", "Delete: Liberar memoria.", "Entrada: Del\nSaida: Novo head"},
-        {"08", "🗑️", "Delete Middle", "Remover", "Delete nó do meio.", "Relink: Pular nó.", "Entrada: Del\nSaida: Lista -1"},
-        {"09", "🧹", "Clear All", "Destruir", "Delete tudo loop.", "Memoria: Limpeza total.", "Entrada: Clear\nSaida: Nullptr"},
-        {"10", "📏", "Size Count", "Contar", "Conte nós.", "Algoritmo: Contagem.", "Entrada: Count\nSaida: N"}};
+        {"01", "✨", "Array Dinamico", "New []", "- HEAP_ARRAY\n- DYNAMIC_SIZE", "Aloque um array de tamanho N definido pelo usuario.", "Heap: Alocacao de arrays em tempo de execucao.", "Entrada: N=10\nSaida: Array criado"},
+        {"02", "🧹", "Delete []", "Limpeza Array", "- DELETE_ARRAY\n- MEM_CLEAN", "Delete corretamente array dinamico.", "Heap: Liberacao correta de arrays.", "Entrada: delete[]\nSaida: Limpo"},
+        {"03", "📈", "Resize Manual", "Realloc", "- REALLOC_LOGIC\n- DATA_MIGRATION", "Crie novo maior, copie, delete antigo.", "Algoritmo: Logica de redimensionar vetor.", "Entrada: Aumentar\nSaida: Array maior"},
+        {"04", "🏭", "Fabrica Struct", "Return Ptr", "- FACTORY_PATTERN\n- STRUCT_PTR", "Funcao que cria Struct no heap e retorna ponteiro.", "Padrao: Factory function.", "Entrada: Cria()\nSaida: Ponteiro valido"},
+        {"05", "🔢", "Matriz Dinamica", "Ponteiro p/ Ponteiro", "- DOUBLE_PTR\n- 2D_ALLOC", "Aloque matriz NxM usando int**.", "Complexidade: Alocacao bidimensional.", "Entrada: 3x3\nSaida: Matriz"},
+        {"06", "🗑️", "Free Matriz", "Delete Loop", "- CASCADE_DELETE\n- MEM_FREE", "Libere a matriz NxM na ordem certa (linhas depois array).", "Complexidade: Liberacao em cascata.", "Entrada: Free\nSaida: Ok"},
+        {"07", "📝", "Buffer de Texto", "Input Dinamico", "- DYNAMIC_BUFFER\n- CHAR_READ", "Leia texto de tamanho desconhecido char a char.", "Input: Buffer elastico.", "Entrada: Texto longo\nSaida: Lido ok"},
+        {"08", "👥", "Array de Objetos", "Structs Dinamicas", "- OBJ_ARRAY\n- HEAP_STRUCTS", "Aloque array de structs Pessoa.", "Estrutura: Dados complexos no heap.", "Entrada: N Pessoas\nSaida: Lista"},
+        {"09", "🚫", "Fora de Limite", "Valgrind", "- OUT_OF_BOUNDS\n- DEBUG", "Acesse indice N (erro) e veja comportamento.", "Debug: Entender acesso invalido no heap.", "Entrada: arr[N]\nSaida: Erro/Lixo"},
+        {"10", "🧠", "Smart Ptr (Intro)", "Unique_ptr", "- SMART_PTR\n- STD_UNIQUE", "Use std::unique_ptr para nao precisar de delete.", "Modern C++: Gestao automatica basica.", "Entrada: make_unique\nSaida: Auto delete"}};
     t.niveis.push_back(l4);
 
-    // ---------------------------------------------------------
-    // LEVEL 5
-    // ---------------------------------------------------------
+    // --- LEVEL 5 ---
     Level l5;
-    l5.pasta = "Level 5 - Listas Complexas";
-    l5.titulo = "LEVEL 5 - LISTAS DUPLAS E CIRCULARES";
+    l5.pasta = "Level 5 - Juncao de tudo";
+    l5.titulo = "LEVEL 5 - PONTEIROS MASTER CLASS";
     l5.exercicios = {
-        {"01", "↔️", "Double Node", "Struct", "Node {ant, prox}.", "Dupla: Nó bidirecional.", "Entrada: N/A\nSaida: Ok"},
-        {"02", "⬅️", "Reverse Print", "Loop", "Imprima de tras pra frente.", "Nav: Usar prev.", "Entrada: Print\nSaida: Reverso"},
-        {"03", "➕", "Double Insert", "Inserção", "Ajuste 4 ponteiros.", "Link: Inserção complexa.", "Entrada: Insere\nSaida: Ok"},
-        {"04", "❌", "Double Delete", "Remoção", "Ajuste vizinhos.", "Unlink: Remoção complexa.", "Entrada: Del\nSaida: Ok"},
-        {"05", "🔄", "Circular Link", "Ciclo", "Fim aponta inicio.", "Ciclo: Fechar anel.", "Entrada: Link\nSaida: Loop"},
-        {"06", "♾️", "Circular Print", "Loop", "Imprima sem loop infinito.", "Logica: Condição parada.", "Entrada: Print\nSaida: Uma volta"},
-        {"07", "🕵️", "Floyd Cycle", "Detect", "Ache ciclo em lista.", "Algo: Tartaruga/Lebre.", "Entrada: Check\nSaida: True"},
-        {"08", "🃏", "Deque Impl", "Deque", "Fila duas pontas.", "Estrutura: Deque.", "Entrada: Push\nSaida: Ok"},
-        {"09", "🧩", "Sorted Insert", "Ordem", "Insira ordenado.", "Algo: Achar posição.", "Entrada: 3 em 1-5\nSaida: 1-3-5"},
-        {"10", "🎁", "Template List", "Generic", "Lista<T>.", "Template: Genérico.", "Entrada: String\nSaida: Ok"}};
+        {"01", "🌌", "Void*", "Generico", "- VOID_PTR\n- TYPE_CAST", "Use void* para apontar para int e float.", "Tipagem: Ponteiro generico cru.", "Entrada: (int*)voidp\nSaida: Valor"},
+        {"02", "🎭", "Polimorfismo C", "Cast", "- REINTERPRET_CAST\n- BYTE_MANIP", "Trate bytes de um int como char*.", "Memoria: Reinterpretacao de dados.", "Entrada: int 65\nSaida: char 'A'"},
+        {"03", "📞", "Func Pointer", "Callback", "- FUNC_PTR\n- DELEGATE", "Crie ponteiro para funcao e chame-a.", "Sintaxe: Ponteiro de funcao basico.", "Entrada: (*p)(10)\nSaida: Executa func"},
+        {"04", "🧮", "Operacao Flex", "Callback Param", "- STRATEGY_PATTERN\n- INJECTION", "Funcao 'Calcular' que recebe ponteiro de Soma ou Subtracao.", "Design: Injecao de dependencia via ponteiro.", "Entrada: Calc(Soma)\nSaida: Resultado"},
+        {"05", "📜", "Menu Array", "Array de Func", "- DISPATCH_TABLE\n- MENU_SYSTEM", "Array de ponteiros de funcao para menu.", "Design: Tabela de despacho.", "Entrada: Opcao 1\nSaida: Func 1"},
+        {"06", "🕵️", "Reference vs Ptr", "Diferenca", "- REF_VS_PTR\n- CPP_CONCEPTS", "Faca a mesma funcao com & e com *.", "Teoria: Referencia C++ vs Ponteiro C.", "Entrada: Troca\nSaida: Igual"},
+        {"07", "📦", "Ponteiro p/ Ponteiro", "Modificar Ptr", "- PTR_TO_PTR\n- INDIRECT_MOD", "Funcao que recebe int** para mudar para onde o ponteiro aponta.", "Indirecao: Alterar endereco remotamente.", "Entrada: Aloca(&p)\nSaida: p mudou"},
+        {"08", "⚡", "Volatile", "Hardware", "- VOLATILE\n- COMPILER_OPT", "Conceito de ponteiro volatile (teorico).", "Keyword: Evitar otimizacao de compilador.", "Entrada: N/A\nSaida: Leitura real"},
+        {"09", "🧬", "Iterator Custom", "Ponteiro Smart", "- OP_OVERLOAD\n- CLASS_IMPL", "Crie uma classe que imita comportamento de ponteiro.", "OOP: Sobrecarga de operadores * e ->.", "Entrada: *obj\nSaida: Valor"},
+        {"10", "🎓", "Desafio Final", "Linked List", "- LINKED_LIST\n- FULL_IMPL", "Implemente uma lista encadeada simples manual.", "Capstone: Juntar tudo (struct, heap, ponteiros).", "Entrada: Add/Rem\nSaida: Lista"}};
     t.niveis.push_back(l5);
 }
 
 // ==========================================
-// 🚀 MAIN - EXECUÇÃO
+// 🚀 MAIN - EXECUCAO
 // ==========================================
 int main()
 {
     SetConsoleOutputCP(65001);
 
     Tema tema;
-    carregarDados(tema); // <--- AQUI ELE PUXA O CARTUCHO QUE VOCÊ EDITOU
+    carregarDados(tema);
 
-    cout << "--- 🏭 FÁBRICA DE EXERCÍCIOS: " << tema.nomePastaRaiz << " ---" << endl;
+    cout << "--- 🏭 FABRICA DE EXERCICIOS: " << tema.nomePastaRaiz << " ---" << endl;
 
-    // Cria pasta raiz do Tópico
+    // Verifica se tracker.exe existe na raiz antes de começar
+    bool temTracker = fs::exists("tracker.exe");
+    if (!temTracker)
+    {
+        cout << "⚠️  AVISO: 'tracker.exe' NAO ENCONTRADO na raiz!" << endl;
+        cout << "⚠️  Os arquivos serao criados, mas o tracker nao sera copiado." << endl;
+        cout << "⚠️  Voce tera que copiar manualmente depois.\n"
+             << endl;
+    }
+
     if (!fs::exists(tema.nomePastaRaiz))
     {
         fs::create_directory(tema.nomePastaRaiz);
@@ -215,7 +244,7 @@ int main()
     }
     else
     {
-        cout << "📁 Pasta raiz já existe: " << tema.nomePastaRaiz << endl;
+        cout << "📁 Pasta raiz ja existe: " << tema.nomePastaRaiz << endl;
     }
 
     for (auto &nivel : tema.niveis)
@@ -225,16 +254,15 @@ int main()
         if (!fs::exists(pathLevel))
         {
             fs::create_directory(pathLevel);
-            cout << "   📂 Criando Nível: " << nivel.pasta << endl;
+            cout << "   📂 Criando Nivel: " << nivel.pasta << endl;
         }
 
         // 1. Gera os arquivos .cpp
         for (auto &ex : nivel.exercicios)
         {
-            string nomeArquivo = ex.id + " -.cpp"; // Nome simplificado
+            string nomeArquivo = ex.id + " - " + ex.nome + ".cpp";
             string pathArquivo = pathLevel + "/" + nomeArquivo;
 
-            // Só cria se não existir (pra não apagar seu código feito)
             if (!fs::exists(pathArquivo))
             {
                 ofstream arquivo(pathArquivo);
@@ -243,14 +271,34 @@ int main()
             }
         }
 
-        // 2. Gera/Sobrescreve o README.md (O README a gente sempre atualiza)
+        // 2. Gera README dentro da pasta
         string pathReadme = pathLevel + "/README.md";
         ofstream readme(pathReadme);
         readme << gerarREADME(nivel.titulo, nivel.exercicios);
         readme.close();
+
+        // 3. 🚀 AUTO-DEPLOY DO TRACKER 🚀
+        if (temTracker)
+        {
+            string destinoTracker = pathLevel + "/tracker.exe";
+            try
+            {
+                // Copia e sobrescreve se já existir (para garantir a versão mais nova)
+                fs::copy_file("tracker.exe", destinoTracker, fs::copy_options::overwrite_existing);
+                // cout << "      [OK] Tracker copiado para: " << nivel.pasta << endl; // Comentei pra não poluir o log
+            }
+            catch (fs::filesystem_error &e)
+            {
+                cout << "      [ERRO] Falha ao copiar tracker: " << e.what() << endl;
+            }
+        }
     }
 
-    cout << "\n✅ PROCESSO CONCLUÍDO!" << endl;
-    cout << "👉 Seus exercícios estão prontos em '" << tema.nomePastaRaiz << "'" << endl;
+    cout << "\n✅ PROCESSO CONCLUIDO!" << endl;
+    if (temTracker)
+    {
+        cout << "🤖 Tracker instalado em todas as pastas automaticamente." << endl;
+    }
+    cout << "👉 Execute 'atualizar_tudo.bat' para sincronizar o progresso." << endl;
     return 0;
 }

@@ -1,60 +1,34 @@
 /*
 ================================================================================
-# 📝 TRACKER LEVEL 2 - ARITMÉTICA DE PONTEIROS
+# 📝 TRACKER LEVEL 2 - ARITMETICA DE PONTEIROS
 ================================================================================
 
-| Status | ID | Ícone | Nome                | Foco                             |
-| :----: | :- | :---: | :------------------ | :------------------------------- |
-|  [x]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
-|  [x]   | 02 |  🧭   | O Navegador         | Iteração Incremental p++         |
-|  [x]   | 03 |  🔙   | A Marcha Ré         | Iteração Decremental p--         |
-|  [ ]   | 04 |  🦘   | O Canguru           | Incremento Não-Unitário p+=2     |
-|  [ ]   | 05 |  📏   | A Régua             | Diferença de Ponteiros           |
-|  [ ]   | 06 |  🧱   | O Preenchimento     | Atribuição em Massa              |
-|  [ ]   | 07 |  📠   | O Copiador          | Cópia entre Buffers              |
-|  [ ]   | 08 |  🚨   | O Sentinela         | Busca com Parada                 |
-|  [ ]   | 09 |  🎯   | O Rastreador        | Rastrear Endereço vs Valor       |
-|  [ ]   | 10 |  🤐   | A Palavra Secreta   | String C-Style \0                |
+| Status | ID | Icone | Nome | Foco |
+| :----: | :- | :---: | :--- | :--- |
+|  [ ]   | 01 |  🔭   | O Salto | Acesso *(p+n) |
+|  [ ]   | 02 |  🧭   | O Navegador | Loop p++ |
+|  [ ]   | 03 |  🔙   | A Marcha Re | Loop p-- |
+|  [ ]   | 04 |  🦘   | O Canguru | Salto p+=2 |
+|  [ ]   | 05 |  📏   | A Regua | Subtracao P-P |
+|  [ ]   | 06 |  🧱   | O Preenchimento | Fill |
+|  [ ]   | 07 |  📠   | O Copiador | Copy |
+|  [ ]   | 08 |  🚨   | O Sentinela | Busca |
+|  [ ]   | 09 |  🎯   | O Rastreador | Max Pointer |
+|  [ ]   | 10 |  🤐   | A String | Char* |
 
 
 ================================================================================
-🧠 CHECKLIST DE COMPETÊNCIAS: LEVEL 2
-O que eu preciso dominar para zerar os 10 exercícios de Aritmética.
+🧠 CHECKLIST DE COMPETENCIAS: LEVEL 2 - ARITMETICA DE PONTEIROS
 ================================================================================
 
-📌 1. NAVEGAÇÃO BÁSICA (Caminhando na Memória)
-   Necessário para os Exercícios 1, 2, 3 e 4.
-
-[x] [ID:01] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
-    usando matemática: *(p + 2).
-[x] [ID:02] Incremento: Sei usar p++ para mover o ponteiro para a próxima casa do array.
-[x] [ID:03] Decremento: Sei usar p-- para voltar casas na memória.
-[ ] [ID:04] Salto: Sei usar p += 2 (ou mais) para pular casas e acessar índices específicos.
-
-
-🎮 2. INTERAÇÃO ENTRE PONTEIROS (Relatividade)
-   Necessário para os Exercícios 5 e 7.
-
-[ ] [ID:05] Distância: Sei que subtrair dois ponteiros (p_fim - p_inicio) me dá a
-    quantidade de elementos entre eles (não o número de bytes).
-[ ] [ID:07] Sincronia: Sei manipular dois ponteiros ao mesmo tempo (um na origem,
-    outro no destino) dentro do mesmo loop.
-
-
-🔄 3. ARRAYS & BUFFERS (Manipulação em Massa)
-   Necessário para os Exercícios 6 e 9.
-
-[ ] [ID:06] Preenchimento: Sei usar um loop e um ponteiro para escrever valores em
-    todas as posições de um array vazio.
-[ ] [ID:09] Rastreio: Sei a diferença entre guardar o maior valor e guardar o
-    endereço do maior valor (p_maior = p_atual).
-
-
-🛡️ 4. LIMITES & STRINGS (Onde Parar)
-   Necessário para os Exercícios 8 e 10.
-
-[ ] [ID:08] Sentinela Numérico: Sei criar loops que param quando o ponteiro encontra
-    um número específico (ex: -1).
-[ ] [ID:10] Sentinela de Texto: Sei que toda string estilo C termina com '\0' (null)
-    e sei usar isso como condição de parada no while ou for.
+[ ] [ID:01] Offset: Sei acessar *(p+i).
+[ ] [ID:02] Iteracao: Sei usar p++ em loop.
+[ ] [ID:03] Iteracao: Sei usar p--.
+[ ] [ID:04] Passo: Sei usar p+=n.
+[ ] [ID:05] Distancia: Sei que p2-p1 da numero de elementos.
+[ ] [ID:06] Write: Sei escrever em massa.
+[ ] [ID:07] Copy: Sei clonar arrays.
+[ ] [ID:08] Stop: Sei usar condicao de parada.
+[ ] [ID:09] Rastreio: Sei guardar referencia do alvo.
+[ ] [ID:10] C-String: Sei iterar texto cru.
 */

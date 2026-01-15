@@ -1,0 +1,29 @@
+/*
+==================================================
+📘 LEVEL 4 - HEAP E GESTAO DE RECURSOS - EXERCICIO 02/10: Delete []
+==================================================
+
+STATUS: TO DO
+
+COMPETENCIAS:
+- DELETE_ARRAY
+- MEM_CLEAN
+
+🎯 OBJETIVO:
+Delete corretamente array dinamico.
+
+🔹 TESTES (Entrada e Saida Esperadas)
+--------------------------------------------------
+Entrada: delete[]
+Saida: Limpo
+--------------------------------------------------
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // SEU CODIGO AQUI
+
+    return 0;
+}
