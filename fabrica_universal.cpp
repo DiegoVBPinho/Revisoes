@@ -37,7 +37,7 @@ struct Tema
 };
 
 // ==========================================
-// ⚙️ MOTOR GERADOR (TEMPLATE ATUALIZADO)
+// ⚙️ MOTOR GERADOR (TEMPLATE LIMPO)
 // ==========================================
 
 string gerarCPP(string nivelTitulo, Exercicio ex)
@@ -60,7 +60,6 @@ string gerarCPP(string nivelTitulo, Exercicio ex)
     s += "--------------------------------------------------\n";
     s += "*/\n\n";
 
-    // --- TEMPLATE LIMPO SOLICITADO ---
     s += "#include <iostream>\n\n\n";
     s += "int main() \n";
     s += "{\n";
@@ -94,7 +93,7 @@ string gerarREADME(string nivelTitulo, vector<Exercicio> &lista)
 }
 
 // ==========================================
-// 💾 CARTUCHO DE DADOS: PONTEIROS
+// 💾 CARTUCHO DE DADOS: PONTEIROS (NOMES CORRIGIDOS)
 // ==========================================
 
 void carregarDados(Tema &t)
@@ -204,13 +203,18 @@ void carregarDados(Tema &t)
     l5.pasta = "Level 5 - Juncao de tudo";
     l5.titulo = "LEVEL 5 - PONTEIROS MASTER CLASS";
     l5.exercicios = {
-        {"01", "🌌", "Void*", "Generico", "- VOID_PTR\n- TYPE_CAST", "Use void* para apontar para int e float.", "Tipagem: Ponteiro generico cru.", "Entrada: (int*)voidp\nSaida: Valor"},
+        // CORRIGIDO: "Void*" virou "Void Ptr"
+        {"01", "🌌", "Void Ptr", "Generico", "- VOID_PTR\n- TYPE_CAST", "Use void* para apontar para int e float.", "Tipagem: Ponteiro generico cru.", "Entrada: (int*)voidp\nSaida: Valor"},
+
         {"02", "🎭", "Polimorfismo C", "Cast", "- REINTERPRET_CAST\n- BYTE_MANIP", "Trate bytes de um int como char*.", "Memoria: Reinterpretacao de dados.", "Entrada: int 65\nSaida: char 'A'"},
         {"03", "📞", "Func Pointer", "Callback", "- FUNC_PTR\n- DELEGATE", "Crie ponteiro para funcao e chame-a.", "Sintaxe: Ponteiro de funcao basico.", "Entrada: (*p)(10)\nSaida: Executa func"},
         {"04", "🧮", "Operacao Flex", "Callback Param", "- STRATEGY_PATTERN\n- INJECTION", "Funcao 'Calcular' que recebe ponteiro de Soma ou Subtracao.", "Design: Injecao de dependencia via ponteiro.", "Entrada: Calc(Soma)\nSaida: Resultado"},
         {"05", "📜", "Menu Array", "Array de Func", "- DISPATCH_TABLE\n- MENU_SYSTEM", "Array de ponteiros de funcao para menu.", "Design: Tabela de despacho.", "Entrada: Opcao 1\nSaida: Func 1"},
         {"06", "🕵️", "Reference vs Ptr", "Diferenca", "- REF_VS_PTR\n- CPP_CONCEPTS", "Faca a mesma funcao com & e com *.", "Teoria: Referencia C++ vs Ponteiro C.", "Entrada: Troca\nSaida: Igual"},
-        {"07", "📦", "Ponteiro p/ Ponteiro", "Modificar Ptr", "- PTR_TO_PTR\n- INDIRECT_MOD", "Funcao que recebe int** para mudar para onde o ponteiro aponta.", "Indirecao: Alterar endereco remotamente.", "Entrada: Aloca(&p)\nSaida: p mudou"},
+
+        // CORRIGIDO: "Ponteiro p/ Ponteiro" virou "Ponteiro para Ponteiro"
+        {"07", "📦", "Ponteiro para Ponteiro", "Modificar Ptr", "- PTR_TO_PTR\n- INDIRECT_MOD", "Funcao que recebe int** para mudar para onde o ponteiro aponta.", "Indirecao: Alterar endereco remotamente.", "Entrada: Aloca(&p)\nSaida: p mudou"},
+
         {"08", "⚡", "Volatile", "Hardware", "- VOLATILE\n- COMPILER_OPT", "Conceito de ponteiro volatile (teorico).", "Keyword: Evitar otimizacao de compilador.", "Entrada: N/A\nSaida: Leitura real"},
         {"09", "🧬", "Iterator Custom", "Ponteiro Smart", "- OP_OVERLOAD\n- CLASS_IMPL", "Crie uma classe que imita comportamento de ponteiro.", "OOP: Sobrecarga de operadores * e ->.", "Entrada: *obj\nSaida: Valor"},
         {"10", "🎓", "Desafio Final", "Linked List", "- LINKED_LIST\n- FULL_IMPL", "Implemente uma lista encadeada simples manual.", "Capstone: Juntar tudo (struct, heap, ponteiros).", "Entrada: Add/Rem\nSaida: Lista"}};
