@@ -1,7 +1,7 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-## 🌍 PROGRESSO GLOBAL: 13/130 (10.0%)
-`[██░░░░░░░░░░░░░░░░░░]`
+## 🌍 PROGRESSO GLOBAL: 13/80 (16.2%)
+`[███░░░░░░░░░░░░░░░░░]`
 
 ---
 
@@ -24,15 +24,6 @@
 | Level 1 - Listas Sequenciais (Arrays) | 0/10 | ❌ |
 | Level 3 - Bibliotecas e Templates | 0/10 | ❌ |
 | Level 4 - Lista Encadeada Simples | 0/10 | ❌ |
-
-## 📂 0x - TEMA [0%] - 💤 AGUARDANDO
-| Nível | Progresso | Status |
-| :--- | :---: | :---: |
-| Level 1 | 0/10 | ❌ |
-| Level 2 | 0/10 | ❌ |
-| Level 3 | 0/10 | ❌ |
-| Level 4 | 0/10 | ❌ |
-| Level 5 | 0/10 | ❌ |
 
 ---
 *Atualizado automaticamente pelo Master Tracker.*

@@ -64,9 +64,17 @@ int main()
         {
             string nomeTopico = entryTopico.path().filename().string();
 
-            // Filtro: Ignora pastas do sistema (.vscode, .git, tracker stuff)
-            if (nomeTopico[0] == '.' || nomeTopico == "progresso")
-                continue;
+            // --- 🚫 FILTRO DE EXCLUSÃO (BLACKLIST) ---
+            // Ignora:
+            // 1. Pastas do sistema (começam com .)
+            // 2. Pasta "progresso" (antiga)
+            // 3. Pasta "0x" (Templates) <--- AQUI ESTÁ A CORREÇÃO
+            if (nomeTopico[0] == '.' ||
+                nomeTopico == "progresso" ||
+                nomeTopico.find("0x") != string::npos)
+            {
+                continue; // Pula essa pasta e vai para a próxima
+            }
 
             // Criamos o objeto do Tópico
             TopicoData tData;
@@ -175,6 +183,6 @@ int main()
     readme << "*Atualizado automaticamente pelo Master Tracker.*" << endl;
     readme.close();
 
-    cout << "\n✅ README GERAL ATUALIZADO!" << endl;
+    cout << "\n✅ README GERAL ATUALIZADO (Templates ignorados)!" << endl;
     return 0;
 }
