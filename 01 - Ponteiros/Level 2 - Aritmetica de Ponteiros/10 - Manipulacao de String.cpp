@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 10/10: A PALAVRA SECRETA (CHEFÃO)
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_STRING
+- PTR_CHAR
+- SENTINELA_NULL
 
 🎯 OBJETIVO:
 1. Crie uma string estilo C: char palavra[] = "C++".

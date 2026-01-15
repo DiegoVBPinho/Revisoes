@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 6/10: O PREENCHIMENTO
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_ITERACAO
+- PTR_ATRIBUICAO
+- LOOP_FOR
 
 🎯 OBJETIVO:
 1. Crie um array vazio 'int arr[5]'.

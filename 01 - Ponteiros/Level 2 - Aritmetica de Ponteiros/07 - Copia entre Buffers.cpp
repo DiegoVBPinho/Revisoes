@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 7/10: O COPIADOR
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_NAVEGACAO_DUPLA
+- PTR_ATRIBUICAO
+- LOOP_PARALELO
 
 🎯 OBJETIVO:
 1. Crie 'int origem[] = {1, 2, 3}' e 'int destino[3]'.

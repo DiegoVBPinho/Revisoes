@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 8/10: O SENTINELA
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_SENTINELA
+- LOOP_CONDICIONAL
+- PTR_COMPARACAO
 
 🎯 OBJETIVO:
 1. Crie 'int arr[] = {10, 20, 30, -1, 50, 60}'.

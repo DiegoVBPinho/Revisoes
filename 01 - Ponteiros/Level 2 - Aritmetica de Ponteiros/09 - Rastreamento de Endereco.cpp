@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 9/10: O RASTREADOR
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_RASTREAMENTO
+- PTR_ATUALIZACAO
+- LOGICA_MAXIMO
 
 🎯 OBJETIVO:
 1. Crie 'int arr[] = {5, 12, 7, 20, 3}'.
