@@ -1,9 +1,12 @@
-// STATUS: DONE
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 2/10: O NAVEGADOR
 ==================================================
+STATUS: DONE
+
+COMPETENCIAS:
+- PTR_INCREMENTO
+- PTR_LOOP_FOR
 
 🎯 OBJETIVO:
 1. Crie um array 'int arr[] = {1, 2, 3, 4, 5}'.

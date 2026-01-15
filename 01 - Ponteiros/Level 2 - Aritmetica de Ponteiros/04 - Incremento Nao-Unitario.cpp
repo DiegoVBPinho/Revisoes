@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 4/10: O CANGURU
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_SALTO
+- PTR_ARITMETICA
+- PTR_LOOP_FOR
 
 🎯 OBJETIVO:
 1. Crie um array 'int arr[] = {0, 1, 2, 3, 4, 5}'.

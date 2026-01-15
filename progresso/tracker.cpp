@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     ifstream arquivo(
-        "../01 - Ponteiros/Level 1 - Conceitos Basicos/00 - README - LEVEL 1.md");
+        "../01 - Ponteiros/Level 1 - Conceitos Basicos/README.md");
 
     if (!arquivo.is_open())
     {

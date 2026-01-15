@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 3/10: A MARCHA RÉ
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_DECREMENTO
+- PTR_LOOP_FOR
+- PTR_DIRECAO_MEMORIA
 
 🎯 OBJETIVO:
 1. Crie um array 'int arr[] = {10, 20, 30}'.

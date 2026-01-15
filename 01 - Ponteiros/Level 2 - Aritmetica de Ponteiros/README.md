@@ -5,8 +5,8 @@
 
 | Status | ID | Ícone | Nome                | Foco                             |
 | :----: | :- | :---: | :------------------ | :------------------------------- |
-|  [x]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
-|  [x]   | 02 |  🧭   | O Navegador         | Iteração Incremental p++         |
+|  [ ]   | 01 |  🔭   | O Salto Dimensional | Acesso via Deslocamento *(p+n)   |
+|  [ ]   | 02 |  🧭   | O Navegador         | Iteração Incremental p++         |
 |  [ ]   | 03 |  🔙   | A Marcha Ré         | Iteração Decremental p--         |
 |  [ ]   | 04 |  🦘   | O Canguru           | Incremento Não-Unitário p+=2     |
 |  [ ]   | 05 |  📏   | A Régua             | Diferença de Ponteiros           |
@@ -25,9 +25,9 @@ O que eu preciso dominar para zerar os 10 exercícios de Aritmética.
 📌 1. NAVEGAÇÃO BÁSICA (Caminhando na Memória)
    Necessário para os Exercícios 1, 2, 3 e 4.
 
-[x] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
+[ ] Deslocamento: Sei acessar um valor à frente sem mover o ponteiro original,
     usando matemática: *(p + 2).
-[x] Incremento: Sei usar p++ para mover o ponteiro para a próxima casa do array.
+[ ] Incremento: Sei usar p++ para mover o ponteiro para a próxima casa do array.
 [ ] Decremento: Sei usar p-- para voltar casas na memória.
 [ ] Salto: Sei usar p += 2 (ou mais) para pular casas e acessar índices específicos.
 

@@ -1,9 +1,13 @@
-// STATUS: TO DO
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 5/10: A RÉGUA
 ==================================================
+STATUS: TO DO
+
+COMPETENCIAS:
+- PTR_DIFERENCA
+- PTR_ARITMETICA
+- PTR_MEMORIA_LINEAR
 
 🎯 OBJETIVO:
 1. Crie 'int arr[] = {10, 20, 30, 40, 50}'.

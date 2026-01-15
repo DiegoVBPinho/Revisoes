@@ -1,9 +1,13 @@
-// STATUS: DONE
-
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 1/10: O SALTO DIMENSIONAL
 ==================================================
+
+STATUS: DONE
+
+COMPETENCIAS:
+- PTR_DESLOCAMENTO
+- PTR_ARITMETICA
 
 🎯 OBJETIVO:
 1. Crie um array 'int numeros[] = {10, 20, 30, 40}'.
