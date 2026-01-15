@@ -1,37 +1,41 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <filesystem>
 
 using namespace std;
-namespace fs = filesystem;
-
-int contarExerciciosConcluidos(const string &caminhoReadme)
-{
-    ifstream arquivo(caminhoReadme);
-    string linha;
-    int concluidos = 0;
-
-    if (!arquivo.is_open())
-        return 0;
-
-    while (getline(arquivo, linha))
-    {
-        if (linha.find("|  [x]") != string::npos)
-            concluidos++;
-    }
-
-    return concluidos;
-}
 
 int main()
 {
-    string caminho =
-        "01 - Ponteiros/Level 2 - Aritmetica de Ponteiros/00 - README - LEVEL 2.md";
+    ifstream arquivo(
+        "../01 - Ponteiros/Level 1 - Conceitos Basicos/00 - README - LEVEL 1.md");
 
-    int feitos = contarExerciciosConcluidos(caminho);
+    if (!arquivo.is_open())
+    {
+        cout << "ERRO: nao consegui abrir o README" << endl;
+        return 0;
+    }
 
-    cout << "Level 2: " << feitos << "/10" << endl;
+    string linha;
+    int concluidos = 0;
+    int total = 0;
+
+    while (getline(arquivo, linha))
+    {
+        if (linha.size() > 0 && linha[0] == '|' &&
+            (linha.find("[") != string::npos))
+        {
+            total++;
+
+            if (
+                linha.find("[x]") != string::npos ||
+                linha.find("[X]") != string::npos)
+            {
+                concluidos++;
+            }
+        }
+    }
+
+    cout << "Level 1: " << concluidos << "/" << total << endl;
 
     return 0;
 }

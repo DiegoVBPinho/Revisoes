@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 1 - EXERCÍCIO 4/10: A CALCULADORA FANTASMA

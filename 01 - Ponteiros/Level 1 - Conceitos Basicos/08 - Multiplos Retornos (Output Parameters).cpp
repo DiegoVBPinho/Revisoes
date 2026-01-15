@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 1 - EXERCÍCIO 8/10: CALCULO DUPLO

@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 1 - EXERCÍCIO 2/10: A SOMA SILENCIOSA

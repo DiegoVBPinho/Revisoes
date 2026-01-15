@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 1 - EXERCÍCIO 5/10: O GUARDIÃO (SEGURANÇA)

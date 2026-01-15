@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 1 - EXERCÍCIO 10/10: A CRIPTOGRAFIA
