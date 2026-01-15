@@ -20,10 +20,11 @@ Saida: Func 1
 */
 
 #include <iostream>
-using namespace std;
 
-int main() {
-    // SEU CODIGO AQUI
 
-    return 0;
+int main() 
+{
+   
+
+   return 0;
 }

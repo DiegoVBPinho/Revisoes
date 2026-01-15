@@ -37,7 +37,7 @@ struct Tema
 };
 
 // ==========================================
-// ⚙️ MOTOR GERADOR (AGORA COPIA O TRACKER!)
+// ⚙️ MOTOR GERADOR (TEMPLATE ATUALIZADO)
 // ==========================================
 
 string gerarCPP(string nivelTitulo, Exercicio ex)
@@ -59,11 +59,13 @@ string gerarCPP(string nivelTitulo, Exercicio ex)
     s += ex.teste + "\n";
     s += "--------------------------------------------------\n";
     s += "*/\n\n";
-    s += "#include <iostream>\n";
-    s += "using namespace std;\n\n";
-    s += "int main() {\n";
-    s += "    // SEU CODIGO AQUI\n\n";
-    s += "    return 0;\n";
+
+    // --- TEMPLATE LIMPO SOLICITADO ---
+    s += "#include <iostream>\n\n\n";
+    s += "int main() \n";
+    s += "{\n";
+    s += "   \n\n";
+    s += "   return 0;\n";
     s += "}\n";
     return s;
 }
@@ -92,7 +94,7 @@ string gerarREADME(string nivelTitulo, vector<Exercicio> &lista)
 }
 
 // ==========================================
-// 💾 CARTUCHO DE DADOS: PONTEIROS (LEVEL 1 CORRIGIDO)
+// 💾 CARTUCHO DE DADOS: PONTEIROS
 // ==========================================
 
 void carregarDados(Tema &t)
@@ -283,9 +285,7 @@ int main()
             string destinoTracker = pathLevel + "/tracker.exe";
             try
             {
-                // Copia e sobrescreve se já existir (para garantir a versão mais nova)
                 fs::copy_file("tracker.exe", destinoTracker, fs::copy_options::overwrite_existing);
-                // cout << "      [OK] Tracker copiado para: " << nivel.pasta << endl; // Comentei pra não poluir o log
             }
             catch (fs::filesystem_error &e)
             {
