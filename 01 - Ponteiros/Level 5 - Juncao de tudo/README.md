@@ -5,13 +5,13 @@
 
 | Status | ID | Icone | Nome | Foco |
 | :----: | :- | :---: | :--- | :--- |
-|  [ ]   | 01 |  🌌   | Void* | Generico |
+|  [ ]   | 01 |  🌌   | Void Ptr | Generico |
 |  [ ]   | 02 |  🎭   | Polimorfismo C | Cast |
 |  [ ]   | 03 |  📞   | Func Pointer | Callback |
 |  [ ]   | 04 |  🧮   | Operacao Flex | Callback Param |
 |  [ ]   | 05 |  📜   | Menu Array | Array de Func |
 |  [ ]   | 06 |  🕵️   | Reference vs Ptr | Diferenca |
-|  [ ]   | 07 |  📦   | Ponteiro p/ Ponteiro | Modificar Ptr |
+|  [ ]   | 07 |  📦   | Ponteiro para Ponteiro | Modificar Ptr |
 |  [ ]   | 08 |  ⚡   | Volatile | Hardware |
 |  [ ]   | 09 |  🧬   | Iterator Custom | Ponteiro Smart |
 |  [ ]   | 10 |  🎓   | Desafio Final | Linked List |
