@@ -1,3 +1,5 @@
+// STATUS: DONE
+
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 1/10: O SALTO DIMENSIONAL

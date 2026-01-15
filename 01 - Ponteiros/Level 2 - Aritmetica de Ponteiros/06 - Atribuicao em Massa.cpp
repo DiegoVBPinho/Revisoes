@@ -1,3 +1,5 @@
+// STATUS: TO DO
+
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 6/10: O PREENCHIMENTO

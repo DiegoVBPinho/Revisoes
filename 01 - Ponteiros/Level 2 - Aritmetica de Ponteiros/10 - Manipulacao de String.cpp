@@ -1,3 +1,5 @@
+// STATUS: TO DO
+
 /*
 ==================================================
 📘 LEVEL 2 - EXERCÍCIO 10/10: A PALAVRA SECRETA (CHEFÃO)
