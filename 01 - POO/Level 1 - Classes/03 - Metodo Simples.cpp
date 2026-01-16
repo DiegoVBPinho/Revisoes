@@ -60,6 +60,3 @@ WRRRRRRAGGGHHH!
 */
 
 #include <iostream>
-
-// ESCREVA SEU CODIGO ABAIXO:
-Manda o código quando terminar para eu validar e a gente pular para o próximo !

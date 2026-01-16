@@ -58,4 +58,3 @@ Zumbi removido da memoria!
 
 #include <iostream>
 
-// ESCREVA SEU CODIGO ABAIXO:

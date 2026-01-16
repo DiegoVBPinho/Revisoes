@@ -10,13 +10,13 @@
 using namespace std;
 namespace fs = std::filesystem;
 
+// --- FUNÇÕES DE APOIO ---
 string toUpper(string s)
 {
     transform(s.begin(), s.end(), s.begin(), ::toupper);
     return s;
 }
 
-// Verifica se arquivo tem STATUS: DONE
 bool checkDone(string path)
 {
     ifstream f(path);
@@ -30,6 +30,29 @@ bool checkDone(string path)
             return true;
     }
     return false;
+}
+
+// --- NOVA FUNÇÃO: GERA O TRACKER LOCAL SE ELE NÃO EXISTIR ---
+void garantirTrackerLocal(string pathLevel, const vector<string> &arquivos)
+{
+    string pathReadme = pathLevel + "/README.md";
+
+    // Se o arquivo não existe, nós criamos o "esqueleto" dele
+    if (!fs::exists(pathReadme))
+    {
+        ofstream f(pathReadme);
+        f << "# 📋 TRACKER DE NÍVEL" << endl
+          << endl;
+        f << "| Status | Exercício |" << endl;
+        f << "| :---: | :--- |" << endl;
+
+        for (const auto &nome : arquivos)
+        {
+            f << "| [ ] | " << nome << " |" << endl;
+        }
+        f.close();
+        cout << "   ✨ Criado tracker faltante em: " << pathLevel << endl;
+    }
 }
 
 struct LevelData
@@ -50,38 +73,27 @@ struct TopicoData
 int main()
 {
     SetConsoleOutputCP(65001); // UTF-8
-
-    cout << "--- 👑 MASTER TRACKER: INICIANDO VARREDURA GERAL ---" << endl;
+    cout << "--- 👑 MASTER TRACKER: VARREDURA E AUTO-GERAÇÃO ---" << endl;
 
     vector<TopicoData> catalogo;
     int grandTotal = 0;
     int grandFeitos = 0;
 
-    // 1. Loop nas pastas da Raiz (01 - Ponteiros, 02 - Recursao...)
     for (const auto &entryTopico : fs::directory_iterator("."))
     {
         if (entryTopico.is_directory())
         {
             string nomeTopico = entryTopico.path().filename().string();
 
-            // --- 🚫 FILTRO DE EXCLUSÃO (BLACKLIST) ---
-            // Ignora:
-            // 1. Pastas do sistema (começam com .)
-            // 2. Pasta "progresso" (antiga)
-            // 3. Pasta "0x" (Templates) <--- AQUI ESTÁ A CORREÇÃO
-            if (nomeTopico[0] == '.' ||
-                nomeTopico == "progresso" ||
-                nomeTopico.find("0x") != string::npos)
+            if (nomeTopico[0] == '.' || nomeTopico == "progresso" || nomeTopico.find("0x") != string::npos)
             {
-                continue; // Pula essa pasta e vai para a próxima
+                continue;
             }
 
-            // Criamos o objeto do Tópico
             TopicoData tData;
             tData.nomePasta = nomeTopico;
             bool temConteudo = false;
 
-            // 2. Entra na pasta do Tópico e procura os Levels
             for (const auto &entryLevel : fs::directory_iterator(entryTopico.path()))
             {
                 if (entryLevel.is_directory())
@@ -89,19 +101,18 @@ int main()
                     string nomeLevel = entryLevel.path().filename().string();
                     string uLevel = toUpper(nomeLevel);
 
-                    // Só processa pastas que tenham "LEVEL" ou "NIVEL" no nome
                     if (uLevel.find("LEVEL") != string::npos || uLevel.find("NIVEL") != string::npos)
                     {
-
                         LevelData lData;
                         lData.nome = nomeLevel;
+                        vector<string> listaArquivosNoLevel;
 
-                        // 3. Conta os arquivos .cpp dentro do Level
                         for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
                         {
                             string fName = entryFile.path().filename().string();
                             if (fName.find(".cpp") != string::npos && isdigit(fName[0]))
                             {
+                                listaArquivosNoLevel.push_back(fName);
                                 lData.total++;
                                 if (checkDone(entryFile.path().string()))
                                 {
@@ -112,6 +123,10 @@ int main()
 
                         if (lData.total > 0)
                         {
+                            // 🔥 A MÁGICA ACONTECE AQUI:
+                            sort(listaArquivosNoLevel.begin(), listaArquivosNoLevel.end());
+                            garantirTrackerLocal(entryLevel.path().string(), listaArquivosNoLevel);
+
                             tData.niveis.push_back(lData);
                             tData.totalTopico += lData.total;
                             tData.feitosTopico += lData.feitos;
@@ -126,51 +141,35 @@ int main()
                 catalogo.push_back(tData);
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
-                cout << "   📦 Tópico Detectado: " << nomeTopico << " (" << tData.feitosTopico << "/" << tData.totalTopico << ")" << endl;
             }
         }
     }
 
-    // Ordenar tópicos (01 antes de 02...)
+    // ... (O resto do seu código que gera o README global continua igual abaixo)
     sort(catalogo.begin(), catalogo.end(), [](const TopicoData &a, const TopicoData &b)
          { return a.nomePasta < b.nomePasta; });
-
-    // ---------------------------------------------
-    // GERAR O README GLOBAL (DASHBOARD SUPREMO)
-    // ---------------------------------------------
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO: ESTUDOS C++" << endl
            << endl;
-
-    // BARRA GERAL
     double porcGlobal = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
     readme << "## 🌍 PROGRESSO GLOBAL: " << grandFeitos << "/" << grandTotal << " (" << fixed << setprecision(1) << porcGlobal << "%)" << endl;
-
     readme << "`[";
     int barras = (int)(porcGlobal / 5);
     for (int i = 0; i < 20; i++)
         readme << (i < barras ? "█" : "░");
     readme << "]`" << endl
+           << endl
+           << "---" << endl
            << endl;
-    readme << "---" << endl
-           << endl;
-
-    // LOOP POR TÓPICOS
     for (auto &topico : catalogo)
     {
-        // Ordena os levels dentro do tópico
         sort(topico.niveis.begin(), topico.niveis.end(), [](const LevelData &a, const LevelData &b)
              { return a.nome < b.nome; });
-
         double porcTopico = (topico.totalTopico > 0) ? (double)topico.feitosTopico / topico.totalTopico * 100.0 : 0.0;
         string statusTopico = (porcTopico == 100.0) ? "🏆 DOMINADO" : (porcTopico > 0 ? "🔥 EM ANDAMENTO" : "💤 AGUARDANDO");
-
         readme << "## 📂 " << topico.nomePasta << " [" << (int)porcTopico << "%] - " << statusTopico << endl;
-
-        // Tabela do Tópico
         readme << "| Nível | Progresso | Status |" << endl;
         readme << "| :--- | :---: | :---: |" << endl;
-
         for (const auto &lv : topico.niveis)
         {
             string icon = (lv.feitos == lv.total) ? "✅" : (lv.feitos > 0 ? "🔨" : "❌");
@@ -178,11 +177,9 @@ int main()
         }
         readme << endl;
     }
-
-    readme << "---" << endl;
-    readme << "*Atualizado automaticamente pelo Master Tracker.*" << endl;
+    readme << "---" << endl
+           << "*Atualizado automaticamente pelo Master Tracker.*" << endl;
     readme.close();
-
-    cout << "\n✅ README GERAL ATUALIZADO (Templates ignorados)!" << endl;
+    cout << "\n✅ MASTER TRACKER CONCLUÍDO! Trackers locais criados/atualizados." << endl;
     return 0;
 }

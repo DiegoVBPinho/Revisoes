@@ -3,7 +3,7 @@
 📘 LEVEL 1 - POO - EXERCICIO 01/10: O Que é uma Classe
 ==================================================
 
-STATUS: DONE
+STATUS: TO DO
 
 COMPETENCIAS:
 - CLASSE_CONCEITO

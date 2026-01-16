@@ -1,14 +1,14 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-## 🌍 PROGRESSO GLOBAL: 1/32 (3.1%)
+## 🌍 PROGRESSO GLOBAL: 0/32 (0.0%)
 `[░░░░░░░░░░░░░░░░░░░░]`
 
 ---
 
-## 📂 01 - POO [3%] - 🔥 EM ANDAMENTO
+## 📂 01 - POO [0%] - 💤 AGUARDANDO
 | Nível | Progresso | Status |
 | :--- | :---: | :---: |
-| Level 1 - Classes | 1/6 | 🔨 |
+| Level 1 - Classes | 0/6 | ❌ |
 | Level 2 - Encapsulamento | 0/5 | ❌ |
 | Level 3 - Heranca | 0/5 | ❌ |
 | Level 4 - Polimorfismo | 0/5 | ❌ |
