@@ -11,7 +11,6 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-// Estruturas mantidas...
 struct LevelData
 {
     string nome;
@@ -27,7 +26,7 @@ struct TopicoData
     map<string, pair<int, int>> skills;
 };
 
-// --- LOGICA DE RANK POR XP (QUANTIDADE DE EXERCICIOS CONCLUIDOS) ---
+// --- LOGICA DE RANK POR XP REAL ---
 string calcularRankReal(int concluidos)
 {
     if (concluidos == 0)
@@ -55,9 +54,6 @@ int main()
     SetConsoleOutputCP(65001);
     vector<TopicoData> catalogo;
     int grandTotal = 0, grandFeitos = 0;
-
-    // ... (A varredura das pastas continua a mesma do código anterior) ...
-    // [Aqui entra o loop de varredura que você já tem no arquivo]
 
     for (const auto &entryTopico : fs::directory_iterator("."))
     {
@@ -121,7 +117,7 @@ int main()
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
 
-                // --- README DO TEMA ---
+                // --- README DO TEMA (DENTRO DA PASTA) ---
                 ofstream rTema(tData.nomePasta + "/README.md");
                 rTema << "# 📂 TEMA: " << tData.nomePasta << endl
                       << endl;
@@ -147,7 +143,7 @@ int main()
         }
     }
 
-    // --- README GLOBAL (RESUMÃO) ---
+    // --- README GLOBAL LIMPO E SEM LINKS ---
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO" << endl
            << endl;
@@ -155,13 +151,16 @@ int main()
     readme << "XP TOTAL: " << grandFeitos << " exercícios concluídos." << endl
            << endl;
 
-    readme << "| Tema | Concluídos | % | Link |" << endl;
-    readme << "| :--- | :---: | :---: | :--- |" << endl;
+    readme << "| Tema | Concluídos | Progresso % |" << endl;
+    readme << "| :--- | :---: | :---: |" << endl;
     for (auto &t : catalogo)
     {
         double p = (double)t.feitosTopico / t.totalTopico * 100.0;
-        readme << "| " << t.nomePasta << " | " << t.feitosTopico << " | " << (int)p << "% | [Ver Detalhes](./" << t.nomePasta << ") |" << endl;
+        readme << "| " << t.nomePasta << " | " << t.feitosTopico << " | " << (int)p << "% |" << endl;
     }
+    readme << endl
+           << "---" << endl
+           << "*Navegue pelas pastas para ver detalhes de cada tema.*" << endl;
     readme.close();
 
     return 0;
