@@ -118,8 +118,48 @@ int main()
     readme << "# 🚀 CENTRAL DE COMANDO: ESTUDOS C++" << endl
            << endl;
 
+    // --- SISTEMA DE RANKING (BRINCADEIRA) ---
     double porcGlobal = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
-    readme << "## 🌍 PROGRESSO GLOBAL: " << grandFeitos << "/" << grandTotal << " (" << fixed << setprecision(1) << porcGlobal << "%)" << endl;
+    string rank, emoji;
+
+    if (porcGlobal < 10)
+    {
+        rank = "NOOB (Fraldinha de Código)";
+        emoji = "👶";
+    }
+    else if (porcGlobal < 30)
+    {
+        rank = "ASPIRANTE (O Construtor de Classes)";
+        emoji = "🛠️";
+    }
+    else if (porcGlobal < 50)
+    {
+        rank = "GUERREIRO (O Encapsulador)";
+        emoji = "🛡️";
+    }
+    else if (porcGlobal < 75)
+    {
+        rank = "MESTRE (O Senhor da Herança)";
+        emoji = "🧙‍♂️";
+    }
+    else if (porcGlobal < 95)
+    {
+        rank = "LENDÁRIO (O Arquiteto de Sistemas)";
+        emoji = "🏛️";
+    }
+    else
+    {
+        rank = "IA HUMANIZADA (Expert Supremo)";
+        emoji = "🤖";
+    }
+
+    readme << "### 🎮 STATUS DO JOGADOR" << endl;
+    readme << "- **Nível Atual:** " << rank << " " << emoji << endl;
+    readme << "- **XP Total:** " << grandFeitos << " de " << grandTotal << " exercícios concluídos" << endl;
+    readme << "- **Próxima Meta:** Manter o foco para evoluir suas competências!" << endl
+           << endl;
+
+    readme << "## 🌍 PROGRESSO GLOBAL: " << fixed << setprecision(1) << porcGlobal << "%" << endl;
     readme << "`[";
     int barras = (int)(porcGlobal / 5);
     for (int i = 0; i < 20; i++)
@@ -129,7 +169,7 @@ int main()
            << "---" << endl
            << endl;
 
-    // Quadro de Competências (Nova Seção)
+    // Quadro de Competências
     if (!skills.empty())
     {
         readme << "## 🏆 ÁRVORE DE COMPETÊNCIAS" << endl;
@@ -146,7 +186,7 @@ int main()
                << endl;
     }
 
-    // Listagem por Níveis (Sua estrutura original)
+    // Listagem por Níveis
     for (auto &topico : catalogo)
     {
         double porcTopico = (topico.totalTopico > 0) ? (double)topico.feitosTopico / topico.totalTopico * 100.0 : 0.0;
@@ -162,9 +202,11 @@ int main()
     }
 
     readme << "---" << endl
-           << "*Atualizado automaticamente pelo Master Tracker.*" << endl;
+           << "*Atualizado automaticamente pelo Master Tracker Evolutivo.*" << endl;
     readme.close();
 
-    cout << "✅ TUDO PRONTO! Níveis e Competências atualizados." << endl;
+    cout << "✅ TUDO PRONTO! Status [" << rank << "] atualizado no README." << endl;
     return 0;
 }
+
+// g++ -std=c++17 master_tracker.cpp -o master.exe
