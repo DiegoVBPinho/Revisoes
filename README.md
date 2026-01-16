@@ -1,14 +1,9 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-## 🌍 PROGRESSO GLOBAL: 1/32 (3.1%)
+## 🌍 PROGRESSO GLOBAL: 0/31 (0.0%)
 `[░░░░░░░░░░░░░░░░░░░░]`
 
 ---
-
-## 📂 01 - Ponteiros [100%] - 🏆 DOMINADO
-| Nível | Progresso | Status |
-| :--- | :---: | :---: |
-| Level 1 - Conceitos Basicos | 1/1 | ✅ |
 
 ## 📂 02 - POO [0%] - 💤 AGUARDANDO
 | Nível | Progresso | Status |
