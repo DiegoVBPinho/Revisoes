@@ -1,18 +1,24 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-## 🌍 PROGRESSO GLOBAL: 0/50 (0.0%)
+## 🌍 PROGRESSO GLOBAL: 1/32 (3.1%)
 `[░░░░░░░░░░░░░░░░░░░░]`
 
 ---
 
-## 📂 01 - Ponteiros [0%] - 💤 AGUARDANDO
+## 📂 01 - Ponteiros [100%] - 🏆 DOMINADO
 | Nível | Progresso | Status |
 | :--- | :---: | :---: |
-| Level 1 - Conceitos Basicos | 0/10 | ❌ |
-| Level 2 - Aritmetica de Ponteiros | 0/10 | ❌ |
-| Level 3 - Memoria Dinamica | 0/10 | ❌ |
-| Level 4 - Ponteiro de Ponteiro | 0/10 | ❌ |
-| Level 5 - Juncao de tudo | 0/10 | ❌ |
+| Level 1 - Conceitos Basicos | 1/1 | ✅ |
+
+## 📂 02 - POO [0%] - 💤 AGUARDANDO
+| Nível | Progresso | Status |
+| :--- | :---: | :---: |
+| Level 1 - Classes | 0/5 | ❌ |
+| Level 2 - Encapsulamento | 0/5 | ❌ |
+| Level 3 - Heranca | 0/5 | ❌ |
+| Level 4 - Polimorfismo | 0/5 | ❌ |
+| Level 5 - Integracao | 0/5 | ❌ |
+| Level 6 - Exercicios PPT - XYZ | 0/6 | ❌ |
 
 ---
 *Atualizado automaticamente pelo Master Tracker.*
