@@ -11,102 +11,96 @@ namespace fs = std::filesystem;
 struct Exercicio
 {
     string id;
-    string nome;
+    string titulo;
+    string dificuldade;
+    string competencias;
+    string objetivo;
 };
 
-struct Level
+struct Trilha
 {
-    string pasta;
-    string titulo;
+    string nomePasta;
     vector<Exercicio> exercicios;
 };
+
+void gerarCabecalho(string path, string categoria, Exercicio ex)
+{
+    ofstream arq(path);
+    arq << "/*" << endl;
+    arq << "==================================================" << endl;
+    arq << "📘 " << categoria << " - EXERCICIO " << ex.id << ": " << ex.titulo << endl;
+    arq << "DIFICULDADE: " << ex.dificuldade << endl;
+    arq << "==================================================" << endl
+        << endl;
+    arq << "STATUS: TO DO" << endl
+        << endl;
+    arq << "COMPETENCIAS:" << endl;
+    arq << "- " << ex.competencias << endl
+        << endl;
+    arq << "🎯 OBJETIVO DO EXERCICIO:" << endl;
+    arq << ex.objetivo << endl
+        << endl;
+    arq << "--------------------------------------------------" << endl;
+    arq << "*/" << endl
+        << endl;
+
+    arq << "#include <iostream>" << endl;
+    arq << "using namespace std;" << endl
+        << endl;
+    arq << "int main() {" << endl;
+    arq << "    // TODO: Implemente sua solução aqui" << endl;
+    arq << "    " << endl;
+    arq << "    return 0;" << endl;
+    arq << "}" << endl;
+    arq.close();
+}
 
 int main()
 {
     SetConsoleOutputCP(65001);
 
-    string pastaTema = "02 - POO";
-    if (!fs::exists(pastaTema))
-        fs::create_directory(pastaTema);
+    // Árvore de evolução baseada no material do Prof. Chris
+    vector<Trilha> mapaDeEstudos = {
+        {"01 - Introducao", {{"01", "Classe Vazia", "Fácil", "ABSTRACAO", "Crie uma classe 'Celular' sem atributos ainda."}, {"02", "Atributos Basicos", "Fácil", "MODELAGEM", "Adicione 'marca' e 'modelo' à classe Celular."}}},
+        {"02 - Metodos", {{"01", "Metodo Ligar", "Médio", "METODOS", "Crie um método que exiba 'O celular está iniciando...'"}}}};
 
-    vector<Level> niveis = {
-        {"Level 1 - Classes",
-         "LEVEL 1 - CLASSES",
-         {
-             {"01", "Classe Basica"},
-             {"02", "Objeto"},
-             {"03", "Metodo Simples"},
-             {"04", "Atributos"},
-             {"05", "Construtor"},
-         }},
-        {"Level 2 - Encapsulamento",
-         "LEVEL 2 - ENCAPSULAMENTO",
-         {
-             {"01", "Public vs Private"},
-             {"02", "Getters"},
-             {"03", "Setters"},
-             {"04", "Validacao"},
-             {"05", "Estado Seguro"},
-         }},
-        {"Level 3 - Heranca",
-         "LEVEL 3 - HERANCA",
-         {
-             {"01", "Classe Base"},
-             {"02", "Classe Derivada"},
-             {"03", "Reaproveitamento"},
-             {"04", "Override Simples"},
-             {"05", "Hierarquia"},
-         }},
-        {"Level 4 - Polimorfismo",
-         "LEVEL 4 - POLIMORFISMO",
-         {
-             {"01", "Metodo Virtual"},
-             {"02", "Override"},
-             {"03", "Ponteiro Base"},
-             {"04", "Chamada Dinamica"},
-             {"05", "Comportamento Diferente"},
-         }},
-        {"Level 5 - Integracao",
-         "LEVEL 5 - INTEGRACAO",
-         {
-             {"01", "Sistema Simples"},
-             {"02", "Entidades"},
-             {"03", "Interacao"},
-             {"04", "Organizacao"},
-             {"05", "Desafio Final"},
-         }},
-        {"Level 6 - Exercicios PPT - XYZ",
-         "LEVEL 6 - EXERCICIOS PPT - XYZ",
-         {
-             {"01", "Exercicio 01"},
-             {"02", "Exercicio 02"},
-             {"03", "Exercicio 03"},
-             {"04", "Exercicio 04"},
-             {"05", "Exercicio 05"},
-         }}};
+    cout << "🛠️  INICIANDO CONSTRUÇÃO DA FÁBRICA..." << endl;
 
-    for (auto &nivel : niveis)
+    for (const auto &trilha : mapaDeEstudos)
     {
-        string pathLevel = pastaTema + "/" + nivel.pasta;
-        if (!fs::exists(pathLevel))
-            fs::create_directory(pathLevel);
+        if (!fs::exists(trilha.nomePasta))
+            fs::create_directory(trilha.nomePasta);
 
-        // Cria arquivos CPP VAZIOS
-        for (auto &ex : nivel.exercicios)
+        for (const auto &ex : trilha.exercicios)
         {
-            string nomeArquivo = ex.id + " - " + ex.nome + ".cpp";
-            ofstream arq(pathLevel + "/" + nomeArquivo);
-            arq.close();
-        }
+            string nomeArquivo = ex.id + " - " + ex.titulo + ".cpp";
+            string caminhoCompleto = trilha.nomePasta + "/" + nomeArquivo;
 
-        // Cria README.md VAZIO
-        ofstream readme(pathLevel + "/README.md");
-        readme.close();
+            if (!fs::exists(caminhoCompleto))
+            {
+                gerarCabecalho(caminhoCompleto, trilha.nomePasta, ex);
+                cout << "   ✅ Criado: " << caminhoCompleto << endl;
+            }
+        }
     }
 
-    cout << "\n✅ PROCESSO CONCLUIDO!" << endl;
-    cout << "🤖 Estrutura de POO criada com sucesso." << endl;
-    cout << "👉 Execute 'atualizar_tudo.bat' para sincronizar o progresso." << endl;
+    cout << "\n🌟 TUDO PRONTO! Agora é só codar e rodar o g++ -std=c++17 fabrica.cpp -o fabrica.exe e também o ./fabrica.exe" << endl;
 
     return 0;
 }
+
+/*
+================================================================================
+❗ LEMBRETE DE OPERAÇÃO NO VS CODE:
+================================================================================
+1. Toda vez que adicionar novos exercícios no 'vector<Trilha>', salve o arquivo.
+2. No terminal do VS Code (PowerShell), compile com:
+   g++ -std=c++17 fabrica_universal.cpp -o fabrica.exe
+
+3. Execute a fábrica para gerar as novas pastas e arquivos:
+   .\fabrica_universal.exe
+
+4. Após codar os exercícios, troque 'STATUS: TO DO' para 'STATUS: DONE'.
+5. Por fim, rode .\atualizar_tudo.bat para subir tudo pro GitHub.
+================================================================================
+*/

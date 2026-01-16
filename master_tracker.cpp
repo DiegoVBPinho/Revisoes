@@ -5,55 +5,11 @@
 #include <filesystem>
 #include <algorithm>
 #include <iomanip>
+#include <map>
 #include <windows.h>
 
 using namespace std;
 namespace fs = std::filesystem;
-
-// --- FUNÇÕES DE APOIO ---
-string toUpper(string s)
-{
-    transform(s.begin(), s.end(), s.begin(), ::toupper);
-    return s;
-}
-
-bool checkDone(string path)
-{
-    ifstream f(path);
-    if (!f.is_open())
-        return false;
-    string l;
-    while (getline(f, l))
-    {
-        string u = toUpper(l);
-        if (u.find("STATUS") != string::npos && u.find("DONE") != string::npos)
-            return true;
-    }
-    return false;
-}
-
-// --- NOVA FUNÇÃO: GERA O TRACKER LOCAL SE ELE NÃO EXISTIR ---
-void garantirTrackerLocal(string pathLevel, const vector<string> &arquivos)
-{
-    string pathReadme = pathLevel + "/README.md";
-
-    // Se o arquivo não existe, nós criamos o "esqueleto" dele
-    if (!fs::exists(pathReadme))
-    {
-        ofstream f(pathReadme);
-        f << "# 📋 TRACKER DE NÍVEL" << endl
-          << endl;
-        f << "| Status | Exercício |" << endl;
-        f << "| :---: | :--- |" << endl;
-
-        for (const auto &nome : arquivos)
-        {
-            f << "| [ ] | " << nome << " |" << endl;
-        }
-        f.close();
-        cout << "   ✨ Criado tracker faltante em: " << pathLevel << endl;
-    }
-}
 
 struct LevelData
 {
@@ -70,73 +26,85 @@ struct TopicoData
     int feitosTopico = 0;
 };
 
+struct CompData
+{
+    int total = 0;
+    int feitos = 0;
+};
+
 int main()
 {
-    SetConsoleOutputCP(65001); // UTF-8
-    cout << "--- 👑 MASTER TRACKER: VARREDURA E AUTO-GERAÇÃO ---" << endl;
+    SetConsoleOutputCP(65001);
+    cout << "--- 👑 MASTER TRACKER: Níveis + Competências ---" << endl;
 
     vector<TopicoData> catalogo;
-    int grandTotal = 0;
-    int grandFeitos = 0;
+    map<string, CompData> skills;
+    int grandTotal = 0, grandFeitos = 0;
 
+    // 1. Varredura para Níveis e Competências
     for (const auto &entryTopico : fs::directory_iterator("."))
     {
         if (entryTopico.is_directory())
         {
             string nomeTopico = entryTopico.path().filename().string();
-
-            if (nomeTopico[0] == '.' || nomeTopico == "progresso" || nomeTopico.find("0x") != string::npos)
-            {
+            if (nomeTopico[0] == '.' || nomeTopico == "progresso")
                 continue;
-            }
 
             TopicoData tData;
             tData.nomePasta = nomeTopico;
-            bool temConteudo = false;
 
             for (const auto &entryLevel : fs::directory_iterator(entryTopico.path()))
             {
                 if (entryLevel.is_directory())
                 {
-                    string nomeLevel = entryLevel.path().filename().string();
-                    string uLevel = toUpper(nomeLevel);
+                    LevelData lData;
+                    lData.nome = entryLevel.path().filename().string();
 
-                    if (uLevel.find("LEVEL") != string::npos || uLevel.find("NIVEL") != string::npos)
+                    for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
                     {
-                        LevelData lData;
-                        lData.nome = nomeLevel;
-                        vector<string> listaArquivosNoLevel;
-
-                        for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
+                        if (entryFile.path().extension() == ".cpp")
                         {
-                            string fName = entryFile.path().filename().string();
-                            if (fName.find(".cpp") != string::npos && isdigit(fName[0]))
+                            ifstream arq(entryFile.path());
+                            string linha;
+                            bool done = false;
+                            vector<string> compsNoArquivo;
+
+                            while (getline(arq, linha))
                             {
-                                listaArquivosNoLevel.push_back(fName);
-                                lData.total++;
-                                if (checkDone(entryFile.path().string()))
+                                if (linha.find("STATUS: DONE") != string::npos)
+                                    done = true;
+                                if (linha.find("- ") != string::npos && linha.find("COMPETENCIAS") == string::npos)
                                 {
-                                    lData.feitos++;
+                                    size_t pos = linha.find("- ");
+                                    string c = linha.substr(pos + 2);
+                                    c.erase(remove(c.begin(), c.end(), '*'), c.end());
+                                    c.erase(remove(c.begin(), c.end(), '/'), c.end());
+                                    if (!c.empty() && c.length() < 30)
+                                        compsNoArquivo.push_back(c);
                                 }
                             }
-                        }
 
-                        if (lData.total > 0)
-                        {
-                            // 🔥 A MÁGICA ACONTECE AQUI:
-                            sort(listaArquivosNoLevel.begin(), listaArquivosNoLevel.end());
-                            garantirTrackerLocal(entryLevel.path().string(), listaArquivosNoLevel);
+                            lData.total++;
+                            if (done)
+                                lData.feitos++;
 
-                            tData.niveis.push_back(lData);
-                            tData.totalTopico += lData.total;
-                            tData.feitosTopico += lData.feitos;
-                            temConteudo = true;
+                            for (const string &c : compsNoArquivo)
+                            {
+                                skills[c].total++;
+                                if (done)
+                                    skills[c].feitos++;
+                            }
                         }
+                    }
+                    if (lData.total > 0)
+                    {
+                        tData.niveis.push_back(lData);
+                        tData.totalTopico += lData.total;
+                        tData.feitosTopico += lData.feitos;
                     }
                 }
             }
-
-            if (temConteudo)
+            if (!tData.niveis.empty())
             {
                 catalogo.push_back(tData);
                 grandTotal += tData.totalTopico;
@@ -145,12 +113,11 @@ int main()
         }
     }
 
-    // ... (O resto do seu código que gera o README global continua igual abaixo)
-    sort(catalogo.begin(), catalogo.end(), [](const TopicoData &a, const TopicoData &b)
-         { return a.nomePasta < b.nomePasta; });
+    // 2. Geração do README.md
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO: ESTUDOS C++" << endl
            << endl;
+
     double porcGlobal = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
     readme << "## 🌍 PROGRESSO GLOBAL: " << grandFeitos << "/" << grandTotal << " (" << fixed << setprecision(1) << porcGlobal << "%)" << endl;
     readme << "`[";
@@ -161,13 +128,29 @@ int main()
            << endl
            << "---" << endl
            << endl;
+
+    // Quadro de Competências (Nova Seção)
+    if (!skills.empty())
+    {
+        readme << "## 🏆 ÁRVORE DE COMPETÊNCIAS" << endl;
+        readme << "| Habilidade | Progresso | Nível |" << endl;
+        readme << "| :--- | :---: | :---: |" << endl;
+        for (auto const &[nome, data] : skills)
+        {
+            double p = (data.total > 0) ? (double)data.feitos / data.total * 100.0 : 0.0;
+            string medalha = (p == 100.0) ? "🥇" : (p > 0 ? "🥈" : "🥉");
+            readme << "| " << nome << " | " << data.feitos << "/" << data.total << " | " << medalha << " " << (int)p << "% |" << endl;
+        }
+        readme << endl
+               << "---" << endl
+               << endl;
+    }
+
+    // Listagem por Níveis (Sua estrutura original)
     for (auto &topico : catalogo)
     {
-        sort(topico.niveis.begin(), topico.niveis.end(), [](const LevelData &a, const LevelData &b)
-             { return a.nome < b.nome; });
         double porcTopico = (topico.totalTopico > 0) ? (double)topico.feitosTopico / topico.totalTopico * 100.0 : 0.0;
-        string statusTopico = (porcTopico == 100.0) ? "🏆 DOMINADO" : (porcTopico > 0 ? "🔥 EM ANDAMENTO" : "💤 AGUARDANDO");
-        readme << "## 📂 " << topico.nomePasta << " [" << (int)porcTopico << "%] - " << statusTopico << endl;
+        readme << "## 📂 " << topico.nomePasta << " [" << (int)porcTopico << "%]" << endl;
         readme << "| Nível | Progresso | Status |" << endl;
         readme << "| :--- | :---: | :---: |" << endl;
         for (const auto &lv : topico.niveis)
@@ -177,9 +160,11 @@ int main()
         }
         readme << endl;
     }
+
     readme << "---" << endl
            << "*Atualizado automaticamente pelo Master Tracker.*" << endl;
     readme.close();
-    cout << "\n✅ MASTER TRACKER CONCLUÍDO! Trackers locais criados/atualizados." << endl;
+
+    cout << "✅ TUDO PRONTO! Níveis e Competências atualizados." << endl;
     return 0;
 }
