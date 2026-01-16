@@ -14,10 +14,10 @@ namespace fs = std::filesystem;
 struct LevelData
 {
     string nome;
-    string caminhoCompleto; // Novo campo para saber onde salvar o README
+    string caminhoCompleto;
     int total = 0;
     int feitos = 0;
-    vector<pair<string, string>> arquivos; // Nome e Status (Ícone)
+    vector<pair<string, string>> arquivos;
 };
 
 struct TopicoData
@@ -88,7 +88,7 @@ int main()
                                 string limpa = normalizar(linha);
                                 if (limpa.find("STATUS:DONE") != string::npos)
                                     done = true;
-                                if (linha.find("- ") != std::string::npos && linha.find("COMPETENCIAS") == std::string::npos)
+                                if (linha.find("- ") != string::npos && linha.find("COMPETENCIAS") == string::npos)
                                 {
                                     size_t pos = linha.find("- ");
                                     string c = linha.substr(pos + 2);
@@ -137,7 +137,6 @@ int main()
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
 
-                // --- GERA O README DO TEMA (PASTA PAI) ---
                 ofstream rTema(tData.nomePasta + "/README.md");
                 rTema << "# 📂 TEMA: " << tData.nomePasta << endl
                       << endl;
@@ -154,7 +153,6 @@ int main()
         }
     }
 
-    // --- README GLOBAL ---
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO" << endl
            << endl;
