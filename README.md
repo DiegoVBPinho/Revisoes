@@ -1,11 +1,10 @@
 # 🚀 CENTRAL DE COMANDO
 
-### 👑 RANK GERAL: ESTAGIÁRIO NOOB 👶
-XP TOTAL: 1 exercícios concluídos.
+### 👑 RANK GERAL: DESEMPREGADO 😶
+XP TOTAL: 0 exercícios concluídos.
 
 | Tema | Concluídos | Progresso % |
 | :--- | :---: | :---: |
-| 01 - POO | 1 | 100% |
 
 ---
 *Navegue pelas pastas para ver detalhes de cada tema.*
