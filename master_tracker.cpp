@@ -14,9 +14,12 @@ namespace fs = std::filesystem;
 struct LevelData
 {
     string nome;
+    string caminhoCompleto; // Novo campo para saber onde salvar o README
     int total = 0;
     int feitos = 0;
+    vector<pair<string, string>> arquivos; // Nome e Status (Ícone)
 };
+
 struct TopicoData
 {
     string nomePasta;
@@ -26,7 +29,6 @@ struct TopicoData
     map<string, pair<int, int>> skills;
 };
 
-// --- LOGICA DE RANK POR XP REAL ---
 string calcularRankReal(int concluidos)
 {
     if (concluidos == 0)
@@ -72,6 +74,7 @@ int main()
                 {
                     LevelData lData;
                     lData.nome = entryLevel.path().filename().string();
+                    lData.caminhoCompleto = entryLevel.path().string();
 
                     for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
                     {
@@ -85,7 +88,7 @@ int main()
                                 string limpa = normalizar(linha);
                                 if (limpa.find("STATUS:DONE") != string::npos)
                                     done = true;
-                                if (linha.find("- ") != string::npos && linha.find("COMPETENCIAS") == string::npos)
+                                if (linha.find("- ") != std::string::npos && linha.find("COMPETENCIAS") == std::string::npos)
                                 {
                                     size_t pos = linha.find("- ");
                                     string c = linha.substr(pos + 2);
@@ -101,39 +104,47 @@ int main()
                             lData.total++;
                             if (done)
                                 lData.feitos++;
+                            lData.arquivos.push_back({entryFile.path().filename().string(), done ? "✅" : "❌"});
                         }
                     }
+
                     if (lData.total > 0)
                     {
+                        // --- GERA O README DENTRO DA PASTA DO LEVEL ---
+                        ofstream rLevel(lData.caminhoCompleto + "/README.md");
+                        rLevel << "# 🎯 FOCO NO NÍVEL: " << lData.nome << endl
+                               << endl;
+                        rLevel << "### PROGRESSO: " << lData.feitos << "/" << lData.total << endl
+                               << endl;
+                        rLevel << "| Status | Exercício |" << endl;
+                        rLevel << "| :---: | :--- |" << endl;
+                        for (auto const &arq : lData.arquivos)
+                        {
+                            rLevel << "| " << arq.second << " | " << arq.first << " |" << endl;
+                        }
+                        rLevel.close();
+
                         tData.niveis.push_back(lData);
                         tData.totalTopico += lData.total;
                         tData.feitosTopico += lData.feitos;
                     }
                 }
             }
+
             if (!tData.niveis.empty())
             {
                 catalogo.push_back(tData);
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
 
-                // --- README DO TEMA (DENTRO DA PASTA) ---
+                // --- GERA O README DO TEMA (PASTA PAI) ---
                 ofstream rTema(tData.nomePasta + "/README.md");
                 rTema << "# 📂 TEMA: " << tData.nomePasta << endl
                       << endl;
-                rTema << "### 📊 STATUS NESTE TEMA: " << calcularRankReal(tData.feitosTopico) << endl;
-                rTema << "- Concluídos: " << tData.feitosTopico << " de " << tData.totalTopico << endl
+                rTema << "### 📊 STATUS: " << calcularRankReal(tData.feitosTopico) << endl;
+                rTema << "Progresso: " << tData.feitosTopico << "/" << tData.totalTopico << endl
                       << endl;
-
-                rTema << "## 🏆 ÁRVORE DE SKILLS" << endl;
-                rTema << "| Skill | Status |" << endl
-                      << "| :--- | :---: |" << endl;
-                for (auto const &[name, data] : tData.skills)
-                {
-                    rTema << "| " << name << " | " << data.second << "/" << data.first << " |" << endl;
-                }
-
-                rTema << "\n## 🗺️ PROGRESSO POR LEVEL" << endl;
+                rTema << "## 🗺️ NÍVEIS DESTE TEMA" << endl;
                 for (auto const &lv : tData.niveis)
                 {
                     rTema << "- " << lv.nome << " [" << lv.feitos << "/" << lv.total << "]" << endl;
@@ -143,28 +154,24 @@ int main()
         }
     }
 
-    // --- README GLOBAL LIMPO E SEM LINKS ---
+    // --- README GLOBAL ---
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO" << endl
            << endl;
     readme << "### 👑 RANK GERAL: " << calcularRankReal(grandFeitos) << endl;
     readme << "XP TOTAL: " << grandFeitos << " exercícios concluídos." << endl
            << endl;
-
-    readme << "| Tema | Concluídos | Progresso % |" << endl;
+    readme << "| Tema | Concluídos | % |" << endl;
     readme << "| :--- | :---: | :---: |" << endl;
     for (auto &t : catalogo)
     {
-        double p = (double)t.feitosTopico / t.totalTopico * 100.0;
+        double p = (t.totalTopico > 0) ? (double)t.feitosTopico / t.totalTopico * 100.0 : 0.0;
         readme << "| " << t.nomePasta << " | " << t.feitosTopico << " | " << (int)p << "% |" << endl;
     }
-    readme << endl
-           << "---" << endl
-           << "*Navegue pelas pastas para ver detalhes de cada tema.*" << endl;
     readme.close();
 
     return 0;
 }
 
 // g++ -std=c++17 master_tracker.cpp -o master.exe
-//.\atualizar_tudo.bat
+//.\master
