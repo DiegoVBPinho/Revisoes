@@ -5,7 +5,7 @@
 
 ---
 
-## 📂 02 - POO [0%] - 💤 AGUARDANDO
+## 📂 01 - POO [0%] - 💤 AGUARDANDO
 | Nível | Progresso | Status |
 | :--- | :---: | :---: |
 | Level 1 - Classes | 0/5 | ❌ |
