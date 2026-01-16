@@ -1,14 +1,14 @@
 # 🚀 CENTRAL DE COMANDO: ESTUDOS C++
 
-### 🎮 STATUS: NOOB 👶 (0/2)
+### 🎮 STATUS: GUERREIRO 🛡️ (1/1)
 
-## 🌍 PROGRESSO: 0.0%
-`[░░░░░░░░░░░░░░░░░░░░]`
+## 🌍 PROGRESSO: 100.0%
+`[████████████████████]`
 
 ---
 ### 📂 01 - POO
 | Habilidade | Status | Nível |
 | :--- | :---: | :---: |
-| ATRIBUTOS | 0/1 | 🥈 0% |
-| INSTANCIACAO | 0/1 | 🥈 0% |
-| LOGICA_POO | 0/1 | 🥈 0% |
+| ATRIBUTOS | 1/1 | 🥇 100% |
+| INSTANCIACAO | 1/1 | 🥇 100% |
+| LOGICA_POO | 1/1 | 🥇 100% |

@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 02/05: Múltiplos Objetos
 ==================================================
 
-STATUS: TO DO
+STATUS: DONE
 
 COMPETENCIAS:
 - INSTANCIACAO
