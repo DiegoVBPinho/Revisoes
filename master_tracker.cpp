@@ -11,6 +11,7 @@
 using namespace std;
 namespace fs = std::filesystem;
 
+// Estruturas mantidas...
 struct LevelData
 {
     string nome;
@@ -23,8 +24,24 @@ struct TopicoData
     vector<LevelData> niveis;
     int totalTopico = 0;
     int feitosTopico = 0;
-    map<string, pair<int, int>> skills; // Skills específicas deste tema
+    map<string, pair<int, int>> skills;
 };
+
+// --- LOGICA DE RANK POR XP (QUANTIDADE DE EXERCICIOS CONCLUIDOS) ---
+string calcularRankReal(int concluidos)
+{
+    if (concluidos == 0)
+        return "DESEMPREGADO 😶";
+    if (concluidos <= 2)
+        return "ESTAGIÁRIO NOOB 👶";
+    if (concluidos <= 5)
+        return "JUNIOR EM EVOLUÇÃO 🛠️";
+    if (concluidos <= 10)
+        return "PLENO RESPEITADO 🛡️";
+    if (concluidos <= 20)
+        return "SENIOR BRABO 🧙‍♂️";
+    return "ARQUITETO LENDÁRIO 🏛️";
+}
 
 string normalizar(string s)
 {
@@ -33,22 +50,14 @@ string normalizar(string s)
     return s;
 }
 
-string calcularRank(double p)
-{
-    if (p < 20)
-        return "NOOB 👶";
-    if (p < 50)
-        return "ASPIRANTE 🛠️";
-    if (p < 80)
-        return "GUERREIRO 🛡️";
-    return "MESTRE 🧙‍♂️";
-}
-
 int main()
 {
     SetConsoleOutputCP(65001);
     vector<TopicoData> catalogo;
     int grandTotal = 0, grandFeitos = 0;
+
+    // ... (A varredura das pastas continua a mesma do código anterior) ...
+    // [Aqui entra o loop de varredura que você já tem no arquivo]
 
     for (const auto &entryTopico : fs::directory_iterator("."))
     {
@@ -68,7 +77,7 @@ int main()
                     LevelData lData;
                     lData.nome = entryLevel.path().filename().string();
 
-                    for (const auto &entryFile : fs::recursive_directory_iterator(entryLevel.path()))
+                    for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
                     {
                         if (entryFile.path().extension() == ".cpp")
                         {
@@ -112,50 +121,51 @@ int main()
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
 
-                // --- CRIA O README DENTRO DA PASTA DO TEMA ---
+                // --- README DO TEMA ---
                 ofstream rTema(tData.nomePasta + "/README.md");
-                double pT = (double)tData.feitosTopico / tData.totalTopico * 100.0;
                 rTema << "# 📂 TEMA: " << tData.nomePasta << endl
                       << endl;
-                rTema << "### 📊 STATUS: " << calcularRank(pT) << " (" << (int)pT << "%)" << endl
+                rTema << "### 📊 STATUS NESTE TEMA: " << calcularRankReal(tData.feitosTopico) << endl;
+                rTema << "- Concluídos: " << tData.feitosTopico << " de " << tData.totalTopico << endl
                       << endl;
 
-                rTema << "## 🏆 COMPETÊNCIAS DO TEMA" << endl;
-                rTema << "| Skill | Progresso |" << endl
+                rTema << "## 🏆 ÁRVORE DE SKILLS" << endl;
+                rTema << "| Skill | Status |" << endl
                       << "| :--- | :---: |" << endl;
                 for (auto const &[name, data] : tData.skills)
                 {
-                    double pS = (double)data.second / data.first * 100.0;
-                    rTema << "| " << name << " | " << data.second << "/" << data.first << " (" << (int)pS << "%) |" << endl;
+                    rTema << "| " << name << " | " << data.second << "/" << data.first << " |" << endl;
                 }
 
-                rTema << "\n## 🗺️ PROGRESSO POR NÍVEL" << endl;
-                rTema << "| Nível | Status |" << endl
-                      << "| :--- | :---: |" << endl;
+                rTema << "\n## 🗺️ PROGRESSO POR LEVEL" << endl;
                 for (auto const &lv : tData.niveis)
                 {
-                    rTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " |" << endl;
+                    rTema << "- " << lv.nome << " [" << lv.feitos << "/" << lv.total << "]" << endl;
                 }
                 rTema.close();
             }
         }
     }
 
-    // --- GERA O README GLOBAL LIMPO ---
+    // --- README GLOBAL (RESUMÃO) ---
     ofstream readme("README.md");
-    double pG = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
-    readme << "# 🚀 CENTRAL DE COMANDO: C++" << endl
+    readme << "# 🚀 CENTRAL DE COMANDO" << endl
            << endl;
-    readme << "## 🌍 PROGRESSO GERAL: " << (int)pG << "%" << endl
+    readme << "### 👑 RANK GERAL: " << calcularRankReal(grandFeitos) << endl;
+    readme << "XP TOTAL: " << grandFeitos << " exercícios concluídos." << endl
            << endl;
 
-    readme << "| Tema de Estudo | Progresso | Rank |" << endl;
-    readme << "| :--- | :---: | :---: |" << endl;
+    readme << "| Tema | Concluídos | % | Link |" << endl;
+    readme << "| :--- | :---: | :---: | :--- |" << endl;
     for (auto &t : catalogo)
     {
         double p = (double)t.feitosTopico / t.totalTopico * 100.0;
-        readme << "| [" << t.nomePasta << "](./" << t.nomePasta << ") | " << (int)p << "% | " << calcularRank(p) << " |" << endl;
+        readme << "| " << t.nomePasta << " | " << t.feitosTopico << " | " << (int)p << "% | [Ver Detalhes](./" << t.nomePasta << ") |" << endl;
     }
     readme.close();
+
     return 0;
 }
+
+// g++ -std=c++17 master_tracker.cpp -o master.exe
+//.\atualizar_tudo.bat

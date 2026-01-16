@@ -1,15 +1,14 @@
 # 📂 TEMA: 01 - POO
 
-### 📊 STATUS: MESTRE 🧙‍♂️ (100%)
+### 📊 STATUS NESTE TEMA: ESTAGIÁRIO NOOB 👶
+- Concluídos: 1 de 1
 
-## 🏆 COMPETÊNCIAS DO TEMA
-| Skill | Progresso |
+## 🏆 ÁRVORE DE SKILLS
+| Skill | Status |
 | :--- | :---: |
-| ATRIBUTOS | 1/1 (100%) |
-| INSTANCIACAO | 1/1 (100%) |
-| LOGICA_POO | 1/1 (100%) |
+| ATRIBUTOS | 1/1 |
+| INSTANCIACAO | 1/1 |
+| LOGICA_POO | 1/1 |
 
-## 🗺️ PROGRESSO POR NÍVEL
-| Nível | Status |
-| :--- | :---: |
-| LEVEL 1 - CLASSE | 1/1 |
+## 🗺️ PROGRESSO POR LEVEL
+- LEVEL 1 - CLASSE [1/1]

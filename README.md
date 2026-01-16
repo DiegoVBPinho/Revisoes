@@ -1,7 +1,8 @@
-# 🚀 CENTRAL DE COMANDO: C++
+# 🚀 CENTRAL DE COMANDO
 
-## 🌍 PROGRESSO GERAL: 100%
+### 👑 RANK GERAL: ESTAGIÁRIO NOOB 👶
+XP TOTAL: 1 exercícios concluídos.
 
-| Tema de Estudo | Progresso | Rank |
-| :--- | :---: | :---: |
-| [01 - POO](./01 - POO) | 100% | MESTRE 🧙‍♂️ |
+| Tema | Concluídos | % | Link |
+| :--- | :---: | :---: | :--- |
+| 01 - POO | 1 | 100% | [Ver Detalhes](./01 - POO) |
