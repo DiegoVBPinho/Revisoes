@@ -9,24 +9,17 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-// Função para converter para maiúsculo
-string paraMaiusculo(string s)
+// Verifica se o arquivo contém a marcação de conclusão
+bool verificarDone(string path)
 {
-    transform(s.begin(), s.end(), s.begin(), ::toupper);
-    return s;
-}
-
-// Verifica se o arquivo tem a marcação STATUS: DONE
-bool estaConcluido(string caminho)
-{
-    ifstream arquivo(caminho);
-    if (!arquivo.is_open())
+    ifstream f(path);
+    if (!f.is_open())
         return false;
     string linha;
-    while (getline(arquivo, linha))
+    while (getline(f, linha))
     {
-        string u = paraMaiusculo(linha);
-        if (u.find("STATUS") != string::npos && u.find("DONE") != string::npos)
+        transform(linha.begin(), linha.end(), linha.begin(), ::toupper);
+        if (linha.find("STATUS: DONE") != string::npos)
             return true;
     }
     return false;
@@ -34,41 +27,37 @@ bool estaConcluido(string caminho)
 
 int main()
 {
-    // 1. Coleta informações da pasta atual
     string nomeLevel = fs::current_path().filename().string();
     vector<pair<string, bool>> exercicios;
     int total = 0, feitos = 0;
 
+    // Busca apenas arquivos .cpp que começam com números (ex: 01 - ...)
     for (const auto &entry : fs::directory_iterator("."))
     {
         string fName = entry.path().filename().string();
-        // Filtra apenas arquivos .cpp que começam com números
-        if (fName.find(".cpp") != string::npos && isdigit(fName[0]))
+        if (entry.path().extension() == ".cpp" && isdigit(fName[0]))
         {
-            bool concluido = estaConcluido(entry.path().string());
-            exercicios.push_back({fName, concluido});
+            bool status = verificarDone(entry.path().string());
+            exercicios.push_back({fName, status});
             total++;
-            if (concluido)
+            if (status)
                 feitos++;
         }
     }
 
-    // Ordenar por nome/número
     sort(exercicios.begin(), exercicios.end());
 
-    // 2. Gerar o README.md bonitão
-    double porcentagem = (total > 0) ? (double)feitos / total * 100.0 : 0.0;
-
+    // Gerando o README.md Local bonitão
     ofstream readme("README.md");
+    double porc = (total > 0) ? (double)feitos / total * 100.0 : 0.0;
+
     readme << "# 🎯 FOCO NO NÍVEL: " << nomeLevel << endl
            << endl;
-
-    readme << "### 📊 PROGRESSO DO NÍVEL: " << feitos << "/" << total
-           << " (" << fixed << setprecision(1) << porcentagem << "%)" << endl;
+    readme << "### 📊 PROGRESSO DO NÍVEL: " << feitos << "/" << total << " (" << fixed << setprecision(1) << porc << "%)" << endl;
 
     // Barra de progresso visual
     readme << "`[";
-    int barras = (int)(porcentagem / 5);
+    int barras = (int)(porc / 5);
     for (int i = 0; i < 20; i++)
         readme << (i < barras ? "█" : "░");
     readme << "]`" << endl
@@ -91,6 +80,6 @@ int main()
     readme << "*Gerado por Tracker Local (C++ Auto-Update)*" << endl;
     readme.close();
 
-    cout << "✅ README do Level [" << nomeLevel << "] atualizado com sucesso!" << endl;
+    cout << "✅ README local atualizado em: " << nomeLevel << endl;
     return 0;
 }
