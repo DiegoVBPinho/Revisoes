@@ -1,14 +1,7 @@
-# 🚀 CENTRAL DE COMANDO: ESTUDOS C++
+# 🚀 CENTRAL DE COMANDO: C++
 
-### 🎮 STATUS: GUERREIRO 🛡️ (1/1)
+## 🌍 PROGRESSO GERAL: 100%
 
-## 🌍 PROGRESSO: 100.0%
-`[████████████████████]`
-
----
-### 📂 01 - POO
-| Habilidade | Status | Nível |
+| Tema de Estudo | Progresso | Rank |
 | :--- | :---: | :---: |
-| ATRIBUTOS | 1/1 | 🥇 100% |
-| INSTANCIACAO | 1/1 | 🥇 100% |
-| LOGICA_POO | 1/1 | 🥇 100% |
+| [01 - POO](./01 - POO) | 100% | MESTRE 🧙‍♂️ |

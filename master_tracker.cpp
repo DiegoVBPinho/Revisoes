@@ -23,14 +23,9 @@ struct TopicoData
     vector<LevelData> niveis;
     int totalTopico = 0;
     int feitosTopico = 0;
-};
-struct CompData
-{
-    int total = 0;
-    int feitos = 0;
+    map<string, pair<int, int>> skills; // Skills específicas deste tema
 };
 
-// FUNÇÃO NOVA: Limpa espaços e converte para maiúsculo para não errar a leitura
 string normalizar(string s)
 {
     s.erase(remove_if(s.begin(), s.end(), ::isspace), s.end());
@@ -38,11 +33,21 @@ string normalizar(string s)
     return s;
 }
 
+string calcularRank(double p)
+{
+    if (p < 20)
+        return "NOOB 👶";
+    if (p < 50)
+        return "ASPIRANTE 🛠️";
+    if (p < 80)
+        return "GUERREIRO 🛡️";
+    return "MESTRE 🧙‍♂️";
+}
+
 int main()
 {
     SetConsoleOutputCP(65001);
     vector<TopicoData> catalogo;
-    map<string, map<string, CompData>> skillsPorCategoria;
     int grandTotal = 0, grandFeitos = 0;
 
     for (const auto &entryTopico : fs::directory_iterator("."))
@@ -55,7 +60,6 @@ int main()
 
             TopicoData tData;
             tData.nomePasta = nomeTopico;
-            string categoriaAtual = nomeTopico;
 
             for (const auto &entryLevel : fs::directory_iterator(entryTopico.path()))
             {
@@ -64,41 +68,34 @@ int main()
                     LevelData lData;
                     lData.nome = entryLevel.path().filename().string();
 
-                    for (const auto &entryFile : fs::directory_iterator(entryLevel.path()))
+                    for (const auto &entryFile : fs::recursive_directory_iterator(entryLevel.path()))
                     {
                         if (entryFile.path().extension() == ".cpp")
                         {
                             ifstream arq(entryFile.path());
                             string linha;
                             bool done = false;
-                            vector<string> compsNoArquivo;
-
                             while (getline(arq, linha))
                             {
                                 string limpa = normalizar(linha);
-                                // Agora ele ignora espaços: "STATUS:DONE" ou "STATUS:   DONE" funcionam
                                 if (limpa.find("STATUS:DONE") != string::npos)
                                     done = true;
-
                                 if (linha.find("- ") != string::npos && linha.find("COMPETENCIAS") == string::npos)
                                 {
                                     size_t pos = linha.find("- ");
                                     string c = linha.substr(pos + 2);
                                     c.erase(remove(c.begin(), c.end(), '*'), c.end());
-                                    c.erase(remove(c.begin(), c.end(), '/'), c.end());
                                     if (!c.empty() && c.length() < 30)
-                                        compsNoArquivo.push_back(c);
+                                    {
+                                        tData.skills[c].first++;
+                                        if (done)
+                                            tData.skills[c].second++;
+                                    }
                                 }
                             }
                             lData.total++;
                             if (done)
                                 lData.feitos++;
-                            for (const string &c : compsNoArquivo)
-                            {
-                                skillsPorCategoria[categoriaAtual][c].total++;
-                                if (done)
-                                    skillsPorCategoria[categoriaAtual][c].feitos++;
-                            }
                         }
                     }
                     if (lData.total > 0)
@@ -114,54 +111,51 @@ int main()
                 catalogo.push_back(tData);
                 grandTotal += tData.totalTopico;
                 grandFeitos += tData.feitosTopico;
+
+                // --- CRIA O README DENTRO DA PASTA DO TEMA ---
+                ofstream rTema(tData.nomePasta + "/README.md");
+                double pT = (double)tData.feitosTopico / tData.totalTopico * 100.0;
+                rTema << "# 📂 TEMA: " << tData.nomePasta << endl
+                      << endl;
+                rTema << "### 📊 STATUS: " << calcularRank(pT) << " (" << (int)pT << "%)" << endl
+                      << endl;
+
+                rTema << "## 🏆 COMPETÊNCIAS DO TEMA" << endl;
+                rTema << "| Skill | Progresso |" << endl
+                      << "| :--- | :---: |" << endl;
+                for (auto const &[name, data] : tData.skills)
+                {
+                    double pS = (double)data.second / data.first * 100.0;
+                    rTema << "| " << name << " | " << data.second << "/" << data.first << " (" << (int)pS << "%) |" << endl;
+                }
+
+                rTema << "\n## 🗺️ PROGRESSO POR NÍVEL" << endl;
+                rTema << "| Nível | Status |" << endl
+                      << "| :--- | :---: |" << endl;
+                for (auto const &lv : tData.niveis)
+                {
+                    rTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " |" << endl;
+                }
+                rTema.close();
             }
         }
     }
 
+    // --- GERA O README GLOBAL LIMPO ---
     ofstream readme("README.md");
-    double porcGlobal = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
-
-    // Gerar Ranking
-    string rank, emoji;
-    if (porcGlobal < 10)
-    {
-        rank = "NOOB 👶";
-    }
-    else if (porcGlobal < 30)
-    {
-        rank = "ASPIRANTE 🛠️";
-    }
-    else
-    {
-        rank = "GUERREIRO 🛡️";
-    }
-
-    readme << "# 🚀 CENTRAL DE COMANDO: ESTUDOS C++" << endl
+    double pG = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
+    readme << "# 🚀 CENTRAL DE COMANDO: C++" << endl
            << endl;
-    readme << "### 🎮 STATUS: " << rank << " (" << grandFeitos << "/" << grandTotal << ")" << endl
+    readme << "## 🌍 PROGRESSO GERAL: " << (int)pG << "%" << endl
            << endl;
-    readme << "## 🌍 PROGRESSO: " << fixed << setprecision(1) << porcGlobal << "%" << endl;
-    readme << "`[";
-    int barras = (int)(porcGlobal / 5);
-    for (int i = 0; i < 20; i++)
-        readme << (i < barras ? "█" : "░");
-    readme << "]`" << endl
-           << endl
-           << "---" << endl;
 
-    for (auto const &[cat, listaSkills] : skillsPorCategoria)
+    readme << "| Tema de Estudo | Progresso | Rank |" << endl;
+    readme << "| :--- | :---: | :---: |" << endl;
+    for (auto &t : catalogo)
     {
-        readme << "### 📂 " << cat << endl;
-        readme << "| Habilidade | Status | Nível |" << endl;
-        readme << "| :--- | :---: | :---: |" << endl;
-        for (auto const &[nome, data] : listaSkills)
-        {
-            double p = (data.total > 0) ? (double)data.feitos / data.total * 100.0 : 0.0;
-            string med = (p == 100.0) ? "🥇" : "🥈";
-            readme << "| " << nome << " | " << data.feitos << "/" << data.total << " | " << med << " " << (int)p << "% |" << endl;
-        }
+        double p = (double)t.feitosTopico / t.totalTopico * 100.0;
+        readme << "| [" << t.nomePasta << "](./" << t.nomePasta << ") | " << (int)p << "% | " << calcularRank(p) << " |" << endl;
     }
-
     readme.close();
     return 0;
 }
