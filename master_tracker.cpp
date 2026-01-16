@@ -35,23 +35,29 @@ struct CompData
 int main()
 {
     SetConsoleOutputCP(65001);
-    cout << "--- 👑 MASTER TRACKER: Níveis + Competências ---" << endl;
+    cout << "--- 👑 MASTER TRACKER: Árvore de Talentos Universal ---" << endl;
 
     vector<TopicoData> catalogo;
-    map<string, CompData> skills;
+    // Mapa: [Nome da Pasta do Tema] -> [Mapa de Competências]
+    map<string, map<string, CompData>> skillsPorCategoria;
     int grandTotal = 0, grandFeitos = 0;
 
-    // 1. Varredura para Níveis e Competências
     for (const auto &entryTopico : fs::directory_iterator("."))
     {
         if (entryTopico.is_directory())
         {
             string nomeTopico = entryTopico.path().filename().string();
-            if (nomeTopico[0] == '.' || nomeTopico == "progresso")
+
+            // Ignora pastas de configuração ou ocultas
+            if (nomeTopico[0] == '.' || nomeTopico == "progresso" || nomeTopico == "vscode")
                 continue;
 
             TopicoData tData;
             tData.nomePasta = nomeTopico;
+
+            // --- A MÁGICA UNIVERSAL ---
+            // A categoria agora é EXATAMENTE o nome da pasta que você criou
+            string categoriaAtual = nomeTopico;
 
             for (const auto &entryLevel : fs::directory_iterator(entryTopico.path()))
             {
@@ -77,8 +83,14 @@ int main()
                                 {
                                     size_t pos = linha.find("- ");
                                     string c = linha.substr(pos + 2);
+
+                                    // Limpeza de caracteres de comentário
                                     c.erase(remove(c.begin(), c.end(), '*'), c.end());
                                     c.erase(remove(c.begin(), c.end(), '/'), c.end());
+
+                                    // Remove espaços em branco no fim da string
+                                    c.erase(c.find_last_not_of(" \n\r\t") + 1);
+
                                     if (!c.empty() && c.length() < 30)
                                         compsNoArquivo.push_back(c);
                                 }
@@ -90,9 +102,9 @@ int main()
 
                             for (const string &c : compsNoArquivo)
                             {
-                                skills[c].total++;
+                                skillsPorCategoria[categoriaAtual][c].total++;
                                 if (done)
-                                    skills[c].feitos++;
+                                    skillsPorCategoria[categoriaAtual][c].feitos++;
                             }
                         }
                     }
@@ -113,15 +125,13 @@ int main()
         }
     }
 
-    // 2. Geração do README.md
     ofstream readme("README.md");
     readme << "# 🚀 CENTRAL DE COMANDO: ESTUDOS C++" << endl
            << endl;
 
-    // --- SISTEMA DE RANKING (BRINCADEIRA) ---
+    // --- STATUS DO JOGADOR ---
     double porcGlobal = (grandTotal > 0) ? (double)grandFeitos / grandTotal * 100.0 : 0.0;
     string rank, emoji;
-
     if (porcGlobal < 10)
     {
         rank = "NOOB (Fraldinha de Código)";
@@ -129,34 +139,28 @@ int main()
     }
     else if (porcGlobal < 30)
     {
-        rank = "ASPIRANTE (O Construtor de Classes)";
+        rank = "ASPIRANTE";
         emoji = "🛠️";
     }
     else if (porcGlobal < 50)
     {
-        rank = "GUERREIRO (O Encapsulador)";
+        rank = "GUERREIRO";
         emoji = "🛡️";
     }
     else if (porcGlobal < 75)
     {
-        rank = "MESTRE (O Senhor da Herança)";
+        rank = "MESTRE";
         emoji = "🧙‍♂️";
-    }
-    else if (porcGlobal < 95)
-    {
-        rank = "LENDÁRIO (O Arquiteto de Sistemas)";
-        emoji = "🏛️";
     }
     else
     {
-        rank = "IA HUMANIZADA (Expert Supremo)";
-        emoji = "🤖";
+        rank = "LENDÁRIO";
+        emoji = "🏛️";
     }
 
     readme << "### 🎮 STATUS DO JOGADOR" << endl;
     readme << "- **Nível Atual:** " << rank << " " << emoji << endl;
-    readme << "- **XP Total:** " << grandFeitos << " de " << grandTotal << " exercícios concluídos" << endl;
-    readme << "- **Próxima Meta:** Manter o foco para evoluir suas competências!" << endl
+    readme << "- **XP Total:** " << grandFeitos << " de " << grandTotal << " concluídos" << endl
            << endl;
 
     readme << "## 🌍 PROGRESSO GLOBAL: " << fixed << setprecision(1) << porcGlobal << "%" << endl;
@@ -169,22 +173,24 @@ int main()
            << "---" << endl
            << endl;
 
-    // Quadro de Competências
-    if (!skills.empty())
+    // --- ÁRVORE DE TALENTOS UNIVERSAL ---
+    readme << "## 🏆 ÁRVORE DE TALENTOS" << endl;
+    for (auto const &[cat, listaSkills] : skillsPorCategoria)
     {
-        readme << "## 🏆 ÁRVORE DE COMPETÊNCIAS" << endl;
+        readme << "### 📂 Categoria: " << cat << endl;
         readme << "| Habilidade | Progresso | Nível |" << endl;
         readme << "| :--- | :---: | :---: |" << endl;
-        for (auto const &[nome, data] : skills)
+        for (auto const &[nome, data] : listaSkills)
         {
             double p = (data.total > 0) ? (double)data.feitos / data.total * 100.0 : 0.0;
             string medalha = (p == 100.0) ? "🥇" : (p > 0 ? "🥈" : "🥉");
             readme << "| " << nome << " | " << data.feitos << "/" << data.total << " | " << medalha << " " << (int)p << "% |" << endl;
         }
-        readme << endl
-               << "---" << endl
-               << endl;
+        readme << endl;
     }
+
+    readme << "---" << endl
+           << endl;
 
     // Listagem por Níveis
     for (auto &topico : catalogo)
@@ -201,12 +207,7 @@ int main()
         readme << endl;
     }
 
-    readme << "---" << endl
-           << "*Atualizado automaticamente pelo Master Tracker Evolutivo.*" << endl;
+    readme << "*Atualizado automaticamente pelo Master Tracker Evolutivo.*" << endl;
     readme.close();
-
-    cout << "✅ TUDO PRONTO! Status [" << rank << "] atualizado no README." << endl;
     return 0;
 }
-
-// g++ -std=c++17 master_tracker.cpp -o master.exe
