@@ -26,10 +26,18 @@ string rankTema(float porcentagem)
     return "MESTRE DO TEMA 👑";
 }
 
-struct TemaStats
+struct LevelStats
 {
+    string nome;
     int total = 0;
     int feitos = 0;
+};
+
+struct TemaStats
+{
+    int totalTema = 0;
+    int feitosTema = 0;
+    vector<LevelStats> niveis;
     set<string> competencias;
 };
 
@@ -37,95 +45,105 @@ int main()
 {
     SetConsoleOutputCP(65001);
     map<string, TemaStats> dashboard;
-    int xpGlobal = 0;
 
-    cout << "🔍 Escaneando Temas para o Dashboard..." << endl;
-
-    // Varre as pastas raízes (01 - POO, 02 - Ponteiros...)
-    for (const auto &entry : fs::directory_iterator("."))
+    // Varre os Temas (ex: 01 - POO)
+    for (const auto &entryTema : fs::directory_iterator("."))
     {
-        if (entry.is_directory())
+        if (entryTema.is_directory())
         {
-            string nomeTema = entry.path().filename().string();
-            // Pula pastas ocultas ou de controle
-            if (nomeTema[0] == '.' || nomeTema == "progresso" || nomeTema == "bin")
+            string nomeTema = entryTema.path().filename().string();
+            if (nomeTema[0] == '.' || nomeTema == "progresso")
                 continue;
 
-            TemaStats stats;
-            // Entra em tudo que tem dentro do Tema (Levels e arquivos)
-            for (const auto &subEntry : fs::recursive_directory_iterator(entry.path()))
+            TemaStats tStats;
+
+            // Varre os Levels dentro do Tema
+            for (const auto &entryLevel : fs::directory_iterator(entryTema.path()))
             {
-                if (subEntry.path().extension() == ".cpp")
+                if (entryLevel.is_directory())
                 {
-                    stats.total++;
+                    LevelStats lStats;
+                    lStats.nome = entryLevel.path().filename().string();
 
-                    ifstream arq(subEntry.path());
-                    string linha;
-                    bool feito = false, lendoComp = false;
-
-                    while (getline(arq, linha))
+                    for (const auto &arq : fs::directory_iterator(entryLevel.path()))
                     {
-                        string up = linha;
-                        transform(up.begin(), up.end(), up.begin(), ::toupper);
-                        if (up.find("STATUS: DONE") != string::npos)
-                            feito = true;
-
-                        if (up.find("COMPETENCIAS:") != string::npos)
+                        if (arq.path().extension() == ".cpp")
                         {
-                            lendoComp = true;
-                            continue;
-                        }
-                        if (lendoComp && (up.find("---") != string::npos || up.find("*/") != string::npos || up.empty()))
-                            lendoComp = false;
+                            lStats.total++;
+                            ifstream f(arq.path());
+                            string linha;
+                            bool done = false, lendoComp = false;
 
-                        if (lendoComp)
-                        {
-                            string c = linha;
-                            if (c.find("- ") != string::npos)
-                                c = c.substr(c.find("- ") + 2);
-                            c.erase(0, c.find_first_not_of(" \t"));
-                            c.erase(c.find_last_not_of(" \t") + 1);
-                            if (!c.empty() && c[0] != '=')
-                                stats.competencias.insert(c);
+                            while (getline(f, linha))
+                            {
+                                string up = linha;
+                                transform(up.begin(), up.end(), up.begin(), ::toupper);
+                                if (up.find("STATUS: DONE") != string::npos)
+                                    done = true;
+                                if (up.find("COMPETENCIAS:") != string::npos)
+                                {
+                                    lendoComp = true;
+                                    continue;
+                                }
+                                if (lendoComp && (up.find("---") != string::npos || up.find("*/") != string::npos || up.empty()))
+                                    lendoComp = false;
+
+                                if (lendoComp)
+                                {
+                                    string c = linha;
+                                    if (c.find("- ") != string::npos)
+                                        c = c.substr(c.find("- ") + 2);
+                                    c.erase(0, c.find_first_not_of(" \t"));
+                                    c.erase(c.find_last_not_of(" \t") + 1);
+                                    if (!c.empty() && c[0] != '=')
+                                        tStats.competencias.insert(c);
+                                }
+                            }
+                            if (done)
+                                lStats.feitos++;
                         }
                     }
-                    if (feito)
-                    {
-                        stats.feitos++;
-                        xpGlobal++;
-                    }
+                    tStats.niveis.push_back(lStats);
+                    tStats.totalTema += lStats.total;
+                    tStats.feitosTema += lStats.feitos;
                 }
             }
-            if (stats.total > 0)
-                dashboard[nomeTema] = stats;
+            dashboard[nomeTema] = tStats;
         }
     }
 
-    // --- GERAÇÃO DO README.md (RAIZ) ---
-    ofstream global("README.md");
-    global << "# 🚀 CENTRAL DE COMANDO\n\n";
-    global << "### 👑 RANK GLOBAL: " << (xpGlobal <= 20 ? "ESTAGIÁRIO" : "EM EVOLUÇÃO") << " (XP: " << xpGlobal << ")\n\n";
-
-    global << "## 📊 STATUS POR TEMA\n";
-    global << "| Pasta do Tema | Progresso | % | Rank do Assunto |\n";
-    global << "| :--- | :---: | :---: | :--- |\n";
-
+    // GERAÇÃO DO README DENTRO DE CADA TEMA (Ex: 01 - POO)
     for (auto const &[nome, st] : dashboard)
     {
-        float porc = (float)st.feitos / st.total * 100.0f;
-        global << "| [" << nome << "](./" << nome << ") | " << st.feitos << "/" << st.total
-               << " | " << fixed << setprecision(0) << porc << "% | " << rankTema(porc) << " |\n";
+        float porcTema = (st.totalTema > 0) ? (float)st.feitosTema / st.totalTema * 100.0f : 0.0f;
+
+        ofstream fTema("./" + nome + "/README.md");
+        fTema << "# 📂 Assunto: " << nome << "\n\n";
+        fTema << "### 🏅 Rank no Tema: " << rankTema(porcTema) << " (" << fixed << setprecision(1) << porcTema << "%)\n\n";
+
+        fTema << "## 📈 Progresso por Level\n";
+        fTema << "| Level | Exercícios | Status | % |\n";
+        fTema << "| :--- | :---: | :--- | :---: |\n";
+
+        for (auto const &lv : st.niveis)
+        {
+            float porcLv = (lv.total > 0) ? (float)lv.feitos / lv.total * 100.0f : 0.0f;
+            int barras = (int)(porcLv / 10);
+            string progress = "";
+            for (int i = 0; i < 10; i++)
+                progress += (i < barras ? "█" : "░");
+
+            fTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " | `" << progress << "` | " << (int)porcLv << "% |\n";
+        }
+
+        fTema << "\n## 🧬 Competências do Tema\n";
+        for (auto const &c : st.competencias)
+            fTema << "- ✅ " << c << "\n";
+
+        fTema.close();
     }
 
-    global << "\n## 🧬 TODAS AS COMPETÊNCIAS\n";
-    set<string> todas;
-    for (auto const &[n, st] : dashboard)
-        todas.insert(st.competencias.begin(), st.competencias.end());
-    for (auto const &c : todas)
-        global << "- [x] " << c << "\n";
-
-    global.close();
-    cout << "✨ Dashboard Principal Atualizado!" << endl;
+    cout << "✨ Dashboard de Níveis gerado dentro das pastas de Tema!" << endl;
     return 0;
 }
 // g++ -std=c++17 master_tracker.cpp -o master.exe
