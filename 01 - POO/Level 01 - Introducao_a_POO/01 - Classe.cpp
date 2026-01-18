@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 01: O Primeiro Molde
 ==================================================
 
-STATUS: DONE
+STATUS: TO DO
 
 COMPETENCIAS:
 - CLASSE_CONCEITO

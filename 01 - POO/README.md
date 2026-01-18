@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| Level 01 - Introducao_a_POO | 1/11 | 9% |
+| Level 01 - Introducao_a_POO | 0/11 | 0% |
 | Level 02 - Estrutura_de_Dados | 0/3 | 0% |
 | Level 03 - Pacotes_e_Organizacao | 0/2 | 0% |
 | Level 04 - Encapsulamento | 0/2 | 0% |
