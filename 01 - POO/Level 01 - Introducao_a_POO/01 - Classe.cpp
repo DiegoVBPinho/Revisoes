@@ -45,8 +45,6 @@ public:            // Modificador de acesso (permite uso fora da classe)
 #include <iostream>
 #include <string>
 
-using namespace std; // Conforme sua preferência configurada
-
 // Desenvolva sua classe aqui:
 
 int main()

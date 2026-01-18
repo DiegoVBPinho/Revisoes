@@ -1,26 +1,44 @@
 /*
 ==================================================
-📘 AULA 04 - Exercicio 3: Referencias
+📘 01 - POO - EXERCICIO 07: Ex 3 - Zumbis_Referencias
 ==================================================
 
-STATUS: TO DO
+STATUS: TODO
 
-🧠 TUTOR EXPLICA:
-Quando fazemos z1 = z2, as duas variaveis apontam para o mesmo objeto na memoria.
+COMPETENCIAS:
+- PASSAGEM_POR_REFERENCIA
+- INTERACAO_OBJETO_VARIAVEL
+- LOGICA_DE_COMBATE
 
-💻 SINTAXE (Sem namespace std):
-std::cout << "Texto" << std::endl;
-std::string variavel;
+🧠 CONCEITO: REFERÊNCIAS EM MÉTODOS (Aula 04)
+Quando passamos uma variável comum para um método, o C++ cria uma cópia.
+Para que o Zumbi consiga "morder" e realmente diminuir a vida do jogador
+que está na função main, precisamos usar o símbolo '&' para passar a
+referência real da memória.
 
-🎯 OBJETIVO:
-Crie dois zumbis. Apos manipular a vida, faca z1 = z2 e verifique o resultado.
+--------------------------------------------------
+🎯 OBJETIVO DO EXERCICIO (Baseado no Slide 13):
+1. Crie uma classe 'Zumbi' com:
+   - Atributo: std::string nome.
+2. Crie um método chamado 'atacarPlayer(int &vidaPlayer)':
+   - O parâmetro DEVE ser uma referência (int &).
+   - O método deve subtrair 20 unidades da 'vidaPlayer'.
+   - Exiba uma mensagem dizendo que o zumbi atacou o humano.
+3. Na função main:
+   - Crie uma variável inteira 'vidaHumano' começando com 100.
+   - Instancie um zumbi.
+   - Chame o método 'atacarPlayer(vidaHumano)'.
+   - Exiba o valor da 'vidaHumano' após o ataque para confirmar a redução.
 --------------------------------------------------
 */
 
 #include <iostream>
 #include <string>
 
-int main() {
-    // Desenvolva seu codigo aqui seguindo o objetivo
+// Desenvolva sua classe aqui:
+
+int main()
+{
+
     return 0;
 }

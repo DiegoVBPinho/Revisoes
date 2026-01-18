@@ -1,26 +1,42 @@
 /*
 ==================================================
-📘 AULA 04 - Exercicio 4: Validacao
+📘 01 - POO - EXERCICIO 08: Ex 4 - Zumbis_Transferencia
 ==================================================
 
-STATUS: TO DO
+STATUS: TODO
 
-🧠 TUTOR EXPLICA:
-Metodos podem retornar valores (bool, int) para confirmar se uma acao deu certo.
+COMPETENCIAS:
+- OBJETOS_COMO_PARAMETROS
+- REFERENCIA_DE_INSTANCIAS
+- LOGICA_DE_SISTEMAS_COOPERATIVOS
 
-💻 SINTAXE (Sem namespace std):
-std::cout << "Texto" << std::endl;
-std::string variavel;
+🧠 CONCEITO: INTERAÇÃO ENTRE OBJETOS (Aula 04)
+Da mesma forma que passamos um 'int' por referência, podemos passar um objeto
+inteiro. Isso permite que um objeto acesse e modifique os atributos de outro
+objeto da mesma classe.
 
-🎯 OBJETIVO:
-Crie um metodo que transfere vida entre zumbis e retorna true se der certo.
+--------------------------------------------------
+🎯 OBJETIVO DO EXERCICIO (Baseado no Slide 14):
+1. Crie uma classe 'Zumbi' com:
+   - Atributos públicos: std::string nome, int vida.
+2. Crie um método chamado 'transferirVida(Zumbi &destino, int quantidade)':
+   - O parâmetro 'destino' DEVE ser uma referência para outro Zumbi.
+   - A 'quantidade' deve ser subtraída da vida do zumbi atual (quem chama o método).
+   - A mesma 'quantidade' deve ser somada à vida do zumbi 'destino'.
+3. Na função main:
+   - Instancie 'zumbiA' (100 de vida) e 'zumbiB' (50 de vida).
+   - Faça 'zumbiA' transferir 30 de vida para 'zumbiB'.
+   - Exiba a vida final de ambos para confirmar a transferência (70 e 80).
 --------------------------------------------------
 */
 
 #include <iostream>
 #include <string>
 
-int main() {
-    // Desenvolva seu codigo aqui seguindo o objetivo
+// Desenvolva sua classe aqui:
+
+int main()
+{
+
     return 0;
 }
