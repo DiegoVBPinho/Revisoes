@@ -1,13 +1,13 @@
 # 🎯 FOCO NO NÍVEL: Level 04 - Encapsulamento
 
-### 📊 PROGRESSO DO NÍVEL: 0/1 (0.0%)
-`[░░░░░░░░░░░░░░░░░░░░]`
-
+### 📊 PROGRESSO DO NÍVEL: 0/2 (0.0%)
 ---
 
-| Status | Ícone | Exercício |
-| :---: | :---: | :--- |
-| [ ] | 🔨 | 01 - Modificadores_Acesso.cpp |
+### 📝 Exercícios
+| Status | Exercício |
+| :---: | :--- |
+| 🔨 | 01 - Modificadores_Acesso.cpp |
+| 🔨 | Exercicio - Conta_Bancaria.cpp |
 
 ---
-*Gerado por Tracker Local (C++ Auto-Update)*
+### 🧬 Árvore de Competências do Nível

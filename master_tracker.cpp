@@ -12,40 +12,26 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-// Ranks de Especialidade por Tema
-string rankTema(float porcentagem)
-{
-    if (porcentagem == 0)
-        return "DESEMPREGADO 😶";
-    if (porcentagem < 30)
-        return "INICIANTE 🧪";
-    if (porcentagem < 60)
-        return "PRATICANTE 🔧";
-    if (porcentagem < 90)
-        return "ESPECIALISTA 🛡️";
-    return "MESTRE DO TEMA 👑";
-}
-
-struct LevelStats
+struct LevelData
 {
     string nome;
     int total = 0, feitos = 0;
+    vector<pair<string, bool>> exercicios;
+    set<string> competenciasAdquiridas;
+    set<string> competenciasPendentes;
 };
 
-struct TemaStats
+struct TemaData
 {
     int totalTema = 0, feitosTema = 0;
-    vector<LevelStats> niveis;
-    set<string> competencias; // Competências específicas deste tema
+    vector<LevelData> niveis;
 };
 
 int main()
 {
     SetConsoleOutputCP(65001);
-    map<string, TemaStats> dashboard;
-    int xpGlobal = 0;
+    map<string, TemaData> dashboard;
 
-    // Varredura
     for (const auto &entryTema : fs::directory_iterator("."))
     {
         if (entryTema.is_directory())
@@ -54,21 +40,24 @@ int main()
             if (nomeTema[0] == '.' || nomeTema == "progresso")
                 continue;
 
-            TemaStats tStats;
+            TemaData tData;
             for (const auto &entryLevel : fs::directory_iterator(entryTema.path()))
             {
                 if (entryLevel.is_directory())
                 {
-                    LevelStats lStats;
-                    lStats.nome = entryLevel.path().filename().string();
+                    LevelData lData;
+                    lData.nome = entryLevel.path().filename().string();
+
                     for (const auto &arq : fs::directory_iterator(entryLevel.path()))
                     {
                         if (arq.path().extension() == ".cpp")
                         {
-                            lStats.total++;
+                            lData.total++;
                             ifstream f(arq.path());
                             string linha;
                             bool done = false, lendoComp = false;
+                            set<string> compsDoArquivo;
+
                             while (getline(f, linha))
                             {
                                 string up = linha;
@@ -82,6 +71,7 @@ int main()
                                 }
                                 if (lendoComp && (up.find("---") != string::npos || up.find("*/") != string::npos || up.empty()))
                                     lendoComp = false;
+
                                 if (lendoComp)
                                 {
                                     string c = linha;
@@ -90,64 +80,64 @@ int main()
                                     c.erase(0, c.find_first_not_of(" \t"));
                                     c.erase(c.find_last_not_of(" \t") + 1);
                                     if (!c.empty() && c[0] != '=')
-                                        tStats.competencias.insert(c);
+                                        compsDoArquivo.insert(c);
                                 }
                             }
+                            lData.exercicios.push_back({arq.path().filename().string(), done});
                             if (done)
                             {
-                                lStats.feitos++;
-                                xpGlobal++;
+                                lData.feitos++;
+                                lData.competenciasAdquiridas.insert(compsDoArquivo.begin(), compsDoArquivo.end());
+                            }
+                            else
+                            {
+                                lData.competenciasPendentes.insert(compsDoArquivo.begin(), compsDoArquivo.end());
                             }
                         }
                     }
-                    tStats.niveis.push_back(lStats);
-                    tStats.totalTema += lStats.total;
-                    tStats.feitosTema += lStats.feitos;
+                    if (lData.total > 0)
+                    {
+                        tData.niveis.push_back(lData);
+                        tData.totalTema += lData.total;
+                        tData.feitosTema += lData.feitos; // Erro corrigido aqui: era lStats
+                    }
                 }
             }
-            dashboard[nomeTema] = tStats;
+            if (!tData.niveis.empty())
+                dashboard[nomeTema] = tData;
         }
     }
 
-    // 1. README GLOBAL (Agrupado por Tema)
-    ofstream global("README.md");
-    global << "# 🚀 CENTRAL DE COMANDO C++\n\n### 👑 XP TOTAL: " << xpGlobal << "\n\n";
-    global << "## 📊 DASHBOARD DE TEMAS\n| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
-    for (auto const &[nome, st] : dashboard)
+    for (auto const &[nomeTema, tData] : dashboard)
     {
-        float p = (st.totalTema > 0) ? (float)st.feitosTema / st.totalTema * 100 : 0;
-        global << "| [" << nome << "](./" << nome << ") | " << st.feitosTema << "/" << st.totalTema << " | " << rankTema(p) << " |\n";
-    }
-
-    global << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (POR ASSUNTO)\n";
-    for (auto const &[nome, st] : dashboard)
-    {
-        if (!st.competencias.empty())
+        for (auto const &lv : tData.niveis)
         {
-            global << "### 📂 " << nome << "\n";
-            for (auto const &c : st.competencias)
-                global << "- [x] " << c << "\n";
-            global << "\n";
-        }
-    }
-    global.close();
-
-    // 2. README DO TEMA (Com Detalhes do Level)
-    for (auto const &[nome, st] : dashboard)
-    {
-        ofstream fTema("./" + nome + "/README.md");
-        fTema << "# 📂 Assunto: " << nome << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
-        for (auto const &lv : st.niveis)
-        {
+            string pathLv = "./" + nomeTema + "/" + lv.nome + "/README.md";
+            ofstream fLv(pathLv);
             float p = (lv.total > 0) ? (float)lv.feitos / lv.total * 100 : 0;
-            fTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " | " << (int)p << "% |\n";
+
+            fLv << "# 🎯 FOCO NO NÍVEL: " << lv.nome << "\n\n";
+            fLv << "### 📊 PROGRESSO DO NÍVEL: " << lv.feitos << "/" << lv.total << " (" << fixed << setprecision(1) << p << "%)\n---\n\n";
+
+            fLv << "### 📝 Exercícios\n| Status | Exercício |\n| :---: | :--- |\n";
+            for (auto const &ex : lv.exercicios)
+                fLv << "| " << (ex.second ? "✅" : "🔨") << " | " << ex.first << " |\n";
+
+            fLv << "\n---\n### 🧬 Árvore de Competências do Nível\n";
+            // Mostra o que já foi conquistado
+            for (auto const &c : lv.competenciasAdquiridas)
+                fLv << "- ✅ " << c << " (Concluída)\n";
+            // Mostra o que falta, mas remove da lista de pendentes o que já foi adquirido em outro arquivo
+            for (auto const &c : lv.competenciasPendentes)
+            {
+                if (lv.competenciasAdquiridas.find(c) == lv.competenciasAdquiridas.end())
+                    fLv << "- ⏳ " << c << " (Pendente)\n";
+            }
+            fLv.close();
         }
-        fTema << "\n## 🧬 Competências Adquiridas\n";
-        for (auto const &c : st.competencias)
-            fTema << "- ✅ " << c << "\n";
-        fTema.close();
     }
 
+    cout << "✨ Master Tracker compilado e executado com sucesso!" << endl;
     return 0;
 }
 // g++ -std=c++17 master_tracker.cpp -o master.exe
