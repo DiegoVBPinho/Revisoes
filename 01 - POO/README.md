@@ -17,9 +17,9 @@
 | [Level 12 - Engenharia_e_Padroes](./Level 12 - Engenharia_e_Padroes) | 0/4 | 0% |
 
 ## 🧬 Competências Adquiridas
-> Nenhuma competência dominada ainda.
+> Nenhuma dominada ainda.
 
-## ⏳ Competências em Desenvolvimento
+## ⏳ Em Desenvolvimento
 - 💡 ACESSO_A_MEMBROS
 - 💡 ALTERACAO_DE_ESTADO
 - 💡 ARRAYS_DE_OBJETOS

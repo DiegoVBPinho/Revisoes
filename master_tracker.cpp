@@ -36,11 +36,26 @@ string trim(string s)
     return s.substr(first, (last - first + 1));
 }
 
+string getRank(float p)
+{
+    if (p <= 0)
+        return "DESEMPREGADO 😶";
+    if (p < 30)
+        return "ESTAGIÁRIO 📋";
+    if (p < 60)
+        return "JUNIOR 🛠️";
+    if (p < 90)
+        return "PLENO 🛡️";
+    return "SENIOR 👑";
+}
+
 int main()
 {
     SetConsoleOutputCP(65001);
     map<string, TemaData> dashboard;
+    int xpTotal = 0;
 
+    // 1. VARREDURA COMPLETA
     for (const auto &entryTema : fs::directory_iterator("."))
     {
         if (entryTema.is_directory())
@@ -64,15 +79,13 @@ int main()
                             lData.total++;
                             ifstream f(arq.path());
                             string linha;
-                            bool isDone = false;
-                            bool lendoComp = false;
+                            bool isDone = false, lendoComp = false;
                             set<string> compsDoArquivo;
 
                             while (getline(f, linha))
                             {
                                 string up = linha;
                                 transform(up.begin(), up.end(), up.begin(), ::toupper);
-
                                 if (up.find("STATUS: DONE") != string::npos)
                                     isDone = true;
                                 if (up.find("COMPETENCIAS:") != string::npos)
@@ -81,9 +94,7 @@ int main()
                                     continue;
                                 }
                                 if (lendoComp && (up.find("---") != string::npos || up.find("*/") != string::npos || up.empty()))
-                                {
                                     lendoComp = false;
-                                }
 
                                 if (lendoComp)
                                 {
@@ -95,7 +106,6 @@ int main()
                                         compsDoArquivo.insert(c);
                                 }
                             }
-
                             lData.exercicios.push_back({arq.path().filename().string(), isDone});
                             if (isDone)
                             {
@@ -117,77 +127,98 @@ int main()
                 }
             }
             if (!tData.niveis.empty())
+            {
                 dashboard[nomeTema] = tData;
+                xpTotal += (tData.feitosTema * 10); // Cada exercício DONE vale 10 XP
+            }
         }
     }
 
+    // 2. GERAÇÃO DO README PRINCIPAL (RAIZ)
+    ofstream fMain("README.md");
+    fMain << "# 🚀 CENTRAL DE COMANDO C++\n\n";
+    fMain << "### 👑 XP TOTAL: " << xpTotal << "\n\n";
+    fMain << "## 📊 DASHBOARD DE TEMAS\n";
+    fMain << "| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
+
+    for (auto const &[nome, tData] : dashboard)
+    {
+        float p = (float)tData.feitosTema / tData.totalTema * 100;
+        fMain << "| [" << nome << "](./" << nome << ") | " << tData.feitosTema << "/" << tData.totalTema << " | " << getRank(p) << " |\n";
+    }
+
+    fMain << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (POR ASSUNTO)\n";
+    for (auto const &[nome, tData] : dashboard)
+    {
+        fMain << "### 📂 " << nome << "\n";
+        set<string> todasAdq, todasPend;
+        for (auto const &lv : tData.niveis)
+        {
+            todasAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
+            todasPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
+        }
+
+        // Listar Dominadas
+        for (auto const &c : todasAdq)
+            fMain << "- [x] ✅ " << c << "\n";
+        // Listar Pendentes (que não foram adquiridas em outro lugar)
+        for (auto const &c : todasPend)
+        {
+            if (todasAdq.find(c) == todasAdq.end())
+                fMain << "- [ ] 💡 " << c << "\n";
+        }
+        fMain << "\n";
+    }
+    fMain.close();
+
+    // 3. GERAÇÃO DOS READMES DE TEMA E LEVEL (Mesma lógica do anterior)
     for (auto const &[nomeTema, tData] : dashboard)
     {
         string pathTema = "./" + nomeTema + "/README.md";
         ofstream fTema(pathTema);
+        fTema << "# 📂 Assunto: " << nomeTema << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
 
-        fTema << "# 📂 Assunto: " << nomeTema << "\n\n";
-        fTema << "## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
-
-        set<string> totalAdquiridas, totalPendentes;
+        set<string> tAdq, tPend;
         for (auto const &lv : tData.niveis)
         {
-            float pLv = (float)lv.feitos / lv.total * 100;
-            fTema << "| [" << lv.nome << "](./" << lv.nome << ") | " << lv.feitos << "/" << lv.total << " | " << (int)pLv << "% |\n";
-            totalAdquiridas.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
-            totalPendentes.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
+            float p = (float)lv.feitos / lv.total * 100;
+            fTema << "| [" << lv.nome << "](./" << lv.nome << ") | " << lv.feitos << "/" << lv.total << " | " << (int)p << "% |\n";
+            tAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
+            tPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
         }
 
         fTema << "\n## 🧬 Competências Adquiridas\n";
-        if (totalAdquiridas.empty())
-        {
-            fTema << "> Nenhuma competência dominada ainda.\n";
-        }
-        else
-        {
-            for (auto const &c : totalAdquiridas)
-                fTema << "- ✅ " << c << "\n";
-        }
+        if (tAdq.empty())
+            fTema << "> Nenhuma dominada ainda.\n";
+        for (auto const &c : tAdq)
+            fTema << "- ✅ " << c << "\n";
 
-        fTema << "\n## ⏳ Competências em Desenvolvimento\n";
-        bool temPendente = false;
-        for (auto const &c : totalPendentes)
-        {
-            if (totalAdquiridas.find(c) == totalAdquiridas.end())
-            {
+        fTema << "\n## ⏳ Em Desenvolvimento\n";
+        for (auto const &c : tPend)
+            if (tAdq.find(c) == tAdq.end())
                 fTema << "- 💡 " << c << "\n";
-                temPendente = true;
-            }
-        }
-        if (!temPendente && !totalAdquiridas.empty())
-            fTema << "> Todas as competências atuais foram concluídas!\n";
         fTema.close();
 
         for (auto const &lv : tData.niveis)
         {
             string pathLv = "./" + nomeTema + "/" + lv.nome + "/README.md";
             ofstream fLv(pathLv);
-            float pLv = (float)lv.feitos / lv.total * 100;
-            fLv << "# 🎯 FOCO NO NÍVEL: " << lv.nome << "\n\n";
-            fLv << "### 📊 PROGRESSO DO NÍVEL: " << lv.feitos << "/" << lv.total << " (" << fixed << setprecision(1) << pLv << "%)\n---\n\n";
+            fLv << "# 🎯 FOCO NO NÍVEL: " << lv.nome << "\n\n### 📊 PROGRESSO: " << lv.feitos << "/" << lv.total << "\n---\n";
             fLv << "### 📝 Exercícios\n| Status | Exercício |\n| :---: | :--- |\n";
             for (auto const &ex : lv.exercicios)
                 fLv << "| " << (ex.second ? "✅" : "🔨") << " | " << ex.first << " |\n";
-            fLv << "\n---\n### 🧬 Árvore de Competências do Nível\n";
+            fLv << "\n### 🧬 Competências\n";
             for (auto const &c : lv.competenciasAdquiridas)
-                fLv << "- ✅ " << c << " (Concluída)\n";
+                fLv << "- ✅ " << c << "\n";
             for (auto const &c : lv.competenciasPendentes)
-            {
                 if (lv.competenciasAdquiridas.find(c) == lv.competenciasAdquiridas.end())
-                    fLv << "- ⏳ " << c << " (Pendente)\n";
-            }
+                    fLv << "- ⏳ " << c << "\n";
             fLv.close();
         }
     }
 
-    cout << "Dashboard atualizado com sucesso!" << endl;
+    cout << "Central de Comando e Árvores de Competência atualizadas!" << endl;
     return 0;
 }
-
 // g++ -std=c++17 master_tracker.cpp -o master.exe
 //.\master

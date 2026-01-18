@@ -1,8 +1,7 @@
 # 🎯 FOCO NO NÍVEL: Level 12 - Engenharia_e_Padroes
 
-### 📊 PROGRESSO DO NÍVEL: 0/4 (0.0%)
+### 📊 PROGRESSO: 0/4
 ---
-
 ### 📝 Exercícios
 | Status | Exercício |
 | :---: | :--- |
@@ -11,5 +10,4 @@
 | 🔨 | 03 - Testes.cpp |
 | 🔨 | 04 - Design_Patterns.cpp |
 
----
-### 🧬 Árvore de Competências do Nível
+### 🧬 Competências

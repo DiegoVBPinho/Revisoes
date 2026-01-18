@@ -1,8 +1,7 @@
 # 🎯 FOCO NO NÍVEL: Level 07 - Abstracao_e_Interfaces
 
-### 📊 PROGRESSO DO NÍVEL: 0/3 (0.0%)
+### 📊 PROGRESSO: 0/3
 ---
-
 ### 📝 Exercícios
 | Status | Exercício |
 | :---: | :--- |
@@ -10,5 +9,4 @@
 | 🔨 | 02 - Interfaces.cpp |
 | 🔨 | Exercicio - Formas_Geometricas.cpp |
 
----
-### 🧬 Árvore de Competências do Nível
+### 🧬 Competências
