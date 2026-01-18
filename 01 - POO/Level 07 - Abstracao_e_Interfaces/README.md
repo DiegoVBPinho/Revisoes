@@ -1,12 +1,12 @@
-# 🎯 FOCO: Level 07 - Abstracao_e_Interfaces
+# 🎯 FOCO NO NÍVEL: Level 07 - Abstracao_e_Interfaces
 
-### 📊 STATUS: 0/3
+### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Classes_Abstratas.cpp |
-| 🔨 | 02 - Interfaces.cpp |
-| 🔨 | Exercicio - Formas_Geometricas.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

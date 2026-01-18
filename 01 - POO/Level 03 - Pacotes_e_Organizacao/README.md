@@ -1,11 +1,12 @@
-# 🎯 FOCO: Level 03 - Pacotes_e_Organizacao
+# 🎯 FOCO NO NÍVEL: Level 03 - Pacotes_e_Organizacao
 
-### 📊 STATUS: 0/2
+### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Pacotes.cpp |
-| 🔨 | 02 - Importacoes.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

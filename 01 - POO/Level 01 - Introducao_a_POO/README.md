@@ -1,6 +1,6 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 0/11
+### 📊 STATUS: 0/12
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
@@ -16,6 +16,7 @@
 | 🔨 | 09 - Ex 5 - Jogo_Dano.cpp |
 | 🔨 | 10 - Ex 6 - Mario_Kart.cpp |
 | 🔨 | 11 - Exercicio - Zoologico (União de Conceitos).cpp |
+| 🔨 | 12 - Carrinho de Compras.cpp |
 
 ### 🧬 Competências do Nível
 - ⏳ ACESSO_A_MEMBROS
@@ -38,6 +39,7 @@
 - ⏳ LOGICA_DE_COMBATE
 - ⏳ LOGICA_DE_METODOS
 - ⏳ LOGICA_DE_SISTEMAS_COOPERATIVOS
+- ⏳ LOGICA_OPERACIONAL
 - ⏳ MANIPULACAO_DE_ATRIBUTOS
 - ⏳ MEMORIA_INDEPENDENTE
 - ⏳ MODELAGEM_COMPLEXA
@@ -49,6 +51,7 @@
 - ⏳ PASSAGEM_POR_REFERENCIA
 - ⏳ REFERENCIA_DE_INSTANCIAS
 - ⏳ REPRESENTACAO_UML
+- ⏳ SIMULACAO_AVANCADA
 - ⏳ SIMULACAO_SISTEMAS
 - ⏳ TIPAGEM_EM_CLASSES
 - ⏳ VISIBILIDADE_MÉTODOS

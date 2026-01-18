@@ -5,7 +5,7 @@
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 0/40 | DESEMPREGADO 😶 |
+| [01 - POO](./01 - POO) | 0/12 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -29,6 +29,7 @@
 - [ ] ⏳ LOGICA_DE_COMBATE
 - [ ] ⏳ LOGICA_DE_METODOS
 - [ ] ⏳ LOGICA_DE_SISTEMAS_COOPERATIVOS
+- [ ] ⏳ LOGICA_OPERACIONAL
 - [ ] ⏳ MANIPULACAO_DE_ATRIBUTOS
 - [ ] ⏳ MEMORIA_INDEPENDENTE
 - [ ] ⏳ MODELAGEM_COMPLEXA
@@ -40,6 +41,7 @@
 - [ ] ⏳ PASSAGEM_POR_REFERENCIA
 - [ ] ⏳ REFERENCIA_DE_INSTANCIAS
 - [ ] ⏳ REPRESENTACAO_UML
+- [ ] ⏳ SIMULACAO_AVANCADA
 - [ ] ⏳ SIMULACAO_SISTEMAS
 - [ ] ⏳ TIPAGEM_EM_CLASSES
 - [ ] ⏳ VISIBILIDADE_MÉTODOS

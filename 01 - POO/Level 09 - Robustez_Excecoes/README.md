@@ -1,11 +1,12 @@
-# 🎯 FOCO: Level 09 - Robustez_Excecoes
+# 🎯 FOCO NO NÍVEL: Level 09 - Robustez_Excecoes
 
-### 📊 STATUS: 0/2
+### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Try_Catch.cpp |
-| 🔨 | Exercicio - Calculadora_Segura.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

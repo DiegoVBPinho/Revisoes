@@ -1,12 +1,12 @@
-# 🎯 FOCO: Level 05 - Ciclo_de_Vida_e_Static
+# 🎯 FOCO NO NÍVEL: Level 05 - Ciclo_de_Vida_e_Static
 
-### 📊 STATUS: 0/3
+### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Construtores.cpp |
-| 🔨 | 02 - Static.cpp |
-| 🔨 | Exercicio - Contador_Pecas.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*
