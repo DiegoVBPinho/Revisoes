@@ -4,9 +4,12 @@
 | Level | Progresso | % |
 | :--- | :---: | :---: |
 | [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 0/12 | 0% |
-| [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/6 | 0% |
+| [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 1/6 | 16% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **⚙️ LOGICA_OPERACIONAL** (Concluído)
+- ✅ **🎮 SIMULACAO_AVANCADA** (Concluído)
+- ✅ **📊 ESTRUTURAS_E_DADOS** (Concluído)
 - 💡 ACESSO_A_MEMBROS (Pendente)
 - 💡 ALTERACAO_DE_ESTADO (Pendente)
 - 💡 ARRAYS_DE_OBJETOS (Pendente)
@@ -43,7 +46,4 @@
 - 💡 SIMULACAO_SISTEMAS (Pendente)
 - 💡 TIPAGEM_EM_CLASSES (Pendente)
 - 💡 VISIBILIDADE_MÉTODOS (Pendente)
-- 💡 ⚙️ LOGICA_OPERACIONAL (Pendente)
-- 💡 🎮 SIMULACAO_AVANCADA (Pendente)
-- 💡 📊 ESTRUTURAS_E_DADOS (Pendente)
 - 💡 📦 MODELAGEM_BASE (Pendente)

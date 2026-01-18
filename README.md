@@ -1,14 +1,17 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 0
+### 👑 XP TOTAL: 10
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 0/18 | DESEMPREGADO 😶 |
+| [01 - POO](./01 - POO) | 1/18 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
+- [x] ✅ **⚙️ LOGICA_OPERACIONAL**
+- [x] ✅ **🎮 SIMULACAO_AVANCADA**
+- [x] ✅ **📊 ESTRUTURAS_E_DADOS**
 - [ ] ⏳ ACESSO_A_MEMBROS
 - [ ] ⏳ ALTERACAO_DE_ESTADO
 - [ ] ⏳ ARRAYS_DE_OBJETOS
@@ -45,7 +48,4 @@
 - [ ] ⏳ SIMULACAO_SISTEMAS
 - [ ] ⏳ TIPAGEM_EM_CLASSES
 - [ ] ⏳ VISIBILIDADE_MÉTODOS
-- [ ] ⏳ ⚙️ LOGICA_OPERACIONAL
-- [ ] ⏳ 🎮 SIMULACAO_AVANCADA
-- [ ] ⏳ 📊 ESTRUTURAS_E_DADOS
 - [ ] ⏳ 📦 MODELAGEM_BASE

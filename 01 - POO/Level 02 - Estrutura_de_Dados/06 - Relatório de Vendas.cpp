@@ -3,7 +3,7 @@
 📘 02 - ESTRUTURA - EXERCICIO 06: Relatório de Vendas
 ==================================================
 
-STATUS: TO DO
+STATUS: DONE
 
 COMPETENCIAS:
 - 📊 ESTRUTURAS_E_DADOS
