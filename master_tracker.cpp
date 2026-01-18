@@ -29,24 +29,23 @@ string rankTema(float porcentagem)
 struct LevelStats
 {
     string nome;
-    int total = 0;
-    int feitos = 0;
+    int total = 0, feitos = 0;
 };
 
 struct TemaStats
 {
-    int totalTema = 0;
-    int feitosTema = 0;
+    int totalTema = 0, feitosTema = 0;
     vector<LevelStats> niveis;
-    set<string> competencias;
+    set<string> competencias; // Competências específicas deste tema
 };
 
 int main()
 {
     SetConsoleOutputCP(65001);
     map<string, TemaStats> dashboard;
+    int xpGlobal = 0;
 
-    // Varre os Temas (ex: 01 - POO)
+    // Varredura
     for (const auto &entryTema : fs::directory_iterator("."))
     {
         if (entryTema.is_directory())
@@ -56,15 +55,12 @@ int main()
                 continue;
 
             TemaStats tStats;
-
-            // Varre os Levels dentro do Tema
             for (const auto &entryLevel : fs::directory_iterator(entryTema.path()))
             {
                 if (entryLevel.is_directory())
                 {
                     LevelStats lStats;
                     lStats.nome = entryLevel.path().filename().string();
-
                     for (const auto &arq : fs::directory_iterator(entryLevel.path()))
                     {
                         if (arq.path().extension() == ".cpp")
@@ -73,7 +69,6 @@ int main()
                             ifstream f(arq.path());
                             string linha;
                             bool done = false, lendoComp = false;
-
                             while (getline(f, linha))
                             {
                                 string up = linha;
@@ -87,7 +82,6 @@ int main()
                                 }
                                 if (lendoComp && (up.find("---") != string::npos || up.find("*/") != string::npos || up.empty()))
                                     lendoComp = false;
-
                                 if (lendoComp)
                                 {
                                     string c = linha;
@@ -100,7 +94,10 @@ int main()
                                 }
                             }
                             if (done)
+                            {
                                 lStats.feitos++;
+                                xpGlobal++;
+                            }
                         }
                     }
                     tStats.niveis.push_back(lStats);
@@ -112,38 +109,45 @@ int main()
         }
     }
 
-    // GERAÇÃO DO README DENTRO DE CADA TEMA (Ex: 01 - POO)
+    // 1. README GLOBAL (Agrupado por Tema)
+    ofstream global("README.md");
+    global << "# 🚀 CENTRAL DE COMANDO C++\n\n### 👑 XP TOTAL: " << xpGlobal << "\n\n";
+    global << "## 📊 DASHBOARD DE TEMAS\n| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
     for (auto const &[nome, st] : dashboard)
     {
-        float porcTema = (st.totalTema > 0) ? (float)st.feitosTema / st.totalTema * 100.0f : 0.0f;
+        float p = (st.totalTema > 0) ? (float)st.feitosTema / st.totalTema * 100 : 0;
+        global << "| [" << nome << "](./" << nome << ") | " << st.feitosTema << "/" << st.totalTema << " | " << rankTema(p) << " |\n";
+    }
 
+    global << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (POR ASSUNTO)\n";
+    for (auto const &[nome, st] : dashboard)
+    {
+        if (!st.competencias.empty())
+        {
+            global << "### 📂 " << nome << "\n";
+            for (auto const &c : st.competencias)
+                global << "- [x] " << c << "\n";
+            global << "\n";
+        }
+    }
+    global.close();
+
+    // 2. README DO TEMA (Com Detalhes do Level)
+    for (auto const &[nome, st] : dashboard)
+    {
         ofstream fTema("./" + nome + "/README.md");
-        fTema << "# 📂 Assunto: " << nome << "\n\n";
-        fTema << "### 🏅 Rank no Tema: " << rankTema(porcTema) << " (" << fixed << setprecision(1) << porcTema << "%)\n\n";
-
-        fTema << "## 📈 Progresso por Level\n";
-        fTema << "| Level | Exercícios | Status | % |\n";
-        fTema << "| :--- | :---: | :--- | :---: |\n";
-
+        fTema << "# 📂 Assunto: " << nome << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
         for (auto const &lv : st.niveis)
         {
-            float porcLv = (lv.total > 0) ? (float)lv.feitos / lv.total * 100.0f : 0.0f;
-            int barras = (int)(porcLv / 10);
-            string progress = "";
-            for (int i = 0; i < 10; i++)
-                progress += (i < barras ? "█" : "░");
-
-            fTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " | `" << progress << "` | " << (int)porcLv << "% |\n";
+            float p = (lv.total > 0) ? (float)lv.feitos / lv.total * 100 : 0;
+            fTema << "| " << lv.nome << " | " << lv.feitos << "/" << lv.total << " | " << (int)p << "% |\n";
         }
-
-        fTema << "\n## 🧬 Competências do Tema\n";
+        fTema << "\n## 🧬 Competências Adquiridas\n";
         for (auto const &c : st.competencias)
             fTema << "- ✅ " << c << "\n";
-
         fTema.close();
     }
 
-    cout << "✨ Dashboard de Níveis gerado dentro das pastas de Tema!" << endl;
     return 0;
 }
 // g++ -std=c++17 master_tracker.cpp -o master.exe

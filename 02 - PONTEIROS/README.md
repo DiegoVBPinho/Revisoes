@@ -1,9 +1,7 @@
 # 📂 Assunto: 02 - PONTEIROS
 
-### 🏅 Rank no Tema: DESEMPREGADO 😶 (0.0%)
+## 📈 Níveis
+| Level | Progresso | % |
+| :--- | :---: | :---: |
 
-## 📈 Progresso por Level
-| Level | Exercícios | Status | % |
-| :--- | :---: | :--- | :---: |
-
-## 🧬 Competências do Tema
+## 🧬 Competências Adquiridas

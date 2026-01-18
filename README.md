@@ -1,13 +1,16 @@
-# 🚀 CENTRAL DE COMANDO
+# 🚀 CENTRAL DE COMANDO C++
 
-### 👑 RANK GLOBAL: ESTAGIÁRIO (XP: 1)
+### 👑 XP TOTAL: 1
 
-## 📊 STATUS POR TEMA
-| Pasta do Tema | Progresso | % | Rank do Assunto |
-| :--- | :---: | :---: | :--- |
-| [01 - POO](./01 - POO) | 1/40 | 2% | INICIANTE 🧪 |
+## 📊 DASHBOARD DE TEMAS
+| Tema | Status | Rank |
+| :--- | :---: | :--- |
+| [01 - POO](./01 - POO) | 1/40 | INICIANTE 🧪 |
+| [02 - PONTEIROS](./02 - PONTEIROS) | 0/0 | DESEMPREGADO 😶 |
 
-## 🧬 TODAS AS COMPETÊNCIAS
+## 🧬 ÁRVORE DE COMPETÊNCIAS (POR ASSUNTO)
+### 📂 01 - POO
 - [x] ATRIBUTOS_BASICOS
 - [x] CLASSE_CONCEITO
 - [x] INSTANCIACAO
+
