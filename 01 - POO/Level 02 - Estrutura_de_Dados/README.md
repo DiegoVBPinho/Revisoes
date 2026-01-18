@@ -1,12 +1,12 @@
-# 🎯 FOCO NO NÍVEL: Level 02 - Estrutura_de_Dados
+# 🎯 FOCO: Level 02 - Estrutura_de_Dados
 
-### 📊 PROGRESSO: 0/3
+### 📊 STATUS: 0/3
 ---
 ### 📝 Exercícios
-| Status | Exercício |
+| Status | Arquivo |
 | :---: | :--- |
 | 🔨 | 01 - Arrays_Primitivos.cpp |
 | 🔨 | 02 - Arrays_Objetos.cpp |
 | 🔨 | Exercicio - Gestao_Escolar.cpp |
 
-### 🧬 Competências
+### 🧬 Competências do Nível

@@ -1,9 +1,9 @@
-# 🎯 FOCO NO NÍVEL: Level 01 - Introducao_a_POO
+# 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 PROGRESSO: 0/11
+### 📊 STATUS: 0/11
 ---
 ### 📝 Exercícios
-| Status | Exercício |
+| Status | Arquivo |
 | :---: | :--- |
 | 🔨 | 01 - Classe.cpp |
 | 🔨 | 02 - Atributos.cpp |
@@ -17,7 +17,7 @@
 | 🔨 | 10 - Ex 6 - Mario_Kart.cpp |
 | 🔨 | 11 - Exercicio - Zoologico (União de Conceitos).cpp |
 
-### 🧬 Competências
+### 🧬 Competências do Nível
 - ⏳ ACESSO_A_MEMBROS
 - ⏳ ALTERACAO_DE_ESTADO
 - ⏳ ARRAYS_DE_OBJETOS

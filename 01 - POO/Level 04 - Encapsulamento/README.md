@@ -1,11 +1,11 @@
-# 🎯 FOCO NO NÍVEL: Level 04 - Encapsulamento
+# 🎯 FOCO: Level 04 - Encapsulamento
 
-### 📊 PROGRESSO: 0/2
+### 📊 STATUS: 0/2
 ---
 ### 📝 Exercícios
-| Status | Exercício |
+| Status | Arquivo |
 | :---: | :--- |
 | 🔨 | 01 - Modificadores_Acesso.cpp |
 | 🔨 | Exercicio - Conta_Bancaria.cpp |
 
-### 🧬 Competências
+### 🧬 Competências do Nível

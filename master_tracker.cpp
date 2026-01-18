@@ -55,7 +55,6 @@ int main()
     map<string, TemaData> dashboard;
     int xpTotal = 0;
 
-    // 1. VARREDURA COMPLETA
     for (const auto &entryTema : fs::directory_iterator("."))
     {
         if (entryTema.is_directory())
@@ -129,85 +128,65 @@ int main()
             if (!tData.niveis.empty())
             {
                 dashboard[nomeTema] = tData;
-                xpTotal += (tData.feitosTema * 10); // Cada exercício DONE vale 10 XP
+                xpTotal += (tData.feitosTema * 10);
             }
         }
     }
 
-    // 2. GERAÇÃO DO README PRINCIPAL (RAIZ)
+    // --- README GLOBAL ---
     ofstream fMain("README.md");
-    fMain << "# 🚀 CENTRAL DE COMANDO C++\n\n";
-    fMain << "### 👑 XP TOTAL: " << xpTotal << "\n\n";
-    fMain << "## 📊 DASHBOARD DE TEMAS\n";
-    fMain << "| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
-
+    fMain << "# 🚀 CENTRAL DE COMANDO C++\n\n### 👑 XP TOTAL: " << xpTotal << "\n\n## 📊 DASHBOARD DE TEMAS\n| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
     for (auto const &[nome, tData] : dashboard)
     {
         float p = (float)tData.feitosTema / tData.totalTema * 100;
         fMain << "| [" << nome << "](./" << nome << ") | " << tData.feitosTema << "/" << tData.totalTema << " | " << getRank(p) << " |\n";
     }
-
-    fMain << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (POR ASSUNTO)\n";
+    fMain << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)\n";
     for (auto const &[nome, tData] : dashboard)
     {
         fMain << "### 📂 " << nome << "\n";
-        set<string> todasAdq, todasPend;
-        for (auto const &lv : tData.niveis)
-        {
-            todasAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
-            todasPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
-        }
-
-        // Listar Dominadas
-        for (auto const &c : todasAdq)
-            fMain << "- [x] ✅ " << c << "\n";
-        // Listar Pendentes (que não foram adquiridas em outro lugar)
-        for (auto const &c : todasPend)
-        {
-            if (todasAdq.find(c) == todasAdq.end())
-                fMain << "- [ ] 💡 " << c << "\n";
-        }
-        fMain << "\n";
-    }
-    fMain.close();
-
-    // 3. GERAÇÃO DOS READMES DE TEMA E LEVEL (Mesma lógica do anterior)
-    for (auto const &[nomeTema, tData] : dashboard)
-    {
-        string pathTema = "./" + nomeTema + "/README.md";
-        ofstream fTema(pathTema);
-        fTema << "# 📂 Assunto: " << nomeTema << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
-
         set<string> tAdq, tPend;
         for (auto const &lv : tData.niveis)
         {
-            float p = (float)lv.feitos / lv.total * 100;
-            fTema << "| [" << lv.nome << "](./" << lv.nome << ") | " << lv.feitos << "/" << lv.total << " | " << (int)p << "% |\n";
             tAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
             tPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
         }
-
-        fTema << "\n## 🧬 Competências Adquiridas\n";
-        if (tAdq.empty())
-            fTema << "> Nenhuma dominada ainda.\n";
         for (auto const &c : tAdq)
-            fTema << "- ✅ " << c << "\n";
-
-        fTema << "\n## ⏳ Em Desenvolvimento\n";
+            fMain << "- [x] ✅ **" << c << "**\n";
         for (auto const &c : tPend)
             if (tAdq.find(c) == tAdq.end())
-                fTema << "- 💡 " << c << "\n";
+                fMain << "- [ ] ⏳ " << c << "\n";
+    }
+    fMain.close();
+
+    // --- READMES DE TEMA E LEVEL ---
+    for (auto const &[nomeTema, tData] : dashboard)
+    {
+        ofstream fTema("./" + nomeTema + "/README.md");
+        fTema << "# 📂 Assunto: " << nomeTema << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
+        set<string> tAdq, tPend;
+        for (auto const &lv : tData.niveis)
+        {
+            fTema << "| [" << lv.nome << "](./" << lv.nome << ") | " << lv.feitos << "/" << lv.total << " | " << (int)((float)lv.feitos / lv.total * 100) << "% |\n";
+            tAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
+            tPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
+        }
+        fTema << "\n## 🧬 Clusters de Domínio\n";
+        for (auto const &c : tAdq)
+            fTema << "- ✅ **" << c << "** (Concluído)\n";
+        for (auto const &c : tPend)
+            if (tAdq.find(c) == tAdq.end())
+                fTema << "- 💡 " << c << " (Pendente)\n";
         fTema.close();
 
         for (auto const &lv : tData.niveis)
         {
-            string pathLv = "./" + nomeTema + "/" + lv.nome + "/README.md";
-            ofstream fLv(pathLv);
-            fLv << "# 🎯 FOCO NO NÍVEL: " << lv.nome << "\n\n### 📊 PROGRESSO: " << lv.feitos << "/" << lv.total << "\n---\n";
-            fLv << "### 📝 Exercícios\n| Status | Exercício |\n| :---: | :--- |\n";
+            ofstream fLv("./" + nomeTema + "/" + lv.nome + "/README.md");
+            fLv << "# 🎯 FOCO: " << lv.nome << "\n\n### 📊 STATUS: " << lv.feitos << "/" << lv.total << "\n---\n";
+            fLv << "### 📝 Exercícios\n| Status | Arquivo |\n| :---: | :--- |\n";
             for (auto const &ex : lv.exercicios)
                 fLv << "| " << (ex.second ? "✅" : "🔨") << " | " << ex.first << " |\n";
-            fLv << "\n### 🧬 Competências\n";
+            fLv << "\n### 🧬 Competências do Nível\n";
             for (auto const &c : lv.competenciasAdquiridas)
                 fLv << "- ✅ " << c << "\n";
             for (auto const &c : lv.competenciasPendentes)
@@ -216,8 +195,7 @@ int main()
             fLv.close();
         }
     }
-
-    cout << "Central de Comando e Árvores de Competência atualizadas!" << endl;
+    cout << "Clusters aplicados em todos os READMES!" << endl;
     return 0;
 }
 // g++ -std=c++17 master_tracker.cpp -o master.exe

@@ -1,12 +1,12 @@
-# 🎯 FOCO NO NÍVEL: Level 08 - Colecoes_Dinamicas
+# 🎯 FOCO: Level 08 - Colecoes_Dinamicas
 
-### 📊 PROGRESSO: 0/3
+### 📊 STATUS: 0/3
 ---
 ### 📝 Exercícios
-| Status | Exercício |
+| Status | Arquivo |
 | :---: | :--- |
 | 🔨 | 01 - Listas.cpp |
 | 🔨 | 02 - Maps.cpp |
 | 🔨 | Exercicio - Inventario.cpp |
 
-### 🧬 Competências
+### 🧬 Competências do Nível
