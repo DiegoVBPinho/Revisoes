@@ -1,7 +1,10 @@
 # 🚀 CENTRAL DE COMANDO
+### 👑 RANK ATUAL: ESTAGIÁRIO NOOB 👶
+📊 XP: 1 exercícios concluídos.
 
-### 👑 RANK GERAL: DESEMPREGADO 😶
-XP TOTAL: 0 exercícios concluídos.
-
-| Tema | Concluídos | % |
-| :--- | :---: | :---: |
+## 🧬 ÁRVORE DE COMPETÊNCIAS
+| Status | Competência |
+| :---: | :--- |
+| ✅ | ATRIBUTOS_BASICOS |
+| ✅ | CLASSE_CONCEITO |
+| ✅ | INSTANCIACAO |
