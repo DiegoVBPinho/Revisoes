@@ -5,7 +5,7 @@
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 0/12 | DESEMPREGADO 😶 |
+| [01 - POO](./01 - POO) | 0/18 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -45,3 +45,7 @@
 - [ ] ⏳ SIMULACAO_SISTEMAS
 - [ ] ⏳ TIPAGEM_EM_CLASSES
 - [ ] ⏳ VISIBILIDADE_MÉTODOS
+- [ ] ⏳ ⚙️ LOGICA_OPERACIONAL
+- [ ] ⏳ 🎮 SIMULACAO_AVANCADA
+- [ ] ⏳ 📊 ESTRUTURAS_E_DADOS
+- [ ] ⏳ 📦 MODELAGEM_BASE
