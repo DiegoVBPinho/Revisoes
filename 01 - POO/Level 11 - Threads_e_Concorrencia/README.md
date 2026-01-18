@@ -1,11 +1,13 @@
-# 🎯 FOCO: Level 11 - Threads_e_Concorrencia
+# 🎯 FOCO NO NÍVEL: Level 11 - Threads_e_Concorrencia
 
-### 📊 STATUS: 0/2
+### 📊 PROGRESSO DO NÍVEL: 0/1 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Threads.cpp |
-| 🔨 | Exercicio - MultiTasking.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+| [ ] | 🔨 | 01 - Threads.cpp |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

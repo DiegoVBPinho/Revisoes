@@ -1,12 +1,14 @@
-# 🎯 FOCO: Level 06 - Heranca_e_Polimorfismo
+# 🎯 FOCO NO NÍVEL: Level 06 - Heranca_e_Polimorfismo
 
-### 📊 STATUS: 0/3
+### 📊 PROGRESSO DO NÍVEL: 0/2 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - Heranca.cpp |
-| 🔨 | 02 - Polimorfismo.cpp |
-| 🔨 | Exercicio - Sistema_RH.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+| [ ] | 🔨 | 01 - Heranca.cpp |
+| [ ] | 🔨 | 02 - Polimorfismo.cpp |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

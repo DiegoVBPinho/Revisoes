@@ -1,11 +1,13 @@
-# 🎯 FOCO: Level 10 - Persistencia_Arquivos
+# 🎯 FOCO NO NÍVEL: Level 10 - Persistencia_Arquivos
 
-### 📊 STATUS: 0/2
+### 📊 PROGRESSO DO NÍVEL: 0/1 (0.0%)
+`[░░░░░░░░░░░░░░░░░░░░]`
+
 ---
-### 📝 Exercícios
-| Status | Arquivo |
-| :---: | :--- |
-| 🔨 | 01 - NIO.cpp |
-| 🔨 | Exercicio - Log_Sistema.cpp |
 
-### 🧬 Competências do Nível
+| Status | Ícone | Exercício |
+| :---: | :---: | :--- |
+| [ ] | 🔨 | 01 - NIO.cpp |
+
+---
+*Gerado por Tracker Local (C++ Auto-Update)*

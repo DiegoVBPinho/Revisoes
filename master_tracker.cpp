@@ -12,13 +12,17 @@
 using namespace std;
 namespace fs = std::filesystem;
 
+// Dicionário de Agrupamento (Mapeia a skill solta para o Cluster)
+map<string, string> mapearCluster = {
+    {"CLASSE_CONCEITO", "📦 MODELAGEM_BASE"}, {"DEFINICAO_ATRIBUTOS", "📦 MODELAGEM_BASE"}, {"DEFINICAO_METODOS", "📦 MODELAGEM_BASE"}, {"TIPAGEM_EM_CLASSES", "📦 MODELAGEM_BASE"}, {"PADRONIZACAO_DE_NOMES", "📦 MODELAGEM_BASE"}, {"INSTANCIACAO", "🏗️ INSTANCIACAO_E_MEMORIA"}, {"CRIACAO_DE_OBJETOS", "🏗️ INSTANCIACAO_E_MEMORIA"}, {"MULTIPLAS_INSTANCIAS", "🏗️ INSTANCIACAO_E_MEMORIA"}, {"MEMORIA_INDEPENDENTE", "🏗️ INSTANCIACAO_E_MEMORIA"}, {"ACESSO_A_MEMBROS", "🏗️ INSTANCIACAO_E_MEMORIA"}, {"LOGICA_DE_METODOS", "⚙️ LOGICA_OPERACIONAL"}, {"ALTERACAO_DE_ESTADO", "⚙️ LOGICA_OPERACIONAL"}, {"MANIPULACAO_DE_ATRIBUTOS", "⚙️ LOGICA_OPERACIONAL"}, {"ATRIBUTOS_CALCULADOS", "⚙️ LOGICA_OPERACIONAL"}, {"CONDICIONAIS_EM_METODOS", "⚙️ LOGICA_OPERACIONAL"}, {"CALCULOS_EM_METODOS", "⚙️ LOGICA_OPERACIONAL"}, {"ESCOPO_DE_CLASSE", "⚙️ LOGICA_OPERACIONAL"}, {"INTERACAO_METODOS", "⚔️ SISTEMAS_DE_INTERACAO"}, {"INTERACAO_OBJETO_VARIAVEL", "⚔️ SISTEMAS_DE_INTERACAO"}, {"OBJETOS_COMO_PARAMETROS", "⚔️ SISTEMAS_DE_INTERACAO"}, {"REFERENCIA_DE_INSTANCIAS", "⚔️ SISTEMAS_DE_INTERACAO"}, {"PASSAGEM_POR_REFERENCIA", "⚔️ SISTEMAS_DE_INTERACAO"}, {"LOGICA_DE_COMBATE", "⚔️ SISTEMAS_DE_INTERACAO"}, {"INTERPRETACAO_UML", "📐 ARQUITETURA_UML"}, {"REPRESENTACAO_UML", "📐 ARQUITETURA_UML"}, {"VISIBILIDADE_MÉTODOS", "📐 ARQUITETURA_UML"}, {"MODIFICADORES_ACESSO (PUBLIC)", "📐 ARQUITETURA_UML"}, {"LOGICA_DE_SISTEMAS_COOPERATIVOS", "🎮 SIMULACAO_AVANCADA"}, {"SIMULACAO_SISTEMAS", "🎮 SIMULACAO_AVANCADA"}, {"ARRAYS_DE_OBJETOS", "🎮 SIMULACAO_AVANCADA"}, {"MODELAGEM_COMPLEXA", "🎮 SIMULACAO_AVANCADA"}};
+
 struct LevelData
 {
     string nome;
     int total = 0, feitos = 0;
     vector<pair<string, bool>> exercicios;
-    set<string> competenciasAdquiridas;
-    set<string> competenciasPendentes;
+    set<string> clustersAdquiridos;
+    set<string> clustersPendentes;
 };
 
 struct TemaData
@@ -36,24 +40,10 @@ string trim(string s)
     return s.substr(first, (last - first + 1));
 }
 
-string getRank(float p)
-{
-    if (p <= 0)
-        return "DESEMPREGADO 😶";
-    if (p < 30)
-        return "ESTAGIÁRIO 📋";
-    if (p < 60)
-        return "JUNIOR 🛠️";
-    if (p < 90)
-        return "PLENO 🛡️";
-    return "SENIOR 👑";
-}
-
 int main()
 {
     SetConsoleOutputCP(65001);
     map<string, TemaData> dashboard;
-    int xpTotal = 0;
 
     for (const auto &entryTema : fs::directory_iterator("."))
     {
@@ -79,7 +69,6 @@ int main()
                             ifstream f(arq.path());
                             string linha;
                             bool isDone = false, lendoComp = false;
-                            set<string> compsDoArquivo;
 
                             while (getline(f, linha))
                             {
@@ -101,20 +90,19 @@ int main()
                                     if (c.find("- ") != string::npos)
                                         c = c.substr(c.find("- ") + 2);
                                     c = trim(c);
+                                    string cluster = (mapearCluster.count(c)) ? mapearCluster[c] : c;
                                     if (!c.empty() && c[0] != '=')
-                                        compsDoArquivo.insert(c);
+                                    {
+                                        if (isDone)
+                                            lData.clustersAdquiridos.insert(cluster);
+                                        else
+                                            lData.clustersPendentes.insert(cluster);
+                                    }
                                 }
                             }
                             lData.exercicios.push_back({arq.path().filename().string(), isDone});
                             if (isDone)
-                            {
                                 lData.feitos++;
-                                lData.competenciasAdquiridas.insert(compsDoArquivo.begin(), compsDoArquivo.end());
-                            }
-                            else
-                            {
-                                lData.competenciasPendentes.insert(compsDoArquivo.begin(), compsDoArquivo.end());
-                            }
                         }
                     }
                     if (lData.total > 0)
@@ -126,76 +114,48 @@ int main()
                 }
             }
             if (!tData.niveis.empty())
-            {
                 dashboard[nomeTema] = tData;
-                xpTotal += (tData.feitosTema * 10);
-            }
         }
     }
 
-    // --- README GLOBAL ---
-    ofstream fMain("README.md");
-    fMain << "# 🚀 CENTRAL DE COMANDO C++\n\n### 👑 XP TOTAL: " << xpTotal << "\n\n## 📊 DASHBOARD DE TEMAS\n| Tema | Status | Rank |\n| :--- | :---: | :--- |\n";
-    for (auto const &[nome, tData] : dashboard)
-    {
-        float p = (float)tData.feitosTema / tData.totalTema * 100;
-        fMain << "| [" << nome << "](./" << nome << ") | " << tData.feitosTema << "/" << tData.totalTema << " | " << getRank(p) << " |\n";
-    }
-    fMain << "\n## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)\n";
-    for (auto const &[nome, tData] : dashboard)
-    {
-        fMain << "### 📂 " << nome << "\n";
-        set<string> tAdq, tPend;
-        for (auto const &lv : tData.niveis)
-        {
-            tAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
-            tPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
-        }
-        for (auto const &c : tAdq)
-            fMain << "- [x] ✅ **" << c << "**\n";
-        for (auto const &c : tPend)
-            if (tAdq.find(c) == tAdq.end())
-                fMain << "- [ ] ⏳ " << c << "\n";
-    }
-    fMain.close();
-
-    // --- READMES DE TEMA E LEVEL ---
     for (auto const &[nomeTema, tData] : dashboard)
     {
+        // --- README TEMA (POO) ---
         ofstream fTema("./" + nomeTema + "/README.md");
-        fTema << "# 📂 Assunto: " << nomeTema << "\n\n## 📈 Níveis\n| Level | Progresso | % |\n| :--- | :---: | :---: |\n";
+        fTema << "# 📂 Assunto: " << nomeTema << "\n\n## 🧬 Domínio por Clusters\n";
         set<string> tAdq, tPend;
         for (auto const &lv : tData.niveis)
         {
-            fTema << "| [" << lv.nome << "](./" << lv.nome << ") | " << lv.feitos << "/" << lv.total << " | " << (int)((float)lv.feitos / lv.total * 100) << "% |\n";
-            tAdq.insert(lv.competenciasAdquiridas.begin(), lv.competenciasAdquiridas.end());
-            tPend.insert(lv.competenciasPendentes.begin(), lv.competenciasPendentes.end());
+            tAdq.insert(lv.clustersAdquiridos.begin(), lv.clustersAdquiridos.end());
+            tPend.insert(lv.clustersPendentes.begin(), lv.clustersPendentes.end());
         }
-        fTema << "\n## 🧬 Clusters de Domínio\n";
         for (auto const &c : tAdq)
-            fTema << "- ✅ **" << c << "** (Concluído)\n";
+            fTema << "- ✅ " << c << " (Dominado)\n";
         for (auto const &c : tPend)
             if (tAdq.find(c) == tAdq.end())
-                fTema << "- 💡 " << c << " (Pendente)\n";
+                fTema << "- 💡 " << c << " (Em progresso)\n";
         fTema.close();
 
-        for (auto const &lv : tData.niveis)
+        // --- README GLOBAL ---
+        ofstream fGlobal("README.md");
+        fGlobal << "# 🚀 CENTRAL DE COMANDO\n\n## 🧬 ÁRVORE DE COMPETÊNCIAS\n";
+        for (auto const &[nT, tD] : dashboard)
         {
-            ofstream fLv("./" + nomeTema + "/" + lv.nome + "/README.md");
-            fLv << "# 🎯 FOCO: " << lv.nome << "\n\n### 📊 STATUS: " << lv.feitos << "/" << lv.total << "\n---\n";
-            fLv << "### 📝 Exercícios\n| Status | Arquivo |\n| :---: | :--- |\n";
-            for (auto const &ex : lv.exercicios)
-                fLv << "| " << (ex.second ? "✅" : "🔨") << " | " << ex.first << " |\n";
-            fLv << "\n### 🧬 Competências do Nível\n";
-            for (auto const &c : lv.competenciasAdquiridas)
-                fLv << "- ✅ " << c << "\n";
-            for (auto const &c : lv.competenciasPendentes)
-                if (lv.competenciasAdquiridas.find(c) == lv.competenciasAdquiridas.end())
-                    fLv << "- ⏳ " << c << "\n";
-            fLv.close();
+            fGlobal << "### 📂 " << nT << "\n";
+            set<string> gAdq, gPend;
+            for (auto const &lv : tD.niveis)
+            {
+                gAdq.insert(lv.clustersAdquiridos.begin(), lv.clustersAdquiridos.end());
+                gPend.insert(lv.clustersPendentes.begin(), lv.clustersPendentes.end());
+            }
+            for (auto const &c : gAdq)
+                fGlobal << "- [x] ✅ " << c << "\n";
+            for (auto const &c : gPend)
+                if (gAdq.find(c) == gAdq.end())
+                    fGlobal << "- [ ] ⏳ " << c << "\n";
         }
     }
-    cout << "Clusters aplicados em todos os READMES!" << endl;
+    cout << "Agrupamento automático concluído!" << endl;
     return 0;
 }
 // g++ -std=c++17 master_tracker.cpp -o master.exe
