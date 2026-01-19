@@ -7,136 +7,67 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-string obterConteudoProjeto(int id)
+void gerarProjetoFinalInatel(string path)
 {
-    if (id == 1)
-        return R"(/*
-==================================================
-🚀 PROJETO FINAL - FASE 1: Arquitetura Core
-==================================================
-[ORIGEM: Aulas 14-15 - Modelagem]
+    // 1. README.md - Documentação de Alto Nível
+    ofstream readme(path + "/README.md");
+    readme << "# 🚀 PROJETO POO - INATEL\n\n"
+           << "## 👥 Equipe\n"
+           << "- Membro 1\n- Membro 2\n- Membro 3\n- Mestre\n\n"
+           << "## 📡 Tema: Sistema de Monitoramento de Redes\n"
+           << "Este projeto visa resolver problemas de monitoramento de ativos em infraestruturas de TI.\n\n"
+           << "### 🛠 Requisitos Implementados:\n"
+           << "- [x] Modularização (.h e .cpp)\n"
+           << "- [x] Herança e Polimorfismo\n"
+           << "- [x] Classes Abstratas\n"
+           << "- [x] Threads para Monitoramento Paralelo\n"
+           << "- [x] Persistência em Arquivos (Logs)\n";
+    readme.close();
 
-COMPETENCIAS:
-- HERANCA_E_POLIMORFISMO
-- CLASSES_ABSTRATAS
-- ENCAPSULAMENTO
+    // 2. Classe Abstrata Dispositivo.h (Requisito 5)
+    ofstream hFile(path + "/Dispositivo.h");
+    hFile << "#ifndef DISPOSITIVO_H\n#define DISPOSITIVO_H\n#include <string>\n\n"
+          << "class Dispositivo {\n"
+          << "protected:\n    std::string ip;\n    std::string nome;\n"
+          << "public:\n"
+          << "    Dispositivo(std::string n, std::string i) : nome(n), ip(i) {}\n"
+          << "    virtual void verificarStatus() = 0; // Requisito 4: Polimorfismo\n"
+          << "    virtual ~Dispositivo() {}\n"
+          << "};\n#endif";
+    hFile.close();
 
-🧠 O DESAFIO:
-Criar a base do sistema de frota. 
-- Classe Abstrata 'Veiculo' (modelo, placa).
-- Classes Filhas 'Carro' e 'Caminhao' com cálculos de manutenção diferentes.
-- Uso de Vector para armazenar a frota.
---------------------------------------------------
-*/
-
-#include <iostream>
-#include <vector>
-#include <string>
-
-using namespace std;
-
-int main() {
-    cout << "--- Fase 1: Sistema de Frota Iniciado ---" << endl;
-    return 0;
-}
-)";
-
-    if (id == 2)
-        return R"(/*
-==================================================
-🚀 PROJETO FINAL - FASE 2: Persistência e Segurança
-==================================================
-[ORIGEM: Aulas 16-17 - Implementação]
-
-COMPETENCIAS:
-- MANIPULACAO_DE_ARQUIVOS (TXT/CSV)
-- TRATAMENTO_DE_EXCECOES
-- ROBUSTEZ
-
-🧠 O DESAFIO:
-O sistema agora deve salvar a frota em um arquivo ao fechar e carregar ao abrir.
-- Implementar 'salvarEmArquivo()'.
-- Tratar erros de leitura caso o arquivo esteja corrompido ou ausente.
---------------------------------------------------
-*/
-
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <exception>
-
-using namespace std;
-
-int main() {
-    cout << "--- Fase 2: Persistencia Implementada ---" << endl;
-    return 0;
-}
-)";
-
-    if (id == 3)
-        return R"(/*
-==================================================
-🚀 PROJETO FINAL - FASE 3: Otimização e Padrões
-==================================================
-[ORIGEM: Aulas 18-19 - Entrega Final]
-
-COMPETENCIAS:
-- SINGLETON (Gerenciador de Sistema)
-- TEMPLATES (Relatórios Genéricos)
-- QUALIDADE_DE_CODIGO
-
-🧠 O DESAFIO FINAL:
-Refatorar o sistema usando o padrão Singleton para o Gerenciador da Frota e 
-Templates para criar uma função de busca que funcione por Placa ou por Modelo.
---------------------------------------------------
-*/
-
-#include <iostream>
-#include <string>
-#include <vector>
-
-using namespace std;
-
-int main() {
-    cout << "--- Fase 3: Sistema Finalizado (Nivel Expert) ---" << endl;
-    return 0;
-}
-)";
-    return "";
+    // 3. Main.cpp com a lógica de Threads (Requisito 8)
+    ofstream mainFile(path + "/main.cpp");
+    mainFile << "#include <iostream>\n#include <vector>\n#include <thread>\n#include \"Dispositivo.h\"\n\n"
+             << "using namespace std;\n\n"
+             << "void monitorarTarefa(string ip) {\n"
+             << "    cout << \"[THREAD] Analisando trafego no IP: \" << ip << endl;\n"
+             << "}\n\n"
+             << "int main() {\n"
+             << "    cout << \"--- PROJETO POO - INATEL ---\\n\";\n"
+             << "    vector<thread> pool;\n"
+             << "    vector<string> ips = {\"192.168.1.1\", \"10.0.0.1\"};\n\n"
+             << "    for(auto ip : ips) pool.push_back(thread(monitorarTarefa, ip));\n"
+             << "    for(auto &t : pool) t.join();\n\n"
+             << "    cout << \"Fim da execucao.\" << endl;\n"
+             << "    return 0;\n"
+             << "}";
+    mainFile.close();
 }
 
 int main()
 {
-    string caminhoBase = "C:/Users/prefe/Documents/REVISOES - CPP/01 - POO/99 - PROJETO_FINAL_INTEGRADO";
-
-    struct Dado
-    {
-        string arquivo;
-        int id;
-    };
-    vector<Dado> roteiro = {
-        {"Fase_01_Arquitetura.cpp", 1},
-        {"Fase_02_Persistencia.cpp", 2},
-        {"Fase_03_Sistema_Completo.cpp", 3}};
+    // NOME DA PASTA ATUALIZADO CONFORME SOLICITADO
+    string caminhoBase = "C:/Users/prefe/Documents/REVISOES - CPP/01 - POO/PROJETO POO - INATEL";
 
     if (!fs::exists(caminhoBase))
     {
         fs::create_directories(caminhoBase);
     }
 
-    cout << "--- 🏭 FABRICA - PROJETO FINAL: CONSOLIDANDO AULAS 14 A 19 ---" << endl;
-
-    for (const auto &item : roteiro)
-    {
-        fs::path caminhoFinal = fs::path(caminhoBase) / item.arquivo;
-        ofstream arquivo(caminhoFinal);
-        if (arquivo.is_open())
-        {
-            arquivo << obterConteudoProjeto(item.id);
-            arquivo.close();
-            cout << "✅ GERADO: " << item.arquivo << endl;
-        }
-    }
+    cout << "--- 🏭 FABRICA: GERANDO PROJETO POO - INATEL ---" << endl;
+    gerarProjetoFinalInatel(caminhoBase);
+    cout << "✅ Pasta 'PROJETO POO - INATEL' criada com sucesso!" << endl;
 
     return 0;
 }

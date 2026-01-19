@@ -10,13 +10,14 @@
 | [Level 05 - Ciclo_de_Vida_e_Static](./Level 05 - Ciclo_de_Vida_e_Static) | 0/3 | 0% |
 | [Level 06 - Heranca_e_Polimorfismo](./Level 06 - Heranca_e_Polimorfismo) | 0/3 | 0% |
 | [Level 07 - Classes_Abstratas_e_Interfaces](./Level 07 - Classes_Abstratas_e_Interfaces) | 0/3 | 0% |
-| [Level 08 - Colecoes_Dinamicas](./Level 08 - Colecoes_Dinamicas) | 0/3 | 0% |
+| [Level 08 - Colecoes_Dinamicas](./Level 08 - Colecoes_Dinamicas) | 0/4 | 0% |
 | [Level 09 - Robustez_Excecoes](./Level 09 - Robustez_Excecoes) | 0/3 | 0% |
 | [Level 10 - Persistencia_Arquivos](./Level 10 - Persistencia_Arquivos) | 0/3 | 0% |
 | [Level 11 - Threads_e_Concorrencia](./Level 11 - Threads_e_Concorrencia) | 0/3 | 0% |
 | [Level 12 - Engenharia_e_Padroes](./Level 12 - Engenharia_e_Padroes) | 0/3 | 0% |
 | [Level 13 - DevOps e Qualidade](./Level 13 - DevOps e Qualidade) | 0/3 | 0% |
 | [Level 14 - PROJETO_FINAL_INTEGRADO](./Level 14 - PROJETO_FINAL_INTEGRADO) | 0/3 | 0% |
+| [PROJETO POO - INATEL](./PROJETO POO - INATEL) | 0/1 | 0% |
 
 ## 🧬 Clusters de Domínio
 - 💡 ABSTRACAO_AVANCADA (Pendente)
@@ -24,6 +25,7 @@
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
 - 💡 ACESSO_A_MEMBROS (Pendente)
 - 💡 ACESSO_SEM_INSTANCIA (Pendente)
+- 💡 AGREGACAO (Biblioteca tem lista de Livros) (Pendente)
 - 💡 ALTERACAO_DE_ESTADO (Pendente)
 - 💡 ARQUITETURA_C++17 (Pendente)
 - 💡 ARQUITETURA_DE_CLASSES (Pendente)
@@ -32,6 +34,7 @@
 - 💡 ARRAY_DE_PONTEIROS (Pendente)
 - 💡 ARRAY_PRIMITIVO (Pendente)
 - 💡 ASSERT_CONCEITO (Pendente)
+- 💡 ASSOCIACAO_DE_METODOS (Pessoa interage com Livro) (Pendente)
 - 💡 ATRIBUTOS_BASICOS (Pendente)
 - 💡 ATRIBUTOS_CALCULADOS (Pendente)
 - 💡 ATRIBUTOS_STATIC (Pendente)
@@ -43,6 +46,7 @@
 - 💡 CICLO_DE_VIDA_DEPENDENTE (Pendente)
 - 💡 CLASSES_ABSTRATAS (Pendente)
 - 💡 CLASSE_CONCEITO (Pendente)
+- 💡 COMPOSICAO (Livro tem Autor) (Pendente)
 - 💡 COMPOSICAO_DE_CLASSES (Pendente)
 - 💡 CONCORRENCIA_SIMPLES (Pendente)
 - 💡 CONDICIONAIS_EM_METODOS (Pendente)
@@ -77,6 +81,7 @@
 - 💡 HERANCA_BASICA (Pendente)
 - 💡 HERANCA_E_POLIMORFISMO (Pendente)
 - 💡 IDENTIFICACAO_DE_BUGS (Pendente)
+- 💡 IMPLEMENTACAO_DE_DIAGRAMA_UML (Pendente)
 - 💡 IMPOSSIBILIDADE_DE_INSTANCIA (Pendente)
 - 💡 INICIALIZACAO_DE_DADOS (Pendente)
 - 💡 INSTANCIACAO (Pendente)

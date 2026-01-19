@@ -5,7 +5,7 @@
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 0/59 | DESEMPREGADO 😶 |
+| [01 - POO](./01 - POO) | 0/61 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -14,6 +14,7 @@
 - [ ] ⏳ ABSTRACAO_DE_SISTEMA
 - [ ] ⏳ ACESSO_A_MEMBROS
 - [ ] ⏳ ACESSO_SEM_INSTANCIA
+- [ ] ⏳ AGREGACAO (Biblioteca tem lista de Livros)
 - [ ] ⏳ ALTERACAO_DE_ESTADO
 - [ ] ⏳ ARQUITETURA_C++17
 - [ ] ⏳ ARQUITETURA_DE_CLASSES
@@ -22,6 +23,7 @@
 - [ ] ⏳ ARRAY_DE_PONTEIROS
 - [ ] ⏳ ARRAY_PRIMITIVO
 - [ ] ⏳ ASSERT_CONCEITO
+- [ ] ⏳ ASSOCIACAO_DE_METODOS (Pessoa interage com Livro)
 - [ ] ⏳ ATRIBUTOS_BASICOS
 - [ ] ⏳ ATRIBUTOS_CALCULADOS
 - [ ] ⏳ ATRIBUTOS_STATIC
@@ -33,6 +35,7 @@
 - [ ] ⏳ CICLO_DE_VIDA_DEPENDENTE
 - [ ] ⏳ CLASSES_ABSTRATAS
 - [ ] ⏳ CLASSE_CONCEITO
+- [ ] ⏳ COMPOSICAO (Livro tem Autor)
 - [ ] ⏳ COMPOSICAO_DE_CLASSES
 - [ ] ⏳ CONCORRENCIA_SIMPLES
 - [ ] ⏳ CONDICIONAIS_EM_METODOS
@@ -67,6 +70,7 @@
 - [ ] ⏳ HERANCA_BASICA
 - [ ] ⏳ HERANCA_E_POLIMORFISMO
 - [ ] ⏳ IDENTIFICACAO_DE_BUGS
+- [ ] ⏳ IMPLEMENTACAO_DE_DIAGRAMA_UML
 - [ ] ⏳ IMPOSSIBILIDADE_DE_INSTANCIA
 - [ ] ⏳ INICIALIZACAO_DE_DADOS
 - [ ] ⏳ INSTANCIACAO
