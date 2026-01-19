@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 02 - ESTRUTURA - EXERCICIO 06: Relatório de Vendas
+📘 02 - ESTRUTURA - 06: Relatório de Vendas
 ==================================================
 
 STATUS: TO DO

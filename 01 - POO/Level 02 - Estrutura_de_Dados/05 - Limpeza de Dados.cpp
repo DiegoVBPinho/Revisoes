@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 02 - ESTRUTURA - EXERCICIO 05: Limpeza de Dados
+📘 02 - ESTRUTURA - 05: Limpeza de Dados
 ==================================================
 
 STATUS: TO DO

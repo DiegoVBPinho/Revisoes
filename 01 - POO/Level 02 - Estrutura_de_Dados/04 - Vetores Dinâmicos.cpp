@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 02 - ESTRUTURA - EXERCICIO 04: Vetores Dinâmicos
+📘 02 - ESTRUTURA - 04: Vetores Dinâmicos
 ==================================================
 
 STATUS: TO DO

@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 02 - ESTRUTURA - EXERCICIO 03: Filtro de Estoque
+📘 02 - ESTRUTURA - 03: Filtro de Estoque
 ==================================================
 
 STATUS: TO DO

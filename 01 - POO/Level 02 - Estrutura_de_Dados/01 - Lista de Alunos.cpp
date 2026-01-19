@@ -1,6 +1,6 @@
 /*
 ==================================================
-📘 02 - ESTRUTURA - EXERCICIO 01: Lista de Alunos
+📘 02 - ESTRUTURA - 01: Lista de Alunos
 ==================================================
 
 STATUS: TO DO
