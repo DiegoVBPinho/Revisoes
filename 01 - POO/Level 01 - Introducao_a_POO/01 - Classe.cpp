@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 01: O Primeiro Molde
 ==================================================
 
-STATUS: TO DO
+STATUS: DONE
 
 COMPETENCIAS:
 - CLASSE_CONCEITO
@@ -47,9 +47,26 @@ public:            // Modificador de acesso (permite uso fora da classe)
 
 // Desenvolva sua classe aqui:
 
+class Guerreiro
+{
+public:
+    std::string nome;
+    int forca;
+};
+
 int main()
 {
     // Desenvolva a instância e exibição aqui:
+    Guerreiro g1;
+
+    // atribuindo valores
+    g1.nome = "Victor";
+    g1.forca = 95;
+
+    // apresentando valores
+
+    std::cout << "O nome do guerreiro é: " << g1.nome << std::endl;
+    std::cout << "A forca do guerreiro é: " << g1.forca << std::endl;
 
     return 0;
 }
