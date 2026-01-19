@@ -1,12 +1,21 @@
-# 🎯 FOCO NO NÍVEL: Level 11 - Threads_e_Concorrencia
+# 🎯 FOCO: Level 11 - Threads_e_Concorrencia
 
-### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
-`[░░░░░░░░░░░░░░░░░░░░]`
-
+### 📊 STATUS: 0/3
 ---
+### 📝 Exercícios
+| Status | Arquivo |
+| :---: | :--- |
+| 🔨 | 01 - Criacao_Threads.cpp |
+| 🔨 | 02 - Threads_Parametros.cpp |
+| 🔨 | 03 - Corrida_Threads.cpp |
 
-| Status | Ícone | Exercício |
-| :---: | :---: | :--- |
-
----
-*Gerado por Tracker Local (C++ Auto-Update)*
+### 🧬 Competências do Nível
+- ⏳ BIBLIOTECA_THREAD
+- ⏳ CONCORRENCIA_SIMPLES
+- ⏳ FUNCOES_ASSINCRONAS
+- ⏳ LOGICA_PARALELA
+- ⏳ METODO_JOIN
+- ⏳ MULTI_TASKING
+- ⏳ SIMULACAO_DE_SISTEMA
+- ⏳ SINCRONIZACAO_BASICA
+- ⏳ THREAD_WITH_PARAMS

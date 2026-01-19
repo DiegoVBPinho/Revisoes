@@ -4,95 +4,141 @@
 #include <vector>
 #include <filesystem>
 
+using namespace std;
 namespace fs = std::filesystem;
 
-struct ItemLab
+string obterConteudoProjeto(int id)
 {
-    std::string pasta;
-    std::string arquivo;
-};
+    if (id == 1)
+        return R"(/*
+==================================================
+🚀 PROJETO FINAL - FASE 1: Arquitetura Core
+==================================================
+[ORIGEM: Aulas 14-15 - Modelagem]
+
+COMPETENCIAS:
+- HERANCA_E_POLIMORFISMO
+- CLASSES_ABSTRATAS
+- ENCAPSULAMENTO
+
+🧠 O DESAFIO:
+Criar a base do sistema de frota. 
+- Classe Abstrata 'Veiculo' (modelo, placa).
+- Classes Filhas 'Carro' e 'Caminhao' com cálculos de manutenção diferentes.
+- Uso de Vector para armazenar a frota.
+--------------------------------------------------
+*/
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    cout << "--- Fase 1: Sistema de Frota Iniciado ---" << endl;
+    return 0;
+}
+)";
+
+    if (id == 2)
+        return R"(/*
+==================================================
+🚀 PROJETO FINAL - FASE 2: Persistência e Segurança
+==================================================
+[ORIGEM: Aulas 16-17 - Implementação]
+
+COMPETENCIAS:
+- MANIPULACAO_DE_ARQUIVOS (TXT/CSV)
+- TRATAMENTO_DE_EXCECOES
+- ROBUSTEZ
+
+🧠 O DESAFIO:
+O sistema agora deve salvar a frota em um arquivo ao fechar e carregar ao abrir.
+- Implementar 'salvarEmArquivo()'.
+- Tratar erros de leitura caso o arquivo esteja corrompido ou ausente.
+--------------------------------------------------
+*/
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <exception>
+
+using namespace std;
+
+int main() {
+    cout << "--- Fase 2: Persistencia Implementada ---" << endl;
+    return 0;
+}
+)";
+
+    if (id == 3)
+        return R"(/*
+==================================================
+🚀 PROJETO FINAL - FASE 3: Otimização e Padrões
+==================================================
+[ORIGEM: Aulas 18-19 - Entrega Final]
+
+COMPETENCIAS:
+- SINGLETON (Gerenciador de Sistema)
+- TEMPLATES (Relatórios Genéricos)
+- QUALIDADE_DE_CODIGO
+
+🧠 O DESAFIO FINAL:
+Refatorar o sistema usando o padrão Singleton para o Gerenciador da Frota e 
+Templates para criar uma função de busca que funcione por Placa ou por Modelo.
+--------------------------------------------------
+*/
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    cout << "--- Fase 3: Sistema Finalizado (Nivel Expert) ---" << endl;
+    return 0;
+}
+)";
+    return "";
+}
 
 int main()
 {
-    std::vector<ItemLab> roteiro = {
-        // Level 01 - Intro
-        {"Level 01 - Introducao_a_POO", "01 - Classe.cpp"},
-        {"Level 01 - Introducao_a_POO", "02 - Atributos.cpp"},
-        {"Level 01 - Introducao_a_POO", "03 - Metodos.cpp"},
-        {"Level 01 - Introducao_a_POO", "04 - Objetos.cpp"},
-        {"Level 01 - Introducao_a_POO", "Exercicio - Zoologico.cpp"},
+    string caminhoBase = "C:/Users/prefe/Documents/REVISOES - CPP/01 - POO/99 - PROJETO_FINAL_INTEGRADO";
 
-        // Level 02 - Arrays
-        {"Level 02 - Estrutura_de_Dados", "01 - Arrays_Primitivos.cpp"},
-        {"Level 02 - Estrutura_de_Dados", "02 - Arrays_Objetos.cpp"},
-        {"Level 02 - Estrutura_de_Dados", "Exercicio - Gestao_Escolar.cpp"},
+    struct Dado
+    {
+        string arquivo;
+        int id;
+    };
+    vector<Dado> roteiro = {
+        {"Fase_01_Arquitetura.cpp", 1},
+        {"Fase_02_Persistencia.cpp", 2},
+        {"Fase_03_Sistema_Completo.cpp", 3}};
 
-        // Level 03 - Pacotes
-        {"Level 03 - Pacotes_e_Organizacao", "01 - Pacotes.cpp"},
-        {"Level 03 - Pacotes_e_Organizacao", "02 - Importacoes.cpp"},
+    if (!fs::exists(caminhoBase))
+    {
+        fs::create_directories(caminhoBase);
+    }
 
-        // Level 04 - Acesso
-        {"Level 04 - Encapsulamento", "01 - Modificadores_Acesso.cpp"},
-        {"Level 04 - Encapsulamento", "Exercicio - Conta_Bancaria.cpp"},
-
-        // Level 05 - Ciclo de Vida
-        {"Level 05 - Ciclo_de_Vida_e_Static", "01 - Construtores.cpp"},
-        {"Level 05 - Ciclo_de_Vida_e_Static", "02 - Static.cpp"},
-        {"Level 05 - Ciclo_de_Vida_e_Static", "Exercicio - Contador_Pecas.cpp"},
-
-        // Level 06 - Herança
-        {"Level 06 - Heranca_e_Polimorfismo", "01 - Heranca.cpp"},
-        {"Level 06 - Heranca_e_Polimorfismo", "02 - Polimorfismo.cpp"},
-        {"Level 06 - Heranca_e_Polimorfismo", "Exercicio - Sistema_RH.cpp"},
-
-        // Level 07 - Abstração
-        {"Level 07 - Abstracao_e_Interfaces", "01 - Classes_Abstratas.cpp"},
-        {"Level 07 - Abstracao_e_Interfaces", "02 - Interfaces.cpp"},
-        {"Level 07 - Abstracao_e_Interfaces", "Exercicio - Formas_Geometricas.cpp"},
-
-        // Level 08 - Coleções
-        {"Level 08 - Colecoes_Dinamicas", "01 - Listas.cpp"},
-        {"Level 08 - Colecoes_Dinamicas", "02 - Maps.cpp"},
-        {"Level 08 - Colecoes_Dinamicas", "Exercicio - Inventario.cpp"},
-
-        // Level 09 - Erros
-        {"Level 09 - Robustez_Excecoes", "01 - Try_Catch.cpp"},
-        {"Level 09 - Robustez_Excecoes", "Exercicio - Calculadora_Segura.cpp"},
-
-        // Level 10 - Persistência
-        {"Level 10 - Persistencia_Arquivos", "01 - NIO.cpp"},
-        {"Level 10 - Persistencia_Arquivos", "Exercicio - Log_Sistema.cpp"},
-
-        // Level 11 - Threads
-        {"Level 11 - Threads_e_Concorrencia", "01 - Threads.cpp"},
-        {"Level 11 - Threads_e_Concorrencia", "Exercicio - MultiTasking.cpp"},
-
-        // Level 12 - Engenharia
-        {"Level 12 - Engenharia_e_Padroes", "01 - Maven.cpp"},
-        {"Level 12 - Engenharia_e_Padroes", "02 - Git.cpp"},
-        {"Level 12 - Engenharia_e_Padroes", "03 - Testes.cpp"},
-        {"Level 12 - Engenharia_e_Padroes", "04 - Design_Patterns.cpp"}};
-
-    std::cout << "--- 🏭 FABRICA: ESTRUTURA PROF. CHRIS ---" << std::endl;
+    cout << "--- 🏭 FABRICA - PROJETO FINAL: CONSOLIDANDO AULAS 14 A 19 ---" << endl;
 
     for (const auto &item : roteiro)
     {
-        if (!fs::exists(item.pasta))
+        fs::path caminhoFinal = fs::path(caminhoBase) / item.arquivo;
+        ofstream arquivo(caminhoFinal);
+        if (arquivo.is_open())
         {
-            fs::create_directories(item.pasta);
-        }
-        std::string caminhoFinal = item.pasta + "/" + item.arquivo;
-        if (!fs::exists(caminhoFinal))
-        {
-            std::ofstream arquivo(caminhoFinal);
-            arquivo.close(); // Cria o arquivo totalmente em branco
-            std::cout << "Criado: " << caminhoFinal << std::endl;
+            arquivo << obterConteudoProjeto(item.id);
+            arquivo.close();
+            cout << "✅ GERADO: " << item.arquivo << endl;
         }
     }
 
-    std::cout << "\n✅ Roteiro completo do Level 01 ao 12 gerado com sucesso!" << std::endl;
     return 0;
 }
-
 // g++ fabrica.cpp -o fabrica.exe
 //./fabrica.exe

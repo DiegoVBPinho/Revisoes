@@ -1,12 +1,21 @@
-# 🎯 FOCO NO NÍVEL: Level 12 - Engenharia_e_Padroes
+# 🎯 FOCO: Level 12 - Engenharia_e_Padroes
 
-### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
-`[░░░░░░░░░░░░░░░░░░░░]`
-
+### 📊 STATUS: 0/3
 ---
+### 📝 Exercícios
+| Status | Arquivo |
+| :---: | :--- |
+| 🔨 | 01 - Padrao_Singleton.cpp |
+| 🔨 | 02 - Refatoracao_DRY.cpp |
+| 🔨 | 03 - Desafio_Factory.cpp |
 
-| Status | Ícone | Exercício |
-| :---: | :---: | :--- |
-
----
-*Gerado por Tracker Local (C++ Auto-Update)*
+### 🧬 Competências do Nível
+- ⏳ ABSTRACAO_DE_INSTANCIA
+- ⏳ CONSTRUTOR_PRIVADO
+- ⏳ D.R.Y (Don't Repeat Yourself)
+- ⏳ DESACOPLAMENTO
+- ⏳ FACTORY_PATTERN
+- ⏳ INSTANCIA_ESTATICA
+- ⏳ ORGANIZACAO_DE_METODOS
+- ⏳ REFATORACAO
+- ⏳ SINGLETON_PATTERN

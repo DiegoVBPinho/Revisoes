@@ -1,12 +1,21 @@
-# 🎯 FOCO NO NÍVEL: Level 03 - Pacotes_e_Organizacao
+# 🎯 FOCO: Level 03 - Pacotes_e_Organizacao
 
-### 📊 PROGRESSO DO NÍVEL: 0/0 (0.0%)
-`[░░░░░░░░░░░░░░░░░░░░]`
-
+### 📊 STATUS: 0/3
 ---
+### 📝 Exercícios
+| Status | Arquivo |
+| :---: | :--- |
+| 🔨 | 01 - Pacotes.cpp |
+| 🔨 | 02 - Importacoes.cpp |
+| 🔨 | 03 - Traducao UML.cpp |
 
-| Status | Ícone | Exercício |
-| :---: | :---: | :--- |
-
----
-*Gerado por Tracker Local (C++ Auto-Update)*
+### 🧬 Competências do Nível
+- ⏳ ARQUITETURA_C++17
+- ⏳ CONFLITO_DE_NOMES
+- ⏳ CONVENCAO_REVERSA
+- ⏳ FULLY_QUALIFIED_NAME
+- ⏳ NAMESPACES_ANINHADOS
+- ⏳ NAMESPACE_CONCEITO
+- ⏳ OPERADOR_DE_ESCOPO (::)
+- ⏳ ORGANIZACAO_LOGICA
+- ⏳ RESOLUCAO_DE_AMBIGUIDADE
