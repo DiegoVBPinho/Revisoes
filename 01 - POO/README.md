@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 0/12 | 0% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 1/12 | 8% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -20,6 +20,9 @@
 | [PROJETO POO - INATEL](./PROJETO POO - INATEL) | 0/1 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **ATRIBUTOS_BASICOS** (Concluído)
+- ✅ **CLASSE_CONCEITO** (Concluído)
+- ✅ **INSTANCIACAO** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
 - 💡 ABSTRACAO_DE_INSTANCIA (Pendente)
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
@@ -35,7 +38,6 @@
 - 💡 ARRAY_PRIMITIVO (Pendente)
 - 💡 ASSERT_CONCEITO (Pendente)
 - 💡 ASSOCIACAO_DE_METODOS (Pessoa interage com Livro) (Pendente)
-- 💡 ATRIBUTOS_BASICOS (Pendente)
 - 💡 ATRIBUTOS_CALCULADOS (Pendente)
 - 💡 ATRIBUTOS_STATIC (Pendente)
 - 💡 BIBLIOTECA_THREAD (Pendente)
@@ -45,7 +47,6 @@
 - 💡 CALCULOS_EM_METODOS (Pendente)
 - 💡 CICLO_DE_VIDA_DEPENDENTE (Pendente)
 - 💡 CLASSES_ABSTRATAS (Pendente)
-- 💡 CLASSE_CONCEITO (Pendente)
 - 💡 COMPOSICAO (Livro tem Autor) (Pendente)
 - 💡 COMPOSICAO_DE_CLASSES (Pendente)
 - 💡 CONCORRENCIA_SIMPLES (Pendente)
@@ -68,6 +69,7 @@
 - 💡 ENTRADA_DE_DADOS (CIN) (Pendente)
 - 💡 ESCOPO_DE_CLASSE (Pendente)
 - 💡 ESCRITA_EM_TXT (Pendente)
+- 💡 ESTRUTURA_DE_REPETICAO (WHILE) (Pendente)
 - 💡 EXIBICAO_ESTRUTURADA (Pendente)
 - 💡 EXTENSAO_DE_CLASSES (Pendente)
 - 💡 FACTORY_PATTERN (Pendente)
@@ -84,7 +86,6 @@
 - 💡 IMPLEMENTACAO_DE_DIAGRAMA_UML (Pendente)
 - 💡 IMPOSSIBILIDADE_DE_INSTANCIA (Pendente)
 - 💡 INICIALIZACAO_DE_DADOS (Pendente)
-- 💡 INSTANCIACAO (Pendente)
 - 💡 INSTANCIACAO_INTERNA (Pendente)
 - 💡 INSTANCIA_ESTATICA (Pendente)
 - 💡 INTERACAO_METODOS (Pendente)
@@ -103,6 +104,7 @@
 - 💡 LOGICA_DE_NEGOCIO_ABSTRATA (Pendente)
 - 💡 LOGICA_DE_SISTEMA (Pendente)
 - 💡 LOGICA_DE_SISTEMAS_COOPERATIVOS (Pendente)
+- 💡 LOGICA_DE_SORTEIO (RAND) (Pendente)
 - 💡 LOGICA_DE_TESTE (Pendente)
 - 💡 LOGICA_DE_VALIDACAO (Pendente)
 - 💡 LOGICA_GENERICA (PONTEIROS PARA CLASSE PAI) (Pendente)
@@ -113,6 +115,7 @@
 - 💡 MANIPULACAO_DE_ARQUIVOS (TXT/CSV) (Pendente)
 - 💡 MANIPULACAO_DE_ATRIBUTOS (Pendente)
 - 💡 MANUTENCAO_DE_CODIGO (Pendente)
+- 💡 MATRIZ_BIDIMENSIONAL (ARRAY 2D) (Pendente)
 - 💡 MATRIZ_QUADRADA (Pendente)
 - 💡 MEMORIA_COMPARTILHADA (Pendente)
 - 💡 MEMORIA_INDEPENDENTE (Pendente)

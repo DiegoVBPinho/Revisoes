@@ -1,11 +1,11 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 0/12
+### 📊 STATUS: 1/12
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
 | :---: | :--- |
-| 🔨 | 01 - Classe.cpp |
+| ✅ | 01 - Classe.cpp |
 | 🔨 | 02 - Atributos.cpp |
 | 🔨 | 03 - Metodos.cpp |
 | 🔨 | 04 - Objetos.cpp |
@@ -19,19 +19,19 @@
 | 🔨 | 12 - Carrinho de Compras.cpp |
 
 ### 🧬 Competências do Nível
+- ✅ ATRIBUTOS_BASICOS
+- ✅ CLASSE_CONCEITO
+- ✅ INSTANCIACAO
 - ⏳ ACESSO_A_MEMBROS
 - ⏳ ALTERACAO_DE_ESTADO
 - ⏳ ARRAYS_DE_OBJETOS
-- ⏳ ATRIBUTOS_BASICOS
 - ⏳ ATRIBUTOS_CALCULADOS
 - ⏳ CALCULOS_EM_METODOS
-- ⏳ CLASSE_CONCEITO
 - ⏳ CONDICIONAIS_EM_METODOS
 - ⏳ CRIACAO_DE_OBJETOS
 - ⏳ DEFINICAO_ATRIBUTOS
 - ⏳ DEFINICAO_METODOS
 - ⏳ ESCOPO_DE_CLASSE
-- ⏳ INSTANCIACAO
 - ⏳ INTERACAO_METODOS
 - ⏳ INTERACAO_OBJETO_VARIAVEL
 - ⏳ INTERPRETACAO_UML
