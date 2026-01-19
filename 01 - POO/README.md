@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 1/12 | 8% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 2/12 | 16% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -22,7 +22,10 @@
 ## 🧬 Clusters de Domínio
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
 - ✅ **CLASSE_CONCEITO** (Concluído)
+- ✅ **DEFINICAO_ATRIBUTOS** (Concluído)
 - ✅ **INSTANCIACAO** (Concluído)
+- ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
+- ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
 - 💡 ABSTRACAO_DE_INSTANCIA (Pendente)
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
@@ -59,7 +62,6 @@
 - 💡 CRIACAO_DE_OBJETOS (Pendente)
 - 💡 CUSTOM_EXCEPTIONS (Pendente)
 - 💡 D.R.Y (Don't Repeat Yourself) (Pendente)
-- 💡 DEFINICAO_ATRIBUTOS (Pendente)
 - 💡 DEFINICAO_METODOS (Pendente)
 - 💡 DESACOPLAMENTO (Pendente)
 - 💡 DOCUMENTACAO_DE_CODIGO (Pendente)
@@ -125,7 +127,6 @@
 - 💡 METODO_JOIN (Pendente)
 - 💡 MODELAGEM_COMPLEXA (Pendente)
 - 💡 MODELAGEM_DE_SISTEMAS (Pendente)
-- 💡 MODIFICADORES_ACESSO (PUBLIC) (Pendente)
 - 💡 MODIFICADOR_PROTECTED (Pendente)
 - 💡 MULTIPLAS_INSTANCIAS (Pendente)
 - 💡 MULTIPLA_IMPLEMENTACAO (Pendente)
@@ -170,7 +171,6 @@
 - 💡 STD_OFSTREAM (Pendente)
 - 💡 TEMPLATES (Relatórios Genéricos) (Pendente)
 - 💡 THREAD_WITH_PARAMS (Pendente)
-- 💡 TIPAGEM_EM_CLASSES (Pendente)
 - 💡 TRATAMENTO_DE_ERROS (Pendente)
 - 💡 TRATAMENTO_DE_EXCECOES (Pendente)
 - 💡 TRATAMENTO_GENERICO (Pendente)

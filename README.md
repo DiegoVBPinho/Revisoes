@@ -1,17 +1,20 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 10
+### 👑 XP TOTAL: 20
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 1/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 2/61 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
 - [x] ✅ **ATRIBUTOS_BASICOS**
 - [x] ✅ **CLASSE_CONCEITO**
+- [x] ✅ **DEFINICAO_ATRIBUTOS**
 - [x] ✅ **INSTANCIACAO**
+- [x] ✅ **MODIFICADORES_ACESSO (PUBLIC)**
+- [x] ✅ **TIPAGEM_EM_CLASSES**
 - [ ] ⏳ ABSTRACAO_AVANCADA
 - [ ] ⏳ ABSTRACAO_DE_INSTANCIA
 - [ ] ⏳ ABSTRACAO_DE_SISTEMA
@@ -48,7 +51,6 @@
 - [ ] ⏳ CRIACAO_DE_OBJETOS
 - [ ] ⏳ CUSTOM_EXCEPTIONS
 - [ ] ⏳ D.R.Y (Don't Repeat Yourself)
-- [ ] ⏳ DEFINICAO_ATRIBUTOS
 - [ ] ⏳ DEFINICAO_METODOS
 - [ ] ⏳ DESACOPLAMENTO
 - [ ] ⏳ DOCUMENTACAO_DE_CODIGO
@@ -114,7 +116,6 @@
 - [ ] ⏳ METODO_JOIN
 - [ ] ⏳ MODELAGEM_COMPLEXA
 - [ ] ⏳ MODELAGEM_DE_SISTEMAS
-- [ ] ⏳ MODIFICADORES_ACESSO (PUBLIC)
 - [ ] ⏳ MODIFICADOR_PROTECTED
 - [ ] ⏳ MULTIPLAS_INSTANCIAS
 - [ ] ⏳ MULTIPLA_IMPLEMENTACAO
@@ -159,7 +160,6 @@
 - [ ] ⏳ STD_OFSTREAM
 - [ ] ⏳ TEMPLATES (Relatórios Genéricos)
 - [ ] ⏳ THREAD_WITH_PARAMS
-- [ ] ⏳ TIPAGEM_EM_CLASSES
 - [ ] ⏳ TRATAMENTO_DE_ERROS
 - [ ] ⏳ TRATAMENTO_DE_EXCECOES
 - [ ] ⏳ TRATAMENTO_GENERICO

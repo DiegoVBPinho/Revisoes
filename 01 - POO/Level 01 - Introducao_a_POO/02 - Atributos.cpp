@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 02: Atributos e Estados
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - DEFINICAO_ATRIBUTOS
@@ -48,9 +48,25 @@ public:
 #include <string>
 
 // Desenvolva sua classe aqui:
+class Pokemon
+{
+public:
+    std::string nome;
+    std::string tipo;
+    int nivel;
+    float saude;
+};
 
 int main()
 {
+    Pokemon p1;
+
+    p1.nome = "Squirtle";
+    p1.tipo = "Agua";
+    p1.nivel = 16;
+    p1.saude = 100.0;
+
+    std::cout << p1.nome << " " << p1.tipo << " " << p1.nivel << " " << p1.saude << std::endl;
 
     return 0;
 }

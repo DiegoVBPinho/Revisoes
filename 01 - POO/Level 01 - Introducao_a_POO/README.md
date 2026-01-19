@@ -1,12 +1,12 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 1/12
+### 📊 STATUS: 2/12
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
 | :---: | :--- |
 | ✅ | 01 - Classe.cpp |
-| 🔨 | 02 - Atributos.cpp |
+| ✅ | 02 - Atributos.cpp |
 | 🔨 | 03 - Metodos.cpp |
 | 🔨 | 04 - Objetos.cpp |
 | 🔨 | 05 - Ex 1 - Zumbis_Basico.cpp |
@@ -21,7 +21,10 @@
 ### 🧬 Competências do Nível
 - ✅ ATRIBUTOS_BASICOS
 - ✅ CLASSE_CONCEITO
+- ✅ DEFINICAO_ATRIBUTOS
 - ✅ INSTANCIACAO
+- ✅ MODIFICADORES_ACESSO (PUBLIC)
+- ✅ TIPAGEM_EM_CLASSES
 - ⏳ ACESSO_A_MEMBROS
 - ⏳ ALTERACAO_DE_ESTADO
 - ⏳ ARRAYS_DE_OBJETOS
@@ -29,7 +32,6 @@
 - ⏳ CALCULOS_EM_METODOS
 - ⏳ CONDICIONAIS_EM_METODOS
 - ⏳ CRIACAO_DE_OBJETOS
-- ⏳ DEFINICAO_ATRIBUTOS
 - ⏳ DEFINICAO_METODOS
 - ⏳ ESCOPO_DE_CLASSE
 - ⏳ INTERACAO_METODOS
@@ -44,7 +46,6 @@
 - ⏳ MEMORIA_INDEPENDENTE
 - ⏳ MODELAGEM_COMPLEXA
 - ⏳ MODELAGEM_DE_SISTEMAS
-- ⏳ MODIFICADORES_ACESSO (PUBLIC)
 - ⏳ MULTIPLAS_INSTANCIAS
 - ⏳ OBJETOS_COMO_PARAMETROS
 - ⏳ PADRONIZACAO_DE_NOMES
@@ -53,5 +54,4 @@
 - ⏳ REPRESENTACAO_UML
 - ⏳ SIMULACAO_AVANCADA
 - ⏳ SIMULACAO_SISTEMAS
-- ⏳ TIPAGEM_EM_CLASSES
 - ⏳ VISIBILIDADE_MÉTODOS

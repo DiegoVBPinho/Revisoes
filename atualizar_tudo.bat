@@ -40,7 +40,7 @@ if exist "master.exe" (
 echo.
 echo [GITHUB] 🐙 Salvando na nuvem...
 git add .
-git commit -m "Auto-update: Atualizacao diaria do Tracker"
+git commit -m "Auto-update: Atualizando DashBoards."
 git push origin main
 
 :: ABRIR O VS CODE NA RAIZ
