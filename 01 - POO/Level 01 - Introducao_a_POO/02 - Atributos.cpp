@@ -70,3 +70,5 @@ int main()
 
     return 0;
 }
+
+// exercicio gerado por IA para aprender as sintaxes.
