@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 07: Ex 3 - Zumbis_Referencias
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - PASSAGEM_POR_REFERENCIA
@@ -37,8 +37,33 @@ referência real da memória.
 
 // Desenvolva sua classe aqui:
 
+class Zumbi
+{
+public:
+   // atributos
+
+   std::string nome;
+
+   // métodos
+   void atacarPlayer(int &vidaPlayer)
+   {
+      vidaPlayer -= 20;
+      std::cout << "O Zumbi atacou o jogador! " << std::endl;
+   };
+};
+
 int main()
 {
+   int vidaHumano = 100;
 
-    return 0;
+   // instancia zumbi
+   Zumbi z1;
+
+   // metodo
+
+   z1.atacarPlayer(vidaHumano);
+
+   std::cout << "A vida do Humano é: " << vidaHumano << std::endl;
+
+   return 0;
 }

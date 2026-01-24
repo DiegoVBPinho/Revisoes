@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 6/12 | 50% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 7/12 | 58% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -29,13 +29,16 @@
 - ✅ **DEFINICAO_METODOS** (Concluído)
 - ✅ **ESCOPO_DE_CLASSE** (Concluído)
 - ✅ **INSTANCIACAO** (Concluído)
+- ✅ **INTERACAO_OBJETO_VARIAVEL** (Concluído)
 - ✅ **INTERPRETACAO_UML** (Concluído)
+- ✅ **LOGICA_DE_COMBATE** (Concluído)
 - ✅ **LOGICA_DE_METODOS** (Concluído)
 - ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
 - ✅ **MEMORIA_INDEPENDENTE** (Concluído)
 - ✅ **MODELAGEM_DE_SISTEMAS** (Concluído)
 - ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
 - ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
+- ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
@@ -98,7 +101,6 @@
 - 💡 INSTANCIACAO_INTERNA (Pendente)
 - 💡 INSTANCIA_ESTATICA (Pendente)
 - 💡 INTERACAO_METODOS (Pendente)
-- 💡 INTERACAO_OBJETO_VARIAVEL (Pendente)
 - 💡 INTERFACES_EM_CPP (Pendente)
 - 💡 INTERFACE_PUBLICA_LIMPA (Pendente)
 - 💡 ITERACAO_DE_ARRAYS (Pendente)
@@ -106,7 +108,6 @@
 - 💡 LEITURA_LINHA_A_LINHA (Pendente)
 - 💡 LIGACAO_DINAMICA (Pendente)
 - 💡 LOGICA_DE_ATRIBUTOS (Pendente)
-- 💡 LOGICA_DE_COMBATE (Pendente)
 - 💡 LOGICA_DE_NEGOCIO (Pendente)
 - 💡 LOGICA_DE_NEGOCIO_ABSTRATA (Pendente)
 - 💡 LOGICA_DE_SISTEMA (Pendente)
@@ -144,7 +145,6 @@
 - 💡 OVERRIDE (Pendente)
 - 💡 OVERRIDE_WHAT (Pendente)
 - 💡 PADRAO_DOXYGEN (Pendente)
-- 💡 PASSAGEM_POR_REFERENCIA (Pendente)
 - 💡 PERSISTENCIA_DE_OBJETOS (Pendente)
 - 💡 POLIMORFISMO_AVANCADO (Pendente)
 - 💡 PROTECAO_DE_ESTADO (Pendente)

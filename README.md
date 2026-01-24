@@ -1,11 +1,11 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 60
+### 👑 XP TOTAL: 70
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 6/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 7/61 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -18,13 +18,16 @@
 - [x] ✅ **DEFINICAO_METODOS**
 - [x] ✅ **ESCOPO_DE_CLASSE**
 - [x] ✅ **INSTANCIACAO**
+- [x] ✅ **INTERACAO_OBJETO_VARIAVEL**
 - [x] ✅ **INTERPRETACAO_UML**
+- [x] ✅ **LOGICA_DE_COMBATE**
 - [x] ✅ **LOGICA_DE_METODOS**
 - [x] ✅ **MANIPULACAO_DE_ATRIBUTOS**
 - [x] ✅ **MEMORIA_INDEPENDENTE**
 - [x] ✅ **MODELAGEM_DE_SISTEMAS**
 - [x] ✅ **MODIFICADORES_ACESSO (PUBLIC)**
 - [x] ✅ **PADRONIZACAO_DE_NOMES**
+- [x] ✅ **PASSAGEM_POR_REFERENCIA**
 - [x] ✅ **TIPAGEM_EM_CLASSES**
 - [x] ✅ **VISIBILIDADE_MÉTODOS**
 - [ ] ⏳ ABSTRACAO_AVANCADA
@@ -87,7 +90,6 @@
 - [ ] ⏳ INSTANCIACAO_INTERNA
 - [ ] ⏳ INSTANCIA_ESTATICA
 - [ ] ⏳ INTERACAO_METODOS
-- [ ] ⏳ INTERACAO_OBJETO_VARIAVEL
 - [ ] ⏳ INTERFACES_EM_CPP
 - [ ] ⏳ INTERFACE_PUBLICA_LIMPA
 - [ ] ⏳ ITERACAO_DE_ARRAYS
@@ -95,7 +97,6 @@
 - [ ] ⏳ LEITURA_LINHA_A_LINHA
 - [ ] ⏳ LIGACAO_DINAMICA
 - [ ] ⏳ LOGICA_DE_ATRIBUTOS
-- [ ] ⏳ LOGICA_DE_COMBATE
 - [ ] ⏳ LOGICA_DE_NEGOCIO
 - [ ] ⏳ LOGICA_DE_NEGOCIO_ABSTRATA
 - [ ] ⏳ LOGICA_DE_SISTEMA
@@ -133,7 +134,6 @@
 - [ ] ⏳ OVERRIDE
 - [ ] ⏳ OVERRIDE_WHAT
 - [ ] ⏳ PADRAO_DOXYGEN
-- [ ] ⏳ PASSAGEM_POR_REFERENCIA
 - [ ] ⏳ PERSISTENCIA_DE_OBJETOS
 - [ ] ⏳ POLIMORFISMO_AVANCADO
 - [ ] ⏳ PROTECAO_DE_ESTADO
