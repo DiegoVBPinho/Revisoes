@@ -1,18 +1,20 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 80
+### 👑 XP TOTAL: 90
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 8/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 9/61 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
 - [x] ✅ **ACESSO_A_MEMBROS**
 - [x] ✅ **ALTERACAO_DE_ESTADO**
 - [x] ✅ **ATRIBUTOS_BASICOS**
+- [x] ✅ **ATRIBUTOS_CALCULADOS**
 - [x] ✅ **CLASSE_CONCEITO**
+- [x] ✅ **CONDICIONAIS_EM_METODOS**
 - [x] ✅ **CRIACAO_DE_OBJETOS**
 - [x] ✅ **DEFINICAO_ATRIBUTOS**
 - [x] ✅ **DEFINICAO_METODOS**
@@ -31,6 +33,7 @@
 - [x] ✅ **PADRONIZACAO_DE_NOMES**
 - [x] ✅ **PASSAGEM_POR_REFERENCIA**
 - [x] ✅ **REFERENCIA_DE_INSTANCIAS**
+- [x] ✅ **SIMULACAO_SISTEMAS**
 - [x] ✅ **TIPAGEM_EM_CLASSES**
 - [x] ✅ **VISIBILIDADE_MÉTODOS**
 - [ ] ⏳ ABSTRACAO_AVANCADA
@@ -46,7 +49,6 @@
 - [ ] ⏳ ARRAY_PRIMITIVO
 - [ ] ⏳ ASSERT_CONCEITO
 - [ ] ⏳ ASSOCIACAO_DE_METODOS (Pessoa interage com Livro)
-- [ ] ⏳ ATRIBUTOS_CALCULADOS
 - [ ] ⏳ ATRIBUTOS_STATIC
 - [ ] ⏳ BIBLIOTECA_THREAD
 - [ ] ⏳ BLOCO_TRY_CATCH
@@ -58,7 +60,6 @@
 - [ ] ⏳ COMPOSICAO (Livro tem Autor)
 - [ ] ⏳ COMPOSICAO_DE_CLASSES
 - [ ] ⏳ CONCORRENCIA_SIMPLES
-- [ ] ⏳ CONDICIONAIS_EM_METODOS
 - [ ] ⏳ CONFLITO_DE_NOMES
 - [ ] ⏳ CONSTRUTORES_NA_HERANCA
 - [ ] ⏳ CONSTRUTOR_PRIVADO
@@ -151,7 +152,6 @@
 - [ ] ⏳ SEGURANCA_DE_DADOS
 - [ ] ⏳ SIMULACAO_AVANCADA
 - [ ] ⏳ SIMULACAO_DE_SISTEMA
-- [ ] ⏳ SIMULACAO_SISTEMAS
 - [ ] ⏳ SINCRONIZACAO_BASICA
 - [ ] ⏳ SINGLETON (Gerenciador de Sistema)
 - [ ] ⏳ SINGLETON_PATTERN

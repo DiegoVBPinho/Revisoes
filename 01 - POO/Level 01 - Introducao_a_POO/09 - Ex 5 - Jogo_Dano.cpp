@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 09: Ex 5 - Jogo_Dano
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - ATRIBUTOS_CALCULADOS
@@ -35,8 +35,40 @@ dano, representando o "desgaste" do objeto na memória.
 
 // Desenvolva sua classe aqui:
 
+class Arma
+{
+public:
+   std::string nome;
+   int poderAtaque;
+   int durabilidade;
+
+   // metodos
+
+   void atacar()
+   {
+      if (durabilidade > 0)
+      {
+         std::cout << "Dano Causado: " << poderAtaque << std ::endl;
+         durabilidade--;
+      }
+
+      else
+      {
+         std::cout << "a arma está quebrada." << std::endl;
+      }
+   }
+};
+
 int main()
 {
+   Arma Espada;
+   Espada.poderAtaque = 50;
 
-    return 0;
+   Espada.durabilidade = 2;
+
+   Espada.atacar();
+   Espada.atacar();
+   Espada.atacar();
+
+   return 0;
 }

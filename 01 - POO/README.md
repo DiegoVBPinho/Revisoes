@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 8/12 | 66% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 9/12 | 75% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -23,7 +23,9 @@
 - ✅ **ACESSO_A_MEMBROS** (Concluído)
 - ✅ **ALTERACAO_DE_ESTADO** (Concluído)
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
+- ✅ **ATRIBUTOS_CALCULADOS** (Concluído)
 - ✅ **CLASSE_CONCEITO** (Concluído)
+- ✅ **CONDICIONAIS_EM_METODOS** (Concluído)
 - ✅ **CRIACAO_DE_OBJETOS** (Concluído)
 - ✅ **DEFINICAO_ATRIBUTOS** (Concluído)
 - ✅ **DEFINICAO_METODOS** (Concluído)
@@ -42,6 +44,7 @@
 - ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
 - ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
 - ✅ **REFERENCIA_DE_INSTANCIAS** (Concluído)
+- ✅ **SIMULACAO_SISTEMAS** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
@@ -57,7 +60,6 @@
 - 💡 ARRAY_PRIMITIVO (Pendente)
 - 💡 ASSERT_CONCEITO (Pendente)
 - 💡 ASSOCIACAO_DE_METODOS (Pessoa interage com Livro) (Pendente)
-- 💡 ATRIBUTOS_CALCULADOS (Pendente)
 - 💡 ATRIBUTOS_STATIC (Pendente)
 - 💡 BIBLIOTECA_THREAD (Pendente)
 - 💡 BLOCO_TRY_CATCH (Pendente)
@@ -69,7 +71,6 @@
 - 💡 COMPOSICAO (Livro tem Autor) (Pendente)
 - 💡 COMPOSICAO_DE_CLASSES (Pendente)
 - 💡 CONCORRENCIA_SIMPLES (Pendente)
-- 💡 CONDICIONAIS_EM_METODOS (Pendente)
 - 💡 CONFLITO_DE_NOMES (Pendente)
 - 💡 CONSTRUTORES_NA_HERANCA (Pendente)
 - 💡 CONSTRUTOR_PRIVADO (Pendente)
@@ -162,7 +163,6 @@
 - 💡 SEGURANCA_DE_DADOS (Pendente)
 - 💡 SIMULACAO_AVANCADA (Pendente)
 - 💡 SIMULACAO_DE_SISTEMA (Pendente)
-- 💡 SIMULACAO_SISTEMAS (Pendente)
 - 💡 SINCRONIZACAO_BASICA (Pendente)
 - 💡 SINGLETON (Gerenciador de Sistema) (Pendente)
 - 💡 SINGLETON_PATTERN (Pendente)
