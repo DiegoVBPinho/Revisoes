@@ -33,9 +33,40 @@ mantendo a coerência da simulação.
 #include <string>
 
 // Desenvolva sua classe aqui:
+class Kart
+{
+public:
+   std::string corredor;
+   int cilidradas;
+   float velocidadeMax;
+
+   void calcularVelocidade()
+   {
+      velocidadeMax = cilidradas * 0.8;
+   }
+
+   void exibirPainel()
+   {
+      std::cout << "O Corredor é: " << corredor << std::endl;
+      std::cout << "A velocidade máxima atingida é: " << velocidadeMax << std ::endl;
+   }
+};
 
 int main()
 {
+   Kart Mario;
+   Mario.corredor = "Mário";
+   Mario.cilidradas = 150;
 
-    return 0;
+   Kart Bowser;
+   Bowser.corredor = "Bowser";
+   Bowser.cilidradas = 200;
+
+   Mario.calcularVelocidade();
+   Bowser.calcularVelocidade();
+
+   Mario.exibirPainel();
+   Bowser.exibirPainel();
+
+   return 0;
 }
