@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 7/12 | 58% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 8/12 | 66% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -33,12 +33,15 @@
 - ✅ **INTERPRETACAO_UML** (Concluído)
 - ✅ **LOGICA_DE_COMBATE** (Concluído)
 - ✅ **LOGICA_DE_METODOS** (Concluído)
+- ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS** (Concluído)
 - ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
 - ✅ **MEMORIA_INDEPENDENTE** (Concluído)
 - ✅ **MODELAGEM_DE_SISTEMAS** (Concluído)
 - ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
+- ✅ **OBJETOS_COMO_PARAMETROS** (Concluído)
 - ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
 - ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
+- ✅ **REFERENCIA_DE_INSTANCIAS** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
@@ -111,7 +114,6 @@
 - 💡 LOGICA_DE_NEGOCIO (Pendente)
 - 💡 LOGICA_DE_NEGOCIO_ABSTRATA (Pendente)
 - 💡 LOGICA_DE_SISTEMA (Pendente)
-- 💡 LOGICA_DE_SISTEMAS_COOPERATIVOS (Pendente)
 - 💡 LOGICA_DE_SORTEIO (RAND) (Pendente)
 - 💡 LOGICA_DE_TESTE (Pendente)
 - 💡 LOGICA_DE_VALIDACAO (Pendente)
@@ -137,7 +139,6 @@
 - 💡 MULTI_TASKING (Pendente)
 - 💡 NAMESPACES_ANINHADOS (Pendente)
 - 💡 NAMESPACE_CONCEITO (Pendente)
-- 💡 OBJETOS_COMO_PARAMETROS (Pendente)
 - 💡 OBJETOS_INDEPENDENTES (Pendente)
 - 💡 OPERADOR_DE_ESCOPO (::) (Pendente)
 - 💡 ORGANIZACAO_DE_METODOS (Pendente)
@@ -152,7 +153,6 @@
 - 💡 PURE_VIRTUAL_FUNCTIONS (Pendente)
 - 💡 QUALIDADE_DE_CODIGO (Pendente)
 - 💡 REFATORACAO (Pendente)
-- 💡 REFERENCIA_DE_INSTANCIAS (Pendente)
 - 💡 RELACIONAMENTO_FORTE (Pendente)
 - 💡 RELACIONAMENTO_TEM_UM (Pendente)
 - 💡 REPRESENTACAO_UML (Pendente)

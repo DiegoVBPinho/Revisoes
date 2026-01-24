@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 08: Ex 4 - Zumbis_Transferencia
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - OBJETOS_COMO_PARAMETROS
@@ -35,8 +35,37 @@ objeto da mesma classe.
 
 // Desenvolva sua classe aqui:
 
-int main()
+class Zumbi
 {
 
-    return 0;
+public:
+   // atributos
+   std::string nome;
+   int vida;
+
+   // métodos
+   void transferirVida(Zumbi &destino, int quantidade)
+   {
+      vida -= quantidade;
+      destino.vida += quantidade;
+   };
+};
+
+int main()
+{
+   // instancias
+   Zumbi A;
+   A.nome = "Frog";
+   A.vida = 100;
+
+   Zumbi B;
+   B.nome = "Chrono";
+   B.vida = 50;
+
+   A.transferirVida(B, 30);
+
+   std::cout << A.vida << std::endl;
+   std::cout << B.vida << std::endl;
+
+   return 0;
 }
