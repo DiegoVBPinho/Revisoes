@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 03: Métodos e Comportamentos
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - DEFINICAO_METODOS
@@ -31,8 +31,42 @@ o que o objeto pode fazer.
 
 // Desenvolva sua classe aqui:
 
+class Carro
+{
+public:
+   std::string marca, modelo;
+   int velocidade;
+
+   // métodos
+   void acelerar(int incremento)
+   {
+      velocidade += incremento;
+   } // somará a velocidade ao incremento;
+
+   void exibirStatus()
+   {
+      std::cout << "Marca: " << marca << std::endl;
+      std::cout << "Modelo: " << modelo << std::endl;
+      std::cout << "Velocidade: " << velocidade << std::endl;
+
+   }; // mostra dados atuais
+};
+
 int main()
 {
+   Carro car;
+   car.marca = "Toyota";
+   car.modelo = "Corolla";
+   car.velocidade = 30;
 
-    return 0;
+   // chamando função status antes de acelerar
+   car.exibirStatus();
+
+   // chamando acelerar
+   car.acelerar(20);
+   std::cout << std::endl;
+   // chamando função status depois de acelerar
+   car.exibirStatus();
+
+   return 0;
 }

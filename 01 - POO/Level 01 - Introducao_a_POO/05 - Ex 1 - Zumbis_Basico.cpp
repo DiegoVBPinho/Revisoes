@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 05: Ex 1 - Zumbis_Basico
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - MODELAGEM_DE_SISTEMAS
@@ -37,8 +37,33 @@ diretamente da vida do objeto.
 
 // Desenvolva sua classe aqui:
 
+class Zumbi
+{
+public:
+   std::string tipo;
+   int vida;
+
+   void receberDano(int dano)
+   {
+      return vida -= dano;
+   }
+
+   void exibirStatus()
+   {
+      std::cout << "O Tipo do Zumbi é : " << tipo << std::endl;
+      std::cout << "A vida atual é : " << vida << std::endl;
+   }
+};
+
 int main()
 {
+   Zumbi z1;
+   z1.tipo = "lento";
+   z1.vida = 100;
 
-    return 0;
+   z1.exibirStatus();
+   z1.receberDano(30);
+   z1.exibirStatus();
+
+   return 0;
 }

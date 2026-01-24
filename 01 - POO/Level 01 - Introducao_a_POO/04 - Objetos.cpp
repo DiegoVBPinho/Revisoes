@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 04: Objetos
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - CRIACAO_DE_OBJETOS
@@ -32,9 +32,25 @@ valores próprios em seus atributos.
 #include <string>
 
 // Desenvolva sua classe aqui:
-
+class Smartphone
+{
+public:
+   std::string marca;
+   int armazenamento;
+};
 int main()
 {
+   Smartphone meuFone;
+   Smartphone seuFone;
 
-    return 0;
+   meuFone.marca = "Apple";
+   meuFone.armazenamento = 128;
+
+   seuFone.marca = "Samsung";
+   seuFone.armazenamento = 256;
+
+   std::cout << meuFone.marca << "/" << meuFone.armazenamento << std::endl;
+   std::cout << seuFone.marca << "/" << seuFone.armazenamento << std::endl;
+
+   return 0;
 }

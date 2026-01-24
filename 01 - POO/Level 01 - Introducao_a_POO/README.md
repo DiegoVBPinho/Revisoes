@@ -1,15 +1,15 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 2/12
+### 📊 STATUS: 5/12
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
 | :---: | :--- |
 | ✅ | 01 - Classe.cpp |
 | ✅ | 02 - Atributos.cpp |
-| 🔨 | 03 - Metodos.cpp |
-| 🔨 | 04 - Objetos.cpp |
-| 🔨 | 05 - Ex 1 - Zumbis_Basico.cpp |
+| ✅ | 03 - Metodos.cpp |
+| ✅ | 04 - Objetos.cpp |
+| ✅ | 05 - Ex 1 - Zumbis_Basico.cpp |
 | 🔨 | 06 - Ex 2 - Zumbis_UML.cpp |
 | 🔨 | 07 - Ex 3 - Zumbis_Referencias.cpp |
 | 🔨 | 08 - Ex 4 - Zumbis_Transferencia.cpp |
@@ -19,33 +19,33 @@
 | 🔨 | 12 - Carrinho de Compras.cpp |
 
 ### 🧬 Competências do Nível
+- ✅ ACESSO_A_MEMBROS
+- ✅ ALTERACAO_DE_ESTADO
 - ✅ ATRIBUTOS_BASICOS
 - ✅ CLASSE_CONCEITO
+- ✅ CRIACAO_DE_OBJETOS
 - ✅ DEFINICAO_ATRIBUTOS
+- ✅ DEFINICAO_METODOS
+- ✅ ESCOPO_DE_CLASSE
 - ✅ INSTANCIACAO
+- ✅ LOGICA_DE_METODOS
+- ✅ MANIPULACAO_DE_ATRIBUTOS
+- ✅ MEMORIA_INDEPENDENTE
+- ✅ MODELAGEM_DE_SISTEMAS
 - ✅ MODIFICADORES_ACESSO (PUBLIC)
 - ✅ TIPAGEM_EM_CLASSES
-- ⏳ ACESSO_A_MEMBROS
-- ⏳ ALTERACAO_DE_ESTADO
 - ⏳ ARRAYS_DE_OBJETOS
 - ⏳ ATRIBUTOS_CALCULADOS
 - ⏳ CALCULOS_EM_METODOS
 - ⏳ CONDICIONAIS_EM_METODOS
-- ⏳ CRIACAO_DE_OBJETOS
-- ⏳ DEFINICAO_METODOS
-- ⏳ ESCOPO_DE_CLASSE
 - ⏳ INTERACAO_METODOS
 - ⏳ INTERACAO_OBJETO_VARIAVEL
 - ⏳ INTERPRETACAO_UML
 - ⏳ LOGICA_DE_ATRIBUTOS
 - ⏳ LOGICA_DE_COMBATE
-- ⏳ LOGICA_DE_METODOS
 - ⏳ LOGICA_DE_SISTEMAS_COOPERATIVOS
 - ⏳ LOGICA_OPERACIONAL
-- ⏳ MANIPULACAO_DE_ATRIBUTOS
-- ⏳ MEMORIA_INDEPENDENTE
 - ⏳ MODELAGEM_COMPLEXA
-- ⏳ MODELAGEM_DE_SISTEMAS
 - ⏳ MULTIPLAS_INSTANCIAS
 - ⏳ OBJETOS_COMO_PARAMETROS
 - ⏳ PADRONIZACAO_DE_NOMES

@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 2/12 | 16% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 5/12 | 41% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -20,19 +20,26 @@
 | [PROJETO POO - INATEL](./PROJETO POO - INATEL) | 0/1 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **ACESSO_A_MEMBROS** (Concluído)
+- ✅ **ALTERACAO_DE_ESTADO** (Concluído)
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
 - ✅ **CLASSE_CONCEITO** (Concluído)
+- ✅ **CRIACAO_DE_OBJETOS** (Concluído)
 - ✅ **DEFINICAO_ATRIBUTOS** (Concluído)
+- ✅ **DEFINICAO_METODOS** (Concluído)
+- ✅ **ESCOPO_DE_CLASSE** (Concluído)
 - ✅ **INSTANCIACAO** (Concluído)
+- ✅ **LOGICA_DE_METODOS** (Concluído)
+- ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
+- ✅ **MEMORIA_INDEPENDENTE** (Concluído)
+- ✅ **MODELAGEM_DE_SISTEMAS** (Concluído)
 - ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
 - 💡 ABSTRACAO_DE_INSTANCIA (Pendente)
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
-- 💡 ACESSO_A_MEMBROS (Pendente)
 - 💡 ACESSO_SEM_INSTANCIA (Pendente)
 - 💡 AGREGACAO (Biblioteca tem lista de Livros) (Pendente)
-- 💡 ALTERACAO_DE_ESTADO (Pendente)
 - 💡 ARQUITETURA_C++17 (Pendente)
 - 💡 ARQUITETURA_DE_CLASSES (Pendente)
 - 💡 ARRAYS_DE_OBJETOS (Pendente)
@@ -59,17 +66,14 @@
 - 💡 CONSTRUTOR_PRIVADO (Pendente)
 - 💡 CONTRATOS_DE_CODIGO (Pendente)
 - 💡 CONVENCAO_REVERSA (Pendente)
-- 💡 CRIACAO_DE_OBJETOS (Pendente)
 - 💡 CUSTOM_EXCEPTIONS (Pendente)
 - 💡 D.R.Y (Don't Repeat Yourself) (Pendente)
-- 💡 DEFINICAO_METODOS (Pendente)
 - 💡 DESACOPLAMENTO (Pendente)
 - 💡 DOCUMENTACAO_DE_CODIGO (Pendente)
 - 💡 ENCAPSULAMENTO (Pendente)
 - 💡 ENCAPSULAMENTO_BASICO (Pendente)
 - 💡 ENCAPSULAMENTO_TOTAL (Pendente)
 - 💡 ENTRADA_DE_DADOS (CIN) (Pendente)
-- 💡 ESCOPO_DE_CLASSE (Pendente)
 - 💡 ESCRITA_EM_TXT (Pendente)
 - 💡 ESTRUTURA_DE_REPETICAO (WHILE) (Pendente)
 - 💡 EXIBICAO_ESTRUTURADA (Pendente)
@@ -101,7 +105,6 @@
 - 💡 LIGACAO_DINAMICA (Pendente)
 - 💡 LOGICA_DE_ATRIBUTOS (Pendente)
 - 💡 LOGICA_DE_COMBATE (Pendente)
-- 💡 LOGICA_DE_METODOS (Pendente)
 - 💡 LOGICA_DE_NEGOCIO (Pendente)
 - 💡 LOGICA_DE_NEGOCIO_ABSTRATA (Pendente)
 - 💡 LOGICA_DE_SISTEMA (Pendente)
@@ -115,18 +118,15 @@
 - 💡 LOG_DE_ERRO (Pendente)
 - 💡 LOOPS_ANINHADOS (FOR DENTRO DE FOR) (Pendente)
 - 💡 MANIPULACAO_DE_ARQUIVOS (TXT/CSV) (Pendente)
-- 💡 MANIPULACAO_DE_ATRIBUTOS (Pendente)
 - 💡 MANUTENCAO_DE_CODIGO (Pendente)
 - 💡 MATRIZ_BIDIMENSIONAL (ARRAY 2D) (Pendente)
 - 💡 MATRIZ_QUADRADA (Pendente)
 - 💡 MEMORIA_COMPARTILHADA (Pendente)
-- 💡 MEMORIA_INDEPENDENTE (Pendente)
 - 💡 METODOS_COM_INDICE (Pendente)
 - 💡 METODOS_STATIC (Pendente)
 - 💡 METODO_CONSTRUTOR (Pendente)
 - 💡 METODO_JOIN (Pendente)
 - 💡 MODELAGEM_COMPLEXA (Pendente)
-- 💡 MODELAGEM_DE_SISTEMAS (Pendente)
 - 💡 MODIFICADOR_PROTECTED (Pendente)
 - 💡 MULTIPLAS_INSTANCIAS (Pendente)
 - 💡 MULTIPLA_IMPLEMENTACAO (Pendente)
