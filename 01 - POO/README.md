@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 5/12 | 41% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 6/12 | 50% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -29,12 +29,15 @@
 - ✅ **DEFINICAO_METODOS** (Concluído)
 - ✅ **ESCOPO_DE_CLASSE** (Concluído)
 - ✅ **INSTANCIACAO** (Concluído)
+- ✅ **INTERPRETACAO_UML** (Concluído)
 - ✅ **LOGICA_DE_METODOS** (Concluído)
 - ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
 - ✅ **MEMORIA_INDEPENDENTE** (Concluído)
 - ✅ **MODELAGEM_DE_SISTEMAS** (Concluído)
 - ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
+- ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
+- ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
 - 💡 ABSTRACAO_AVANCADA (Pendente)
 - 💡 ABSTRACAO_DE_INSTANCIA (Pendente)
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
@@ -98,7 +101,6 @@
 - 💡 INTERACAO_OBJETO_VARIAVEL (Pendente)
 - 💡 INTERFACES_EM_CPP (Pendente)
 - 💡 INTERFACE_PUBLICA_LIMPA (Pendente)
-- 💡 INTERPRETACAO_UML (Pendente)
 - 💡 ITERACAO_DE_ARRAYS (Pendente)
 - 💡 LANÇAMENTO_DE_EXCECAO (throw) (Pendente)
 - 💡 LEITURA_LINHA_A_LINHA (Pendente)
@@ -142,7 +144,6 @@
 - 💡 OVERRIDE (Pendente)
 - 💡 OVERRIDE_WHAT (Pendente)
 - 💡 PADRAO_DOXYGEN (Pendente)
-- 💡 PADRONIZACAO_DE_NOMES (Pendente)
 - 💡 PASSAGEM_POR_REFERENCIA (Pendente)
 - 💡 PERSISTENCIA_DE_OBJETOS (Pendente)
 - 💡 POLIMORFISMO_AVANCADO (Pendente)
@@ -179,7 +180,6 @@
 - 💡 VALIDACAO_DE_SISTEMA (Pendente)
 - 💡 VERIFICACAO_DE_ARQUIVO (is_open) (Pendente)
 - 💡 VIRTUAL_METHODS (Pendente)
-- 💡 VISIBILIDADE_MÉTODOS (Pendente)
 - 💡 ⚙️ LOGICA_OPERACIONAL (Pendente)
 - 💡 🎮 SIMULACAO_AVANCADA (Pendente)
 - 💡 📊 ESTRUTURAS_E_DADOS (Pendente)

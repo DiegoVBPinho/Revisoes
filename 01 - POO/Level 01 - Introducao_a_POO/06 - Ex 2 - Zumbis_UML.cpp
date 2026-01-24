@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 06: Ex 2 - Zumbis_UML
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - INTERPRETACAO_UML
@@ -40,9 +40,36 @@ No Slide 12, o professor apresenta um diagrama com sinais de + e -.
 #include <string>
 
 // Desenvolva sua classe aqui:
+class Zumbi
+{
+public:
+   std::string nome;
+   int saude;
+
+   // metodos
+   void rugir()
+   {
+      std::cout << " Graaaaawr !" << std::endl;
+   }
+
+   void tomarDano(int dano)
+   {
+      saude -= dano;
+   }
+};
 
 int main()
 {
+   // instanciando 1 zumbi
 
-    return 0;
+   Zumbi z1;
+   z1.nome = "Victor";
+   z1.saude = 100;
+
+   z1.rugir();
+   z1.tomarDano(50);
+
+   std::cout << "A vida atual é: " << z1.saude << std::endl;
+
+   return 0;
 }

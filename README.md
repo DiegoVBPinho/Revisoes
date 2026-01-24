@@ -1,11 +1,11 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 50
+### 👑 XP TOTAL: 60
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 5/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 6/61 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -18,12 +18,15 @@
 - [x] ✅ **DEFINICAO_METODOS**
 - [x] ✅ **ESCOPO_DE_CLASSE**
 - [x] ✅ **INSTANCIACAO**
+- [x] ✅ **INTERPRETACAO_UML**
 - [x] ✅ **LOGICA_DE_METODOS**
 - [x] ✅ **MANIPULACAO_DE_ATRIBUTOS**
 - [x] ✅ **MEMORIA_INDEPENDENTE**
 - [x] ✅ **MODELAGEM_DE_SISTEMAS**
 - [x] ✅ **MODIFICADORES_ACESSO (PUBLIC)**
+- [x] ✅ **PADRONIZACAO_DE_NOMES**
 - [x] ✅ **TIPAGEM_EM_CLASSES**
+- [x] ✅ **VISIBILIDADE_MÉTODOS**
 - [ ] ⏳ ABSTRACAO_AVANCADA
 - [ ] ⏳ ABSTRACAO_DE_INSTANCIA
 - [ ] ⏳ ABSTRACAO_DE_SISTEMA
@@ -87,7 +90,6 @@
 - [ ] ⏳ INTERACAO_OBJETO_VARIAVEL
 - [ ] ⏳ INTERFACES_EM_CPP
 - [ ] ⏳ INTERFACE_PUBLICA_LIMPA
-- [ ] ⏳ INTERPRETACAO_UML
 - [ ] ⏳ ITERACAO_DE_ARRAYS
 - [ ] ⏳ LANÇAMENTO_DE_EXCECAO (throw)
 - [ ] ⏳ LEITURA_LINHA_A_LINHA
@@ -131,7 +133,6 @@
 - [ ] ⏳ OVERRIDE
 - [ ] ⏳ OVERRIDE_WHAT
 - [ ] ⏳ PADRAO_DOXYGEN
-- [ ] ⏳ PADRONIZACAO_DE_NOMES
 - [ ] ⏳ PASSAGEM_POR_REFERENCIA
 - [ ] ⏳ PERSISTENCIA_DE_OBJETOS
 - [ ] ⏳ POLIMORFISMO_AVANCADO
@@ -168,7 +169,6 @@
 - [ ] ⏳ VALIDACAO_DE_SISTEMA
 - [ ] ⏳ VERIFICACAO_DE_ARQUIVO (is_open)
 - [ ] ⏳ VIRTUAL_METHODS
-- [ ] ⏳ VISIBILIDADE_MÉTODOS
 - [ ] ⏳ ⚙️ LOGICA_OPERACIONAL
 - [ ] ⏳ 🎮 SIMULACAO_AVANCADA
 - [ ] ⏳ 📊 ESTRUTURAS_E_DADOS
