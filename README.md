@@ -1,11 +1,11 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 90
+### 👑 XP TOTAL: 100
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 9/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 10/61 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -13,6 +13,7 @@
 - [x] ✅ **ALTERACAO_DE_ESTADO**
 - [x] ✅ **ATRIBUTOS_BASICOS**
 - [x] ✅ **ATRIBUTOS_CALCULADOS**
+- [x] ✅ **CALCULOS_EM_METODOS**
 - [x] ✅ **CLASSE_CONCEITO**
 - [x] ✅ **CONDICIONAIS_EM_METODOS**
 - [x] ✅ **CRIACAO_DE_OBJETOS**
@@ -22,6 +23,7 @@
 - [x] ✅ **INSTANCIACAO**
 - [x] ✅ **INTERACAO_OBJETO_VARIAVEL**
 - [x] ✅ **INTERPRETACAO_UML**
+- [x] ✅ **LOGICA_DE_ATRIBUTOS**
 - [x] ✅ **LOGICA_DE_COMBATE**
 - [x] ✅ **LOGICA_DE_METODOS**
 - [x] ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS**
@@ -33,6 +35,7 @@
 - [x] ✅ **PADRONIZACAO_DE_NOMES**
 - [x] ✅ **PASSAGEM_POR_REFERENCIA**
 - [x] ✅ **REFERENCIA_DE_INSTANCIAS**
+- [x] ✅ **REPRESENTACAO_UML**
 - [x] ✅ **SIMULACAO_SISTEMAS**
 - [x] ✅ **TIPAGEM_EM_CLASSES**
 - [x] ✅ **VISIBILIDADE_MÉTODOS**
@@ -54,7 +57,6 @@
 - [ ] ⏳ BLOCO_TRY_CATCH
 - [ ] ⏳ BOAS_PRATICAS
 - [ ] ⏳ CALCULOS_EM_LOOP
-- [ ] ⏳ CALCULOS_EM_METODOS
 - [ ] ⏳ CICLO_DE_VIDA_DEPENDENTE
 - [ ] ⏳ CLASSES_ABSTRATAS
 - [ ] ⏳ COMPOSICAO (Livro tem Autor)
@@ -100,7 +102,6 @@
 - [ ] ⏳ LANÇAMENTO_DE_EXCECAO (throw)
 - [ ] ⏳ LEITURA_LINHA_A_LINHA
 - [ ] ⏳ LIGACAO_DINAMICA
-- [ ] ⏳ LOGICA_DE_ATRIBUTOS
 - [ ] ⏳ LOGICA_DE_NEGOCIO
 - [ ] ⏳ LOGICA_DE_NEGOCIO_ABSTRATA
 - [ ] ⏳ LOGICA_DE_SISTEMA
@@ -145,7 +146,6 @@
 - [ ] ⏳ REFATORACAO
 - [ ] ⏳ RELACIONAMENTO_FORTE
 - [ ] ⏳ RELACIONAMENTO_TEM_UM
-- [ ] ⏳ REPRESENTACAO_UML
 - [ ] ⏳ RESOLUCAO_DE_AMBIGUIDADE
 - [ ] ⏳ ROBUSTEZ
 - [ ] ⏳ ROBUSTEZ_AVANCADA

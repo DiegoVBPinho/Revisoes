@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 9/12 | 75% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 10/12 | 83% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -24,6 +24,7 @@
 - ✅ **ALTERACAO_DE_ESTADO** (Concluído)
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
 - ✅ **ATRIBUTOS_CALCULADOS** (Concluído)
+- ✅ **CALCULOS_EM_METODOS** (Concluído)
 - ✅ **CLASSE_CONCEITO** (Concluído)
 - ✅ **CONDICIONAIS_EM_METODOS** (Concluído)
 - ✅ **CRIACAO_DE_OBJETOS** (Concluído)
@@ -33,6 +34,7 @@
 - ✅ **INSTANCIACAO** (Concluído)
 - ✅ **INTERACAO_OBJETO_VARIAVEL** (Concluído)
 - ✅ **INTERPRETACAO_UML** (Concluído)
+- ✅ **LOGICA_DE_ATRIBUTOS** (Concluído)
 - ✅ **LOGICA_DE_COMBATE** (Concluído)
 - ✅ **LOGICA_DE_METODOS** (Concluído)
 - ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS** (Concluído)
@@ -44,6 +46,7 @@
 - ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
 - ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
 - ✅ **REFERENCIA_DE_INSTANCIAS** (Concluído)
+- ✅ **REPRESENTACAO_UML** (Concluído)
 - ✅ **SIMULACAO_SISTEMAS** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
@@ -65,7 +68,6 @@
 - 💡 BLOCO_TRY_CATCH (Pendente)
 - 💡 BOAS_PRATICAS (Pendente)
 - 💡 CALCULOS_EM_LOOP (Pendente)
-- 💡 CALCULOS_EM_METODOS (Pendente)
 - 💡 CICLO_DE_VIDA_DEPENDENTE (Pendente)
 - 💡 CLASSES_ABSTRATAS (Pendente)
 - 💡 COMPOSICAO (Livro tem Autor) (Pendente)
@@ -111,7 +113,6 @@
 - 💡 LANÇAMENTO_DE_EXCECAO (throw) (Pendente)
 - 💡 LEITURA_LINHA_A_LINHA (Pendente)
 - 💡 LIGACAO_DINAMICA (Pendente)
-- 💡 LOGICA_DE_ATRIBUTOS (Pendente)
 - 💡 LOGICA_DE_NEGOCIO (Pendente)
 - 💡 LOGICA_DE_NEGOCIO_ABSTRATA (Pendente)
 - 💡 LOGICA_DE_SISTEMA (Pendente)
@@ -156,7 +157,6 @@
 - 💡 REFATORACAO (Pendente)
 - 💡 RELACIONAMENTO_FORTE (Pendente)
 - 💡 RELACIONAMENTO_TEM_UM (Pendente)
-- 💡 REPRESENTACAO_UML (Pendente)
 - 💡 RESOLUCAO_DE_AMBIGUIDADE (Pendente)
 - 💡 ROBUSTEZ (Pendente)
 - 💡 ROBUSTEZ_AVANCADA (Pendente)

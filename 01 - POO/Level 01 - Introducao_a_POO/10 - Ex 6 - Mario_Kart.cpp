@@ -3,7 +3,8 @@
 📘 01 - POO - EXERCICIO 10: Ex 6 - Mario_Kart
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
+
 
 COMPETENCIAS:
 - LOGICA_DE_ATRIBUTOS

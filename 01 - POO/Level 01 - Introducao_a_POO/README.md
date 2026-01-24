@@ -1,6 +1,6 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 9/12
+### 📊 STATUS: 10/12
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
@@ -14,7 +14,7 @@
 | ✅ | 07 - Ex 3 - Zumbis_Referencias.cpp |
 | ✅ | 08 - Ex 4 - Zumbis_Transferencia.cpp |
 | ✅ | 09 - Ex 5 - Jogo_Dano.cpp |
-| 🔨 | 10 - Ex 6 - Mario_Kart.cpp |
+| ✅ | 10 - Ex 6 - Mario_Kart.cpp |
 | 🔨 | 11 - Exercicio - Zoologico (União de Conceitos).cpp |
 | 🔨 | 12 - Carrinho de Compras.cpp |
 
@@ -23,6 +23,7 @@
 - ✅ ALTERACAO_DE_ESTADO
 - ✅ ATRIBUTOS_BASICOS
 - ✅ ATRIBUTOS_CALCULADOS
+- ✅ CALCULOS_EM_METODOS
 - ✅ CLASSE_CONCEITO
 - ✅ CONDICIONAIS_EM_METODOS
 - ✅ CRIACAO_DE_OBJETOS
@@ -32,6 +33,7 @@
 - ✅ INSTANCIACAO
 - ✅ INTERACAO_OBJETO_VARIAVEL
 - ✅ INTERPRETACAO_UML
+- ✅ LOGICA_DE_ATRIBUTOS
 - ✅ LOGICA_DE_COMBATE
 - ✅ LOGICA_DE_METODOS
 - ✅ LOGICA_DE_SISTEMAS_COOPERATIVOS
@@ -43,15 +45,13 @@
 - ✅ PADRONIZACAO_DE_NOMES
 - ✅ PASSAGEM_POR_REFERENCIA
 - ✅ REFERENCIA_DE_INSTANCIAS
+- ✅ REPRESENTACAO_UML
 - ✅ SIMULACAO_SISTEMAS
 - ✅ TIPAGEM_EM_CLASSES
 - ✅ VISIBILIDADE_MÉTODOS
 - ⏳ ARRAYS_DE_OBJETOS
-- ⏳ CALCULOS_EM_METODOS
 - ⏳ INTERACAO_METODOS
-- ⏳ LOGICA_DE_ATRIBUTOS
 - ⏳ LOGICA_OPERACIONAL
 - ⏳ MODELAGEM_COMPLEXA
 - ⏳ MULTIPLAS_INSTANCIAS
-- ⏳ REPRESENTACAO_UML
 - ⏳ SIMULACAO_AVANCADA
