@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Difícil (Level 1)
 
 COMPETENCIAS:
@@ -28,6 +28,43 @@ COMPETENCIAS:
 using namespace std;
 
 int main()
+
 {
+    // 1
+    int A, B, C;
+
+    cin >> A;
+    cin >> B >> C;
+
+    // 2 - VERIFICAÇÃO DE TRIANGULO
+
+    if (A < B + C && B < A + C && C < A + B)
+    {
+        cout << "Triangulo Válido: ";
+
+        if (A == B && B == C)
+        {
+            cout << "Equilatero";
+        }
+
+        else if (A != B && B != C && A != C)
+        {
+            cout << "Escaleno";
+        }
+
+        else
+        {
+            cout << "Isoceles";
+        }
+    }
+    else
+    {
+        cout << "Triangulo Invalido!";
+    }
+
     return 0;
 }
+
+// todos iguais → Equilátero
+// dois iguais → Isósceles
+// todos diferentes → Escaleno
