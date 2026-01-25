@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - IF](./Level 01 - IF) | 2/5 | 40% |
+| [Level 01 - IF](./Level 01 - IF) | 3/5 | 60% |
 | [Level 02 - For](./Level 02 - For) | 0/5 | 0% |
 | [Level 03 - While](./Level 03 - While) | 0/5 | 0% |
 | [Level 04 - Do While](./Level 04 - Do While) | 0/5 | 0% |

@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Difícil (Level 1)
 
 🎯 OBJETIVO DO EXERCICIO:
@@ -19,10 +19,40 @@ DIFICULDADE: Difícil (Level 1)
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
+
+    float IMC, peso, altura;
+
+    cout << "Digite peso: ";
+    cin >> peso;
+
+    cout << "Digite Altura: ";
+    cin >> altura;
+
+    // calculo de IMC
+    IMC = peso / (altura * altura);
+
+    if (IMC < 18.5)
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Abaixo" << endl;
+
+    else if (IMC > 18.5 && IMC < 24.9)
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Normal" << endl;
+
+    else if (IMC > 25 && IMC < 29.9)
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Sobrepeso" << endl;
+
+    else if (IMC > 30 && IMC < 34.9)
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Obesidade I" << endl;
+
+    else if (IMC > 35 && IMC < 39.9)
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Obesidade II" << endl;
+
+    else
+        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Morbida" << endl;
     return 0;
 }
