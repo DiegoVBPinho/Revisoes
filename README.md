@@ -1,16 +1,17 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 100
+### 👑 XP TOTAL: 110
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [01 - POO](./01 - POO) | 10/61 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
 - [x] ✅ **ACESSO_A_MEMBROS**
 - [x] ✅ **ALTERACAO_DE_ESTADO**
+- [x] ✅ **ARRAYS_DE_OBJETOS**
 - [x] ✅ **ATRIBUTOS_BASICOS**
 - [x] ✅ **ATRIBUTOS_CALCULADOS**
 - [x] ✅ **CALCULOS_EM_METODOS**
@@ -21,6 +22,7 @@
 - [x] ✅ **DEFINICAO_METODOS**
 - [x] ✅ **ESCOPO_DE_CLASSE**
 - [x] ✅ **INSTANCIACAO**
+- [x] ✅ **INTERACAO_METODOS**
 - [x] ✅ **INTERACAO_OBJETO_VARIAVEL**
 - [x] ✅ **INTERPRETACAO_UML**
 - [x] ✅ **LOGICA_DE_ATRIBUTOS**
@@ -29,8 +31,10 @@
 - [x] ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS**
 - [x] ✅ **MANIPULACAO_DE_ATRIBUTOS**
 - [x] ✅ **MEMORIA_INDEPENDENTE**
+- [x] ✅ **MODELAGEM_COMPLEXA**
 - [x] ✅ **MODELAGEM_DE_SISTEMAS**
 - [x] ✅ **MODIFICADORES_ACESSO (PUBLIC)**
+- [x] ✅ **MULTIPLAS_INSTANCIAS**
 - [x] ✅ **OBJETOS_COMO_PARAMETROS**
 - [x] ✅ **PADRONIZACAO_DE_NOMES**
 - [x] ✅ **PASSAGEM_POR_REFERENCIA**
@@ -46,7 +50,6 @@
 - [ ] ⏳ AGREGACAO (Biblioteca tem lista de Livros)
 - [ ] ⏳ ARQUITETURA_C++17
 - [ ] ⏳ ARQUITETURA_DE_CLASSES
-- [ ] ⏳ ARRAYS_DE_OBJETOS
 - [ ] ⏳ ARRAY_DE_OBJETOS
 - [ ] ⏳ ARRAY_DE_PONTEIROS
 - [ ] ⏳ ARRAY_PRIMITIVO
@@ -95,7 +98,6 @@
 - [ ] ⏳ INICIALIZACAO_DE_DADOS
 - [ ] ⏳ INSTANCIACAO_INTERNA
 - [ ] ⏳ INSTANCIA_ESTATICA
-- [ ] ⏳ INTERACAO_METODOS
 - [ ] ⏳ INTERFACES_EM_CPP
 - [ ] ⏳ INTERFACE_PUBLICA_LIMPA
 - [ ] ⏳ ITERACAO_DE_ARRAYS
@@ -122,9 +124,7 @@
 - [ ] ⏳ METODOS_STATIC
 - [ ] ⏳ METODO_CONSTRUTOR
 - [ ] ⏳ METODO_JOIN
-- [ ] ⏳ MODELAGEM_COMPLEXA
 - [ ] ⏳ MODIFICADOR_PROTECTED
-- [ ] ⏳ MULTIPLAS_INSTANCIAS
 - [ ] ⏳ MULTIPLA_IMPLEMENTACAO
 - [ ] ⏳ MULTIPLOS_CATCHS
 - [ ] ⏳ MULTI_TASKING

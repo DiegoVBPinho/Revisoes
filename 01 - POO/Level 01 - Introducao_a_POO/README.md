@@ -1,6 +1,6 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 10/12
+### 📊 STATUS: 11/13
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
@@ -15,12 +15,14 @@
 | ✅ | 08 - Ex 4 - Zumbis_Transferencia.cpp |
 | ✅ | 09 - Ex 5 - Jogo_Dano.cpp |
 | ✅ | 10 - Ex 6 - Mario_Kart.cpp |
-| 🔨 | 11 - Exercicio - Zoologico (União de Conceitos).cpp |
+| ✅ | 11 - Exercicio - Zoologico.cpp |
 | 🔨 | 12 - Carrinho de Compras.cpp |
+| 🔨 | 13  - Array de Classes Pokemons (União de Conceitos).cpp |
 
 ### 🧬 Competências do Nível
 - ✅ ACESSO_A_MEMBROS
 - ✅ ALTERACAO_DE_ESTADO
+- ✅ ARRAYS_DE_OBJETOS
 - ✅ ATRIBUTOS_BASICOS
 - ✅ ATRIBUTOS_CALCULADOS
 - ✅ CALCULOS_EM_METODOS
@@ -31,6 +33,7 @@
 - ✅ DEFINICAO_METODOS
 - ✅ ESCOPO_DE_CLASSE
 - ✅ INSTANCIACAO
+- ✅ INTERACAO_METODOS
 - ✅ INTERACAO_OBJETO_VARIAVEL
 - ✅ INTERPRETACAO_UML
 - ✅ LOGICA_DE_ATRIBUTOS
@@ -39,8 +42,10 @@
 - ✅ LOGICA_DE_SISTEMAS_COOPERATIVOS
 - ✅ MANIPULACAO_DE_ATRIBUTOS
 - ✅ MEMORIA_INDEPENDENTE
+- ✅ MODELAGEM_COMPLEXA
 - ✅ MODELAGEM_DE_SISTEMAS
 - ✅ MODIFICADORES_ACESSO (PUBLIC)
+- ✅ MULTIPLAS_INSTANCIAS
 - ✅ OBJETOS_COMO_PARAMETROS
 - ✅ PADRONIZACAO_DE_NOMES
 - ✅ PASSAGEM_POR_REFERENCIA
@@ -49,9 +54,5 @@
 - ✅ SIMULACAO_SISTEMAS
 - ✅ TIPAGEM_EM_CLASSES
 - ✅ VISIBILIDADE_MÉTODOS
-- ⏳ ARRAYS_DE_OBJETOS
-- ⏳ INTERACAO_METODOS
 - ⏳ LOGICA_OPERACIONAL
-- ⏳ MODELAGEM_COMPLEXA
-- ⏳ MULTIPLAS_INSTANCIAS
 - ⏳ SIMULACAO_AVANCADA

@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 10/12 | 83% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 11/13 | 84% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -22,6 +22,7 @@
 ## 🧬 Clusters de Domínio
 - ✅ **ACESSO_A_MEMBROS** (Concluído)
 - ✅ **ALTERACAO_DE_ESTADO** (Concluído)
+- ✅ **ARRAYS_DE_OBJETOS** (Concluído)
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
 - ✅ **ATRIBUTOS_CALCULADOS** (Concluído)
 - ✅ **CALCULOS_EM_METODOS** (Concluído)
@@ -32,6 +33,7 @@
 - ✅ **DEFINICAO_METODOS** (Concluído)
 - ✅ **ESCOPO_DE_CLASSE** (Concluído)
 - ✅ **INSTANCIACAO** (Concluído)
+- ✅ **INTERACAO_METODOS** (Concluído)
 - ✅ **INTERACAO_OBJETO_VARIAVEL** (Concluído)
 - ✅ **INTERPRETACAO_UML** (Concluído)
 - ✅ **LOGICA_DE_ATRIBUTOS** (Concluído)
@@ -40,8 +42,10 @@
 - ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS** (Concluído)
 - ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
 - ✅ **MEMORIA_INDEPENDENTE** (Concluído)
+- ✅ **MODELAGEM_COMPLEXA** (Concluído)
 - ✅ **MODELAGEM_DE_SISTEMAS** (Concluído)
 - ✅ **MODIFICADORES_ACESSO (PUBLIC)** (Concluído)
+- ✅ **MULTIPLAS_INSTANCIAS** (Concluído)
 - ✅ **OBJETOS_COMO_PARAMETROS** (Concluído)
 - ✅ **PADRONIZACAO_DE_NOMES** (Concluído)
 - ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
@@ -57,7 +61,6 @@
 - 💡 AGREGACAO (Biblioteca tem lista de Livros) (Pendente)
 - 💡 ARQUITETURA_C++17 (Pendente)
 - 💡 ARQUITETURA_DE_CLASSES (Pendente)
-- 💡 ARRAYS_DE_OBJETOS (Pendente)
 - 💡 ARRAY_DE_OBJETOS (Pendente)
 - 💡 ARRAY_DE_PONTEIROS (Pendente)
 - 💡 ARRAY_PRIMITIVO (Pendente)
@@ -106,7 +109,6 @@
 - 💡 INICIALIZACAO_DE_DADOS (Pendente)
 - 💡 INSTANCIACAO_INTERNA (Pendente)
 - 💡 INSTANCIA_ESTATICA (Pendente)
-- 💡 INTERACAO_METODOS (Pendente)
 - 💡 INTERFACES_EM_CPP (Pendente)
 - 💡 INTERFACE_PUBLICA_LIMPA (Pendente)
 - 💡 ITERACAO_DE_ARRAYS (Pendente)
@@ -133,9 +135,7 @@
 - 💡 METODOS_STATIC (Pendente)
 - 💡 METODO_CONSTRUTOR (Pendente)
 - 💡 METODO_JOIN (Pendente)
-- 💡 MODELAGEM_COMPLEXA (Pendente)
 - 💡 MODIFICADOR_PROTECTED (Pendente)
-- 💡 MULTIPLAS_INSTANCIAS (Pendente)
 - 💡 MULTIPLA_IMPLEMENTACAO (Pendente)
 - 💡 MULTIPLOS_CATCHS (Pendente)
 - 💡 MULTI_TASKING (Pendente)

@@ -3,7 +3,8 @@
 📘 01 - POO - EXERCICIO 11: O Grande Zoológico
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
+
 
 COMPETENCIAS:
 - MODELAGEM_COMPLEXA
@@ -51,10 +52,47 @@ using namespace std;
 
 // Desenvolva sua classe aqui:
 
+class Animal
+{
+public:
+    // atributos
+    std::string specie;
+    std ::string nome;
+    int idade;
+
+    // métodos
+    void apresentar()
+    {
+        cout << "O nome é: " << nome << std::endl;
+        cout << "A Especie é: " << specie << std::endl;
+        cout << "A idade é: " << idade << std::endl;
+    }
+};
+
 int main()
 {
+
     // Configure o console para aceitar acentos
+    system("chcp 65001");
     // Desenvolva as instâncias aqui:
+
+    Animal leao;
+    leao.specie = "Mamifero";
+    leao.nome = "Lion";
+    leao.idade = 20;
+    leao.apresentar();
+
+    Animal elefante;
+    elefante.specie = "Mamifero";
+    elefante.nome = "Babar";
+    elefante.idade = 100;
+    elefante.apresentar();
+
+    Animal girafa;
+    girafa.specie = "Mamifero";
+    girafa.nome = "Gyr";
+    girafa.idade = 50;
+    girafa.apresentar();
 
     return 0;
 }
