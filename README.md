@@ -1,11 +1,11 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 120
+### 👑 XP TOTAL: 130
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [00 - BASE DE PROG](./00 - BASE DE PROG) | 1/60 | ESTAGIÁRIO 📋 |
+| [00 - BASE DE PROG](./00 - BASE DE PROG) | 2/60 | ESTAGIÁRIO 📋 |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 0/25 | DESEMPREGADO 😶 |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
