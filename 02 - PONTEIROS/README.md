@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 1 - Enderecamento](./Level 1 - Enderecamento) | 0/4 | 0% |
+| [Level 1 - Enderecamento](./Level 1 - Enderecamento) | 0/5 | 0% |
 | [Level 2 - Desferecenciamento](./Level 2 - Desferecenciamento) | 0/5 | 0% |
 | [Level 3 - Arimetica e Arrays](./Level 3 - Arimetica e Arrays) | 0/5 | 0% |
 | [Level 4 - Agregacao e Objetos](./Level 4 - Agregacao e Objetos) | 0/5 | 0% |
@@ -20,6 +20,8 @@
 - 💡 ATRIBUTO_PONTEIRO (Pendente)
 - 💡 BOA_PRÁTICA_NULLPTR (Pendente)
 - 💡 CASTING_DE_PONTEIRO (Opcional) (Pendente)
+- 💡 COMPARAÇÃO_DE_ENDEREÇOS (Pendente)
+- 💡 COMPREENSÃO_DE_ALIAS (REFERÊNCIA) (Pendente)
 - 💡 COMPREENSÃO_DE_ARQUITETURA (Pendente)
 - 💡 COMPREENSÃO_DE_SALTOS (sizeof) (Pendente)
 - 💡 CONSTRUTOR (Pendente)

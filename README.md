@@ -6,7 +6,7 @@
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
-| [02 - PONTEIROS](./02 - PONTEIROS) | 0/24 | DESEMPREGADO 😶 |
+| [02 - PONTEIROS](./02 - PONTEIROS) | 0/25 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -187,6 +187,8 @@
 - [ ] ⏳ ATRIBUTO_PONTEIRO
 - [ ] ⏳ BOA_PRÁTICA_NULLPTR
 - [ ] ⏳ CASTING_DE_PONTEIRO (Opcional)
+- [ ] ⏳ COMPARAÇÃO_DE_ENDEREÇOS
+- [ ] ⏳ COMPREENSÃO_DE_ALIAS (REFERÊNCIA)
 - [ ] ⏳ COMPREENSÃO_DE_ARQUITETURA
 - [ ] ⏳ COMPREENSÃO_DE_SALTOS (sizeof)
 - [ ] ⏳ CONSTRUTOR
