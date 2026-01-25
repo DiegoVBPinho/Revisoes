@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - IF](./Level 01 - IF) | 0/5 | 0% |
+| [Level 01 - IF](./Level 01 - IF) | 1/5 | 20% |
 | [Level 02 - For](./Level 02 - For) | 0/5 | 0% |
 | [Level 03 - While](./Level 03 - While) | 0/5 | 0% |
 | [Level 04 - Do While](./Level 04 - Do While) | 0/5 | 0% |
@@ -17,12 +17,13 @@
 | [Level 12 - Recursao](./Level 12 - Recursao) | 0/5 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **LOGICA_DE_CONDIÇÃO_COMPOSTA (&&)** (Concluído)
+- ✅ **TRIANGULO_INEQUALITY_THEOREM** (Concluído)
 - 💡 CONTROLE_DE_FLUXO_SIMPLES (Pendente)
 - 💡 DEFINIÇÃO_DE_STRUCT (Pendente)
 - 💡 DIVISÃO_E_CONQUISTA (Pendente)
 - 💡 GARANTIA_DE_EXECUÇÃO_MÍNIMA (Pendente)
 - 💡 GERAÇÃO_DE_NÚMEROS_ALEATÓRIOS (Pendente)
-- 💡 LOGICA_DE_CONDIÇÃO_COMPOSTA (&&) (Pendente)
 - 💡 LOGICA_DE_CONTAGEM (Pendente)
 - 💡 LOGICA_DE_ESPAÇAMENTO (Pendente)
 - 💡 LOGICA_DE_ESTADOS_DE_JOGO (Pendente)
@@ -36,6 +37,5 @@
 - 💡 RECURSIVIDADE_AVANÇADA (Pendente)
 - 💡 RETORNO_DE_VALORES (Pendente)
 - 💡 SWITCH_COM_CHAR (Pendente)
-- 💡 TRIANGULO_INEQUALITY_THEOREM (Pendente)
 - 💡 USO_DE_ENUM (Pendente)
 - 💡 VETOR_DE_OBJETOS (Pendente)

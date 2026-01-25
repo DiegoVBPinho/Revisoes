@@ -26,5 +26,19 @@ using namespace std;
 
 int main()
 {
+
+    int ano;
+    cout << "digite um ano: " << endl;
+    cin >> ano;
+
+    if (ano % 4 == 0 && ano % 100 == 0)
+    {
+        cout << " O Ano " << ano << " é bissexto.";
+    }
+    else
+    {
+        cout << "Não é ano bissexto!";
+    }
+
     return 0;
 }
