@@ -6,6 +6,7 @@
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
+| [02 - PONTEIROS](./02 - PONTEIROS) | 0/24 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -47,7 +48,9 @@
 - [ ] ⏳ ABSTRACAO_DE_INSTANCIA
 - [ ] ⏳ ABSTRACAO_DE_SISTEMA
 - [ ] ⏳ ACESSO_SEM_INSTANCIA
+- [ ] ⏳ ACESSO_VIA_SETA (->)
 - [ ] ⏳ AGREGACAO (Biblioteca tem lista de Livros)
+- [ ] ⏳ AGREGAÇÃO_MUITOS_PARA_UM
 - [ ] ⏳ ARQUITETURA_C++17
 - [ ] ⏳ ARQUITETURA_DE_CLASSES
 - [ ] ⏳ ARRAY_DE_OBJETOS
@@ -173,3 +176,50 @@
 - [ ] ⏳ 🎮 SIMULACAO_AVANCADA
 - [ ] ⏳ 📊 ESTRUTURAS_E_DADOS
 - [ ] ⏳ 📦 MODELAGEM_BASE
+### 📂 02 - PONTEIROS
+- [ ] ⏳ ACESSO_INDIRETO
+- [ ] ⏳ ACESSO_MÉMBROS_VIA_PONTEIRO
+- [ ] ⏳ ALOCAÇÃO_DINÂMICA (Heap)
+- [ ] ⏳ ALTERAÇÃO_ESTADO_EXTERNO
+- [ ] ⏳ ARITMETICA_DE_PONTEIROS
+- [ ] ⏳ ARRAY_DE_PONTEIROS
+- [ ] ⏳ ATRIBUIÇÃO_DE_ENDEREÇO
+- [ ] ⏳ ATRIBUTO_PONTEIRO
+- [ ] ⏳ BOA_PRÁTICA_NULLPTR
+- [ ] ⏳ CASTING_DE_PONTEIRO (Opcional)
+- [ ] ⏳ COMPREENSÃO_DE_ARQUITETURA
+- [ ] ⏳ COMPREENSÃO_DE_SALTOS (sizeof)
+- [ ] ⏳ CONSTRUTOR
+- [ ] ⏳ DECLARAÇÃO_TIPO_PONTEIRO (*)
+- [ ] ⏳ DELETE_ARRAY (delete[])
+- [ ] ⏳ DESREFERENCIAÇÃO (*)
+- [ ] ⏳ DESTRUTOR (~)
+- [ ] ⏳ DINAMISMO_DE_OBJETOS
+- [ ] ⏳ ENDEREÇAMENTO_DE_OBJETOS
+- [ ] ⏳ GESTÃO_DE_MEMÓRIA_EM_JOGOS
+- [ ] ⏳ IDENTIFICAÇÃO_DE_ENDEREÇO
+- [ ] ⏳ INSTANCIAÇÃO_DE_CLASSES
+- [ ] ⏳ ITERAÇÃO_COM_PONTEIROS
+- [ ] ⏳ ITERAÇÃO_SOBRE_OBJETOS_AGREGADOS
+- [ ] ⏳ LOGICA_DE_CONTROLE
+- [ ] ⏳ LÓGICA_DE_PERMUTAÇÃO
+- [ ] ⏳ MANIPULAÇÃO_DE_CSTRINGS
+- [ ] ⏳ MANIPULAÇÃO_DE_VALOR_VIA_ENDEREÇO
+- [ ] ⏳ NEW_ARRAY ([])
+- [ ] ⏳ NOTAÇÃO_DE_COLCHETES_EM_PONTEIROS
+- [ ] ⏳ OPERADOR_DELETE
+- [ ] ⏳ OPERADOR_NEW
+- [ ] ⏳ OPERADOR_SIZEOF
+- [ ] ⏳ OPERAÇÕES_MATEMÁTICAS_COM_PONTEIROS
+- [ ] ⏳ OVERFLOW_DE_MEMORIA
+- [ ] ⏳ PASSAGEM_DE_PONTEIRO_COMO_PARAMETRO
+- [ ] ⏳ PONTEIRO_DE_CHAR
+- [ ] ⏳ PONTEIRO_DE_STRING
+- [ ] ⏳ PRECEDÊNCIA_DE_OPERADORES
+- [ ] ⏳ RELACIONAMENTO_ENTRE_CLASSES
+- [ ] ⏳ SINTAXE_->
+- [ ] ⏳ SUBSTITUIÇÃO_DE_CONTEÚDO
+- [ ] ⏳ TRABALHO_COM_CHARS
+- [ ] ⏳ USO_DE_CIN_COM_DESREFERENCIAÇÃO
+- [ ] ⏳ USO_DE_VARIÁVEL_TEMPORÁRIA
+- [ ] ⏳ USO_DO_OPERADOR_&
