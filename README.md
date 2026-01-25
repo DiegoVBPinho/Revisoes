@@ -7,6 +7,9 @@
 | :--- | :---: | :--- |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 0/25 | DESEMPREGADO 😶 |
+| [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
+| [04 - PILHAS (STACKS)](./04 - PILHAS (STACKS)) | 0/15 | DESEMPREGADO 😶 |
+| [05 - FILAS (QUEUE)](./05 - FILAS (QUEUE)) | 0/15 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 01 - POO
@@ -225,3 +228,82 @@
 - [ ] ⏳ USO_DE_CIN_COM_DESREFERENCIAÇÃO
 - [ ] ⏳ USO_DE_VARIÁVEL_TEMPORÁRIA
 - [ ] ⏳ USO_DO_OPERADOR_&
+### 📂 03 - LISTA ENCADEADA
+- [ ] ⏳ ACESSO_A_DADOS
+- [ ] ⏳ ATUALIZAÇÃO_DE_HEAD
+- [ ] ⏳ BUSCA_LINEAR
+- [ ] ⏳ COMPARAÇÃO_ENTRE_NÓS_ADJACENTES
+- [ ] ⏳ CONTADOR_DE_ITERAÇÕES
+- [ ] ⏳ GESTÃO_DE_MEMÓRIA (Delete)
+- [ ] ⏳ JUNÇÃO_DE_ESTRUTURAS
+- [ ] ⏳ LIBERAÇÃO_DE_MEMÓRIA
+- [ ] ⏳ LÓGICA_BOOLEANA_DE_PERCURSO
+- [ ] ⏳ LÓGICA_DE_VERIFICAÇÃO
+- [ ] ⏳ MANIPULAÇÃO_DE_PONTEIROS
+- [ ] ⏳ PERCURSO_PARA_CONEXÃO
+- [ ] ⏳ PERCURSO_SIMPLES
+- [ ] ⏳ PREVENÇÃO_DE_MEMORY_LEAK
+- [ ] ⏳ RECURSIVIDADE_OU_LOOP_DE_DELEÇÃO
+- [ ] ⏳ RETORNO_DE_PONTEIROS
+- [ ] ⏳ SEGURANÇA_DE_CÓDIGO
+- [ ] ⏳ VALIDAÇÃO_DE_ESTADO
+- [ ] ⏳ VERIFICAÇÃO_DE_PONTEIRO
+### 📂 04 - PILHAS (STACKS)
+- [ ] ⏳ ACESSO_VIA_TOPO
+- [ ] ⏳ ALGORITMOS_DE_BUSCA
+- [ ] ⏳ ALGORITMO_DE_FECHAMENTO
+- [ ] ⏳ ALOCAÇÃO_DINÂMICA_DE_NÓS
+- [ ] ⏳ APLICAÇÃO_PRÁTICA_LIFO
+- [ ] ⏳ AVALIAÇÃO_DE_EXPRESSÕES
+- [ ] ⏳ COMPARAÇÃO_DE_STRINGS
+- [ ] ⏳ CONSULTA_SEM_ALTERAÇÃO
+- [ ] ⏳ CONTROLE_DE_INDICE_TOPO
+- [ ] ⏳ DEFINIÇÃO_DE_CLASSE_PILHA
+- [ ] ⏳ DESTRUTOR_DINÂMICO
+- [ ] ⏳ GERENCIAMENTO_DE_ESTADO
+- [ ] ⏳ INSERÇÃO_EM_PILHA
+- [ ] ⏳ LOGICA_LIFO_AVANÇADA
+- [ ] ⏳ LÓGICA_DE_ANINHAMENTO
+- [ ] ⏳ LÓGICA_DE_VALIDAÇÃO
+- [ ] ⏳ LÓGICA_MATEMÁTICA
+- [ ] ⏳ MANIPULAÇÃO_DE_STRINGS
+- [ ] ⏳ OPERAÇÕES_PÓS_FIXADAS
+- [ ] ⏳ PILHA_DE_CLASSES
+- [ ] ⏳ PONTEIRO_TOPO
+- [ ] ⏳ PREVENÇÃO_DE_MEMORY_LEAK
+- [ ] ⏳ PROPRIEDADE_LIFO
+- [ ] ⏳ RECORREÇÃO_DE_CAMINHO
+- [ ] ⏳ REMOÇÃO_EM_PILHA
+- [ ] ⏳ SIMULAÇÃO_DE_SISTEMA
+- [ ] ⏳ TRATAMENTO_DE_OVERFLOW
+- [ ] ⏳ TRATAMENTO_DE_UNDERFLOW
+### 📂 05 - FILAS (QUEUE)
+- [ ] ⏳ ALOCAÇÃO_DE_NÓS
+- [ ] ⏳ ATUALIZAÇÃO_DE_FRENTE
+- [ ] ⏳ CONTROLE_DE_FLUXO
+- [ ] ⏳ CONTROLE_DE_INDICES (Frente/Tras)
+- [ ] ⏳ CÁLCULO_ESTATÍSTICO
+- [ ] ⏳ DEFINIÇÃO_DE_CLASSE_FILA
+- [ ] ⏳ DESTRUTORES_C++
+- [ ] ⏳ FORMATAÇÃO_DE_SAIDA
+- [ ] ⏳ GESTÃO_DE_ATRIBUTOS_DURANTE_FLUXO
+- [ ] ⏳ GESTÃO_DE_MEMÓRIA (Heap)
+- [ ] ⏳ GESTÃO_DE_PONTEIROS_FRENTE_TRAS
+- [ ] ⏳ INSERÇÃO_NO_FIM
+- [ ] ⏳ INSERÇÃO_NO_INÍCIO (Exceção)
+- [ ] ⏳ INTEGRAÇÃO_DE_ESTRUTURAS (Queue + Stack)
+- [ ] ⏳ ITERAÇÃO_SOBRE_ESTRUTURA
+- [ ] ⏳ LIMITE_DE_RECURSOS
+- [ ] ⏳ LÓGICA_BOOLEANA
+- [ ] ⏳ LÓGICA_DE_CICLOS
+- [ ] ⏳ LÓGICA_DE_NEGÓCIO
+- [ ] ⏳ MANIPULAÇÃO_DE_STRINGS
+- [ ] ⏳ OPERADOR_MODULO (%)
+- [ ] ⏳ PERCURSO_DINÂMICO
+- [ ] ⏳ PREVENÇÃO_DE_CRASH
+- [ ] ⏳ REMOÇÃO_NO_INÍCIO
+- [ ] ⏳ REORDENAÇÃO_DE_DADOS
+- [ ] ⏳ REUSO_DE_MEMORIA
+- [ ] ⏳ SIMULAÇÃO_SISTEMA_OPERACIONAL
+- [ ] ⏳ VERIFICAÇÃO_DE_OVERFLOW
+- [ ] ⏳ VISUALIZAÇÃO_DE_ESTADO
