@@ -1,4 +1,4 @@
-# 🎯 FOCO NO NÍVEL: Level 9 - Busca Binária
+# 🎯 FOCO NO NÍVEL: Level 09 - Busca Binária
 
 ### 📊 PROGRESSO DO NÍVEL: 0/5 (0.0%)
 `[░░░░░░░░░░░░░░░░░░░░]`

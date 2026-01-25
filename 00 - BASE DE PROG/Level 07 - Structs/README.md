@@ -1,4 +1,4 @@
-# 🎯 FOCO: Level 7 - Structs
+# 🎯 FOCO: Level 07 - Structs
 
 ### 📊 STATUS: 0/5
 ---

@@ -1,4 +1,4 @@
-# 🎯 FOCO: Level 6 - Array
+# 🎯 FOCO: Level 06 - Array
 
 ### 📊 STATUS: 0/5
 ---

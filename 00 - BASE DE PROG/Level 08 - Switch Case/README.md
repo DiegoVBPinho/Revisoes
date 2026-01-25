@@ -1,4 +1,4 @@
-# 🎯 FOCO: Level 8 - Switch Case
+# 🎯 FOCO: Level 08 - Switch Case
 
 ### 📊 STATUS: 0/5
 ---

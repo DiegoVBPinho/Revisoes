@@ -3,18 +3,18 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 1 - IF](./Level 1 - IF) | 0/5 | 0% |
+| [Level 01 - IF](./Level 01 - IF) | 0/5 | 0% |
+| [Level 02 - For](./Level 02 - For) | 0/5 | 0% |
+| [Level 03 - While](./Level 03 - While) | 0/5 | 0% |
+| [Level 04 - Do While](./Level 04 - Do While) | 0/5 | 0% |
+| [Level 05 - Função](./Level 05 - Função) | 0/5 | 0% |
+| [Level 06 - Array](./Level 06 - Array) | 0/5 | 0% |
+| [Level 07 - Structs](./Level 07 - Structs) | 0/5 | 0% |
+| [Level 08 - Switch Case](./Level 08 - Switch Case) | 0/5 | 0% |
+| [Level 09 - Busca Binária](./Level 09 - Busca Binária) | 0/5 | 0% |
 | [Level 10 - Busca Sequencial](./Level 10 - Busca Sequencial) | 0/5 | 0% |
 | [Level 11 - Pesquisa em Vetores](./Level 11 - Pesquisa em Vetores) | 0/5 | 0% |
 | [Level 12 - Recursao](./Level 12 - Recursao) | 0/5 | 0% |
-| [Level 2 - For](./Level 2 - For) | 0/5 | 0% |
-| [Level 3 - While](./Level 3 - While) | 0/5 | 0% |
-| [Level 4 - Do While](./Level 4 - Do While) | 0/5 | 0% |
-| [Level 5 - Função](./Level 5 - Função) | 0/5 | 0% |
-| [Level 6 - Array](./Level 6 - Array) | 0/5 | 0% |
-| [Level 7 - Structs](./Level 7 - Structs) | 0/5 | 0% |
-| [Level 8 - Switch Case](./Level 8 - Switch Case) | 0/5 | 0% |
-| [Level 9 - Busca Binária](./Level 9 - Busca Binária) | 0/5 | 0% |
 
 ## 🧬 Clusters de Domínio
 - 💡 CONTROLE_DE_FLUXO_SIMPLES (Pendente)
