@@ -5,6 +5,7 @@
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
+| [00 - BASE DE PROG](./00 - BASE DE PROG) | 0/60 | DESEMPREGADO 😶 |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 0/25 | DESEMPREGADO 😶 |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
@@ -12,6 +13,29 @@
 | [05 - FILAS (QUEUE)](./05 - FILAS (QUEUE)) | 0/15 | DESEMPREGADO 😶 |
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
+### 📂 00 - BASE DE PROG
+- [ ] ⏳ CONTROLE_DE_FLUXO_SIMPLES
+- [ ] ⏳ DEFINIÇÃO_DE_STRUCT
+- [ ] ⏳ DIVISÃO_E_CONQUISTA
+- [ ] ⏳ GARANTIA_DE_EXECUÇÃO_MÍNIMA
+- [ ] ⏳ GERAÇÃO_DE_NÚMEROS_ALEATÓRIOS
+- [ ] ⏳ LOGICA_DE_CONDIÇÃO_COMPOSTA (&&)
+- [ ] ⏳ LOGICA_DE_CONTAGEM
+- [ ] ⏳ LOGICA_DE_ESPAÇAMENTO
+- [ ] ⏳ LOGICA_DE_ESTADOS_DE_JOGO
+- [ ] ⏳ LOOPS_ANINHADOS (Nested Loops)
+- [ ] ⏳ LOOP_CONDICIONAL_INFINITO
+- [ ] ⏳ LÓGICA_DE_REPETIÇÃO_DE_ERRO
+- [ ] ⏳ MANIPULAÇÃO_DE_INDICES
+- [ ] ⏳ MANIPULAÇÃO_DE_PONTOS (Inicio, Meio, Fim)
+- [ ] ⏳ PASSAGEM_DE_LIMITES_POR_PARAMETRO
+- [ ] ⏳ PROTÓTIPOS_DE_FUNÇÃO
+- [ ] ⏳ RECURSIVIDADE_AVANÇADA
+- [ ] ⏳ RETORNO_DE_VALORES
+- [ ] ⏳ SWITCH_COM_CHAR
+- [ ] ⏳ TRIANGULO_INEQUALITY_THEOREM
+- [ ] ⏳ USO_DE_ENUM
+- [ ] ⏳ VETOR_DE_OBJETOS
 ### 📂 01 - POO
 - [x] ✅ **ACESSO_A_MEMBROS**
 - [x] ✅ **ALTERACAO_DE_ESTADO**

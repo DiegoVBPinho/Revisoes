@@ -1,0 +1,41 @@
+# 📂 Assunto: 00 - BASE DE PROG
+
+## 📈 Níveis
+| Level | Progresso | % |
+| :--- | :---: | :---: |
+| [Level 1 - IF](./Level 1 - IF) | 0/5 | 0% |
+| [Level 10 - Busca Sequencial](./Level 10 - Busca Sequencial) | 0/5 | 0% |
+| [Level 11 - Pesquisa em Vetores](./Level 11 - Pesquisa em Vetores) | 0/5 | 0% |
+| [Level 12 - Recursao](./Level 12 - Recursao) | 0/5 | 0% |
+| [Level 2 - For](./Level 2 - For) | 0/5 | 0% |
+| [Level 3 - While](./Level 3 - While) | 0/5 | 0% |
+| [Level 4 - Do While](./Level 4 - Do While) | 0/5 | 0% |
+| [Level 5 - Função](./Level 5 - Função) | 0/5 | 0% |
+| [Level 6 - Array](./Level 6 - Array) | 0/5 | 0% |
+| [Level 7 - Structs](./Level 7 - Structs) | 0/5 | 0% |
+| [Level 8 - Switch Case](./Level 8 - Switch Case) | 0/5 | 0% |
+| [Level 9 - Busca Binária](./Level 9 - Busca Binária) | 0/5 | 0% |
+
+## 🧬 Clusters de Domínio
+- 💡 CONTROLE_DE_FLUXO_SIMPLES (Pendente)
+- 💡 DEFINIÇÃO_DE_STRUCT (Pendente)
+- 💡 DIVISÃO_E_CONQUISTA (Pendente)
+- 💡 GARANTIA_DE_EXECUÇÃO_MÍNIMA (Pendente)
+- 💡 GERAÇÃO_DE_NÚMEROS_ALEATÓRIOS (Pendente)
+- 💡 LOGICA_DE_CONDIÇÃO_COMPOSTA (&&) (Pendente)
+- 💡 LOGICA_DE_CONTAGEM (Pendente)
+- 💡 LOGICA_DE_ESPAÇAMENTO (Pendente)
+- 💡 LOGICA_DE_ESTADOS_DE_JOGO (Pendente)
+- 💡 LOOPS_ANINHADOS (Nested Loops) (Pendente)
+- 💡 LOOP_CONDICIONAL_INFINITO (Pendente)
+- 💡 LÓGICA_DE_REPETIÇÃO_DE_ERRO (Pendente)
+- 💡 MANIPULAÇÃO_DE_INDICES (Pendente)
+- 💡 MANIPULAÇÃO_DE_PONTOS (Inicio, Meio, Fim) (Pendente)
+- 💡 PASSAGEM_DE_LIMITES_POR_PARAMETRO (Pendente)
+- 💡 PROTÓTIPOS_DE_FUNÇÃO (Pendente)
+- 💡 RECURSIVIDADE_AVANÇADA (Pendente)
+- 💡 RETORNO_DE_VALORES (Pendente)
+- 💡 SWITCH_COM_CHAR (Pendente)
+- 💡 TRIANGULO_INEQUALITY_THEOREM (Pendente)
+- 💡 USO_DE_ENUM (Pendente)
+- 💡 VETOR_DE_OBJETOS (Pendente)
