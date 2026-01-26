@@ -7,6 +7,11 @@
 STATUS: DONE
 DIFICULDADE: Difícil (Level 1)
 
+COMPETENCIAS:
+- LOGICA_BOOLEANA_AVANÇADA (&&, ||, !=)
+- OPERADOR_MODULO (%)
+- PRECEDENCIA_DE_OPERADORES
+
 🧠 CONCEITO:
 Um ano é bissexto se: (Divisível por 4 E não por 100) OU (Divisível por 400).
 
@@ -31,7 +36,7 @@ int main()
     cout << "digite um ano: " << endl;
     cin >> ano;
 
-    if (ano % 4 == 0 && ano % 100 == 0)
+    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0))
     {
         cout << " O Ano " << ano << " é bissexto.";
     }
@@ -42,3 +47,7 @@ int main()
 
     return 0;
 }
+
+// EXPLICAÇÃO RÁPIDA:
+// 1. (ano % 4 == 0 && ano % 100 != 0) -> Verifica se é múltiplo de 4, mas ignora viradas de século (1700, 1800, 1900).
+// 2. || (ano % 400 == 0) -> Abre a exceção: se for divisível por 400, volta a ser bissexto (ex: 2000, 2400).

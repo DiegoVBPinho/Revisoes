@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Difícil (Level 1)
 
 🎯 OBJETIVO DO EXERCICIO:
@@ -18,10 +18,53 @@ DIFICULDADE: Difícil (Level 1)
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
+
+    float x, y;
+
+    cout << "Digite um valor para X: ";
+    cin >> x;
+    cout << "Digite um valor para y: ";
+    cin >> y;
+
+    cout << fixed << setprecision(2);
+    cout << " A posição está sobre : ";
+
+    if (x == 0 && y == 0)
+        cout << "a Origem." << endl;
+
+    else if (y == 0)
+        cout << "o Eixo X." << endl;
+
+    else if (x == 0)
+        cout << "o Eixo Y." << endl;
+
+    else if (x > 0 && y > 0)
+        cout << "Q1" << endl;
+
+    else if (x < 0 && y > 0)
+        cout << "Q2" << endl;
+
+    else if (x < 0 && y < 0)
+        cout << "Q3" << endl;
+
+    else if (x > 0 && y < 0)
+        cout << "Q4" << endl;
+
     return 0;
 }
+
+/* A ORDEM SEMPRE IMPORTA
+
+Por que a ordem importa?
+Ao testar x == 0 e y == 0 logo no início,
+você simplifica os testes seguintes.
+Por exemplo, se o código chega no else if (x == 0),
+nós já sabemos que o y não pode ser zero (pois o primeiro if teria capturado),
+ economizando uma verificação lógica.
+ */

@@ -7,6 +7,12 @@
 STATUS: DONE
 DIFICULDADE: Difícil (Level 1)
 
+COMPETENCIAS:
+- MANIPULAÇÃO_DE_PONTO_FLUTUANTE (float/double)
+- FORMATAÇÃO_DE_SAIDA (iomanip/setprecision)
+- ESTRUTURA_CONDICIONAL_ENCADEADA (if/else if/else)
+- EXERCICIO_DE_ORDEM_LOGICA (Intervalos de valores)
+
 🎯 OBJETIVO DO EXERCICIO:
 1. Receba peso e altura. Calcule IMC = peso / (altura * altura).
 2. Classifique: < 18.5 (Abaixo), 18.5-24.9 (Normal), 25-29.9 (Sobrepeso),
@@ -18,14 +24,12 @@ DIFICULDADE: Difícil (Level 1)
 */
 
 #include <iostream>
-#include <string>
 #include <iomanip>
 
 using namespace std;
 
 int main()
 {
-
     float IMC, peso, altura;
 
     cout << "Digite peso: ";
@@ -34,25 +38,26 @@ int main()
     cout << "Digite Altura: ";
     cin >> altura;
 
-    // calculo de IMC
+    // Calculo de IMC
     IMC = peso / (altura * altura);
 
+    // Configuração global de saída para 2 casas decimais
+    cout << fixed << setprecision(2);
+    cout << "IMC: " << IMC << " | Classificação: ";
+
+    // Lógica de intervalos (Importante: usar <= ou >= para não deixar "buracos" entre os números)
     if (IMC < 18.5)
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Abaixo" << endl;
-
-    else if (IMC > 18.5 && IMC < 24.9)
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Normal" << endl;
-
-    else if (IMC > 25 && IMC < 29.9)
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Sobrepeso" << endl;
-
-    else if (IMC > 30 && IMC < 34.9)
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Obesidade I" << endl;
-
-    else if (IMC > 35 && IMC < 39.9)
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Obesidade II" << endl;
-
+        cout << "Abaixo do peso" << endl;
+    else if (IMC < 25.0) // Se chegou aqui, ja sabemos que é >= 18.5
+        cout << "Peso Normal" << endl;
+    else if (IMC < 30.0)
+        cout << "Sobrepeso" << endl;
+    else if (IMC < 35.0)
+        cout << "Obesidade I" << endl;
+    else if (IMC < 40.0)
+        cout << "Obesidade II" << endl;
     else
-        cout << fixed << setprecision(2) << "IMC: " << IMC << " | Classificação: Peso Morbida" << endl;
+        cout << "Obesidade Morbida" << endl;
+
     return 0;
 }

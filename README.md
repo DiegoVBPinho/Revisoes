@@ -1,11 +1,11 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 140
+### 👑 XP TOTAL: 150
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
-| [00 - BASE DE PROG](./00 - BASE DE PROG) | 3/60 | ESTAGIÁRIO 📋 |
+| [00 - BASE DE PROG](./00 - BASE DE PROG) | 4/60 | ESTAGIÁRIO 📋 |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 0/25 | DESEMPREGADO 😶 |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
@@ -14,7 +14,14 @@
 
 ## 🧬 ÁRVORE DE COMPETÊNCIAS (CONSOLIDADO)
 ### 📂 00 - BASE DE PROG
+- [x] ✅ **ESTRUTURA_CONDICIONAL_ENCADEADA (if/else if/else)**
+- [x] ✅ **EXERCICIO_DE_ORDEM_LOGICA (Intervalos de valores)**
+- [x] ✅ **FORMATAÇÃO_DE_SAIDA (iomanip/setprecision)**
+- [x] ✅ **LOGICA_BOOLEANA_AVANÇADA (&&, ||, !=)**
 - [x] ✅ **LOGICA_DE_CONDIÇÃO_COMPOSTA (&&)**
+- [x] ✅ **MANIPULAÇÃO_DE_PONTO_FLUTUANTE (float/double)**
+- [x] ✅ **OPERADOR_MODULO (%)**
+- [x] ✅ **PRECEDENCIA_DE_OPERADORES**
 - [x] ✅ **TRIANGULO_INEQUALITY_THEOREM**
 - [ ] ⏳ CONTROLE_DE_FLUXO_SIMPLES
 - [ ] ⏳ DEFINIÇÃO_DE_STRUCT

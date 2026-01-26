@@ -27,5 +27,13 @@ using namespace std;
 
 int main()
 {
+    int salarioAtual = 0;
+    cin >> salarioAtual;
+
+    int novoSalario = 0;
+
+    if (salarioAtual <= 1500)
+        novoSalario = salarioAtual * 1.20;
+
     return 0;
 }

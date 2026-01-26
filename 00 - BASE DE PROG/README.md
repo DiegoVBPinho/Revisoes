@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - IF](./Level 01 - IF) | 3/5 | 60% |
+| [Level 01 - IF](./Level 01 - IF) | 4/5 | 80% |
 | [Level 02 - For](./Level 02 - For) | 0/5 | 0% |
 | [Level 03 - While](./Level 03 - While) | 0/5 | 0% |
 | [Level 04 - Do While](./Level 04 - Do While) | 0/5 | 0% |
@@ -17,7 +17,14 @@
 | [Level 12 - Recursao](./Level 12 - Recursao) | 0/5 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **ESTRUTURA_CONDICIONAL_ENCADEADA (if/else if/else)** (Concluído)
+- ✅ **EXERCICIO_DE_ORDEM_LOGICA (Intervalos de valores)** (Concluído)
+- ✅ **FORMATAÇÃO_DE_SAIDA (iomanip/setprecision)** (Concluído)
+- ✅ **LOGICA_BOOLEANA_AVANÇADA (&&, ||, !=)** (Concluído)
 - ✅ **LOGICA_DE_CONDIÇÃO_COMPOSTA (&&)** (Concluído)
+- ✅ **MANIPULAÇÃO_DE_PONTO_FLUTUANTE (float/double)** (Concluído)
+- ✅ **OPERADOR_MODULO (%)** (Concluído)
+- ✅ **PRECEDENCIA_DE_OPERADORES** (Concluído)
 - ✅ **TRIANGULO_INEQUALITY_THEOREM** (Concluído)
 - 💡 CONTROLE_DE_FLUXO_SIMPLES (Pendente)
 - 💡 DEFINIÇÃO_DE_STRUCT (Pendente)
