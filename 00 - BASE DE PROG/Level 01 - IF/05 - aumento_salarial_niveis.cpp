@@ -27,10 +27,12 @@ using namespace std;
 
 int main()
 {
-    int salarioAtual = 0;
+    float salarioAtual = 0;
     cin >> salarioAtual;
 
     int novoSalario = 0;
+
+    cout << "Novo Salário: ";
 
     if (salarioAtual <= 1500)
         novoSalario = salarioAtual * 1.20;
