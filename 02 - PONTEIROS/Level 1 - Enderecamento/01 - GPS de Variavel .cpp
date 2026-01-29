@@ -4,7 +4,8 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
+
 DIFICULDADE: Fácil (Level 1)
 
 COMPETENCIAS:
@@ -28,7 +29,19 @@ funciona como um GPS que nos diz a latitude e longitude (endereço) desse espaç
 
 int main()
 {
-    // Desenvolva aqui:
+    int idItem = 500; // criação da variavel normal
+    int *p = nullptr; // ponteiro p apontando para NULO
+    p = &idItem;      // variavel P recebe o endereço de idItem.
+
+    std::cout << "VALOR da variavel apontado pelo ponteiro *P(=500): " << *p << std::endl; // imprimindo o valor que P está apontado
+    std::cout << "ENDEREÇO da variavel apontado pelo ponteiro P: " << p << std::endl;      // imprimindo o endereço que P está apontando.
+
+    // alterando o valor via ponteiro
+
+    *p = 900; // o VALOR da variavel foi alterado pelo ponteiro, logo, se imprimir a variavel, ela deveria ficar 900 e nao mais 500
+
+    std::cout << "VALOR da variavel apontado pelo ponteiro *P (=900): " << *p << std::endl; // imprimindo o valor que P está apontado
+    std::cout << "ENDEREÇO da variavel apontado pelo ponteiro P: " << p << std::endl;       // imprimindo o endereço que P está apontando.
 
     return 0;
 }

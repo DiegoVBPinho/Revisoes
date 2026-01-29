@@ -3,13 +3,15 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 1 - Enderecamento](./Level 1 - Enderecamento) | 0/5 | 0% |
+| [Level 1 - Enderecamento](./Level 1 - Enderecamento) | 1/5 | 20% |
 | [Level 2 - Desferecenciamento](./Level 2 - Desferecenciamento) | 0/5 | 0% |
 | [Level 3 - Arimetica e Arrays](./Level 3 - Arimetica e Arrays) | 0/5 | 0% |
 | [Level 4 - Agregacao e Objetos](./Level 4 - Agregacao e Objetos) | 0/5 | 0% |
 | [Level 5 - Alocacao Dinamica](./Level 5 - Alocacao Dinamica) | 0/5 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **IDENTIFICAÇÃO_DE_ENDEREÇO** (Concluído)
+- ✅ **USO_DO_OPERADOR_&** (Concluído)
 - 💡 ACESSO_INDIRETO (Pendente)
 - 💡 ACESSO_MÉMBROS_VIA_PONTEIRO (Pendente)
 - 💡 ALOCAÇÃO_DINÂMICA (Heap) (Pendente)
@@ -32,7 +34,6 @@
 - 💡 DINAMISMO_DE_OBJETOS (Pendente)
 - 💡 ENDEREÇAMENTO_DE_OBJETOS (Pendente)
 - 💡 GESTÃO_DE_MEMÓRIA_EM_JOGOS (Pendente)
-- 💡 IDENTIFICAÇÃO_DE_ENDEREÇO (Pendente)
 - 💡 INSTANCIAÇÃO_DE_CLASSES (Pendente)
 - 💡 ITERAÇÃO_COM_PONTEIROS (Pendente)
 - 💡 ITERAÇÃO_SOBRE_OBJETOS_AGREGADOS (Pendente)
@@ -57,4 +58,3 @@
 - 💡 TRABALHO_COM_CHARS (Pendente)
 - 💡 USO_DE_CIN_COM_DESREFERENCIAÇÃO (Pendente)
 - 💡 USO_DE_VARIÁVEL_TEMPORÁRIA (Pendente)
-- 💡 USO_DO_OPERADOR_& (Pendente)
