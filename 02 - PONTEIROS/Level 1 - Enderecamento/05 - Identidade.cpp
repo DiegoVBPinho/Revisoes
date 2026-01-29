@@ -21,11 +21,25 @@ COMPETENCIAS:
 */
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main()
 {
+    int original = 10;
+    int &ref = original;
+
+    cout << "Endereco de original: " << &original << endl;
+    cout << "Endereco de ref:      " << &ref << endl;
+
+    if (&original == &ref)
+    {
+        cout << "Os enderecos SAO IDENTICOS." << endl;
+    }
+    else
+    {
+        cout << "Os enderecos SAO DIFERENTES." << endl;
+    }
+
     return 0;
 }

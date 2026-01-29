@@ -29,5 +29,16 @@ using namespace std;
 
 int main()
 {
+    char inicial = 'G';
+    char *pInicial = &inicial; // ponteiro aponta para o endereço
+
+    // imprimindo endereço
+
+    cout << "Endereço da Inicial com (VOID*): " << (void *)pInicial << endl; //
+    cout << "Endereço da Inicial usando &: " << &pInicial;                   //
     return 0;
 }
+
+// lembrar sempre que parenteses tem prioridade.
+// void * faz: “Ei, cout, isso aqui é só um endereço cru.
+// Não tenta imprimir como texto.

@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Fácil (Level 1)
 
 COMPETENCIAS:
@@ -30,5 +30,18 @@ using namespace std;
 
 int main()
 {
+
+    char *pChar;
+    int *pInt;
+    double *pDouble;
+
+    // imprimindo os endereços//
+
+    cout << "Ponteiro char ocupa tantos bytes: " << sizeof(pChar) << endl;
+    cout << "Ponteiro int ocupa tantos bytes: " << sizeof(pInt) << endl;
+    cout << "Ponteiro double ocupa tantos bytes: " << sizeof(pDouble) << endl;
+
     return 0;
 }
+
+// Todo ponteiro tem o tamanho do endereço da arquitetura, não do dado apontado.

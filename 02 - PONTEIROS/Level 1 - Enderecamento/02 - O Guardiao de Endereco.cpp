@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Fácil (Level 1)
 
 COMPETENCIAS:
@@ -27,5 +27,13 @@ using namespace std;
 
 int main()
 {
+    // 1
+
+    float velocidade = 80.5;
+    float *ptrVel = nullptr;
+    ptrVel = &velocidade;
+
+    cout << "Imprimindo endereço de PRTVEL: " << ptrVel << endl;
+
     return 0;
 }
