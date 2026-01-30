@@ -5,6 +5,7 @@
 [ORIGEM: Inteligência Artificial]
 
 STATUS: DONE
+
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:

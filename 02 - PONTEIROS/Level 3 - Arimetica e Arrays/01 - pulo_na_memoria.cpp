@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 3)
 
 COMPETENCIAS:
@@ -32,7 +32,17 @@ using namespace std;
 
 int main()
 {
-    // Desenvolva aqui:
+    int valores[2] = {10, 20};
+    int *p = valores;
+
+    cout << "Endereco de p:     " << p << endl;
+    cout << "Endereco de p + 1: " << p + 1 << endl;
+
+    cout << "Bytes pulados (sizeof): "
+         << sizeof(*p) << endl;
+
+    cout << "Bytes pulados (calculado): "
+         << sizeof(valores) / 2 << endl; // sizeof(valores) = 2 * sizeof(int)  - 2 É O NÚMERO DE ELEMTENTOS DO ARRAY * O TAMANHO DE INT
 
     return 0;
 }

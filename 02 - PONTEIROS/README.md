@@ -5,13 +5,15 @@
 | :--- | :---: | :---: |
 | [Level 1 - Enderecamento](./Level 1 - Enderecamento) | 3/5 | 60% |
 | [Level 2 - Desferecenciamento](./Level 2 - Desferecenciamento) | 5/5 | 100% |
-| [Level 3 - Arimetica e Arrays](./Level 3 - Arimetica e Arrays) | 0/5 | 0% |
+| [Level 3 - Arimetica e Arrays](./Level 3 - Arimetica e Arrays) | 1/5 | 20% |
 | [Level 4 - Agregacao e Objetos](./Level 4 - Agregacao e Objetos) | 0/5 | 0% |
 | [Level 5 - Alocacao Dinamica](./Level 5 - Alocacao Dinamica) | 0/5 | 0% |
 
 ## 🧬 Clusters de Domínio
+- ✅ **ARITMETICA_DE_PONTEIROS** (Concluído)
 - ✅ **ATRIBUIÇÃO_DE_ENDEREÇO** (Concluído)
 - ✅ **COMPREENSÃO_DE_ARQUITETURA** (Concluído)
+- ✅ **COMPREENSÃO_DE_SALTOS (sizeof)** (Concluído)
 - ✅ **DECLARAÇÃO_TIPO_PONTEIRO (*)** (Concluído)
 - ✅ **DESREFERENCIAÇÃO (*)** (Concluído)
 - ✅ **IDENTIFICAÇÃO_DE_ENDEREÇO** (Concluído)
@@ -29,14 +31,12 @@
 - 💡 ACESSO_MÉMBROS_VIA_PONTEIRO (Pendente)
 - 💡 ALOCAÇÃO_DINÂMICA (Heap) (Pendente)
 - 💡 ALTERAÇÃO_ESTADO_EXTERNO (Pendente)
-- 💡 ARITMETICA_DE_PONTEIROS (Pendente)
 - 💡 ARRAY_DE_PONTEIROS (Pendente)
 - 💡 ATRIBUTO_PONTEIRO (Pendente)
 - 💡 BOA_PRÁTICA_NULLPTR (Pendente)
 - 💡 CASTING_DE_PONTEIRO (Opcional) (Pendente)
 - 💡 COMPARAÇÃO_DE_ENDEREÇOS (Pendente)
 - 💡 COMPREENSÃO_DE_ALIAS (REFERÊNCIA) (Pendente)
-- 💡 COMPREENSÃO_DE_SALTOS (sizeof) (Pendente)
 - 💡 CONSTRUTOR (Pendente)
 - 💡 DELETE_ARRAY (delete[]) (Pendente)
 - 💡 DESTRUTOR (~) (Pendente)
