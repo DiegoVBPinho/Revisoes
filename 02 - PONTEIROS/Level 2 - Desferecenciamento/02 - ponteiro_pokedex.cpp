@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:
@@ -27,5 +27,18 @@ using namespace std;
 
 int main()
 {
+
+    string pokemon = "Charmander";
+    string *p = &pokemon;
+
+    cout << "*p antes da alteração: " << *p << endl;
+    cout << "VAR POKEMON ANTES DA ALTERAÇÃO: " << pokemon << endl;
+    *p = "Charmeleon";
+
+    cout << "----------------------" << endl;
+
+    cout << "*p após a alteração: " << *p << endl;
+    cout << "VAR POKEMON APÓS  A ALTERAÇÃO: " << pokemon << endl;
+
     return 0;
 }

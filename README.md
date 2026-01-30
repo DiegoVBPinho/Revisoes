@@ -1,13 +1,13 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 180
+### 👑 XP TOTAL: 230
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
 | [00 - BASE DE PROG](./00 - BASE DE PROG) | 4/60 | ESTAGIÁRIO 📋 |
 | [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
-| [02 - PONTEIROS](./02 - PONTEIROS) | 3/25 | ESTAGIÁRIO 📋 |
+| [02 - PONTEIROS](./02 - PONTEIROS) | 8/25 | JUNIOR 🛠️ |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
 | [04 - PILHAS (STACKS)](./04 - PILHAS (STACKS)) | 0/15 | DESEMPREGADO 😶 |
 | [05 - FILAS (QUEUE)](./05 - FILAS (QUEUE)) | 0/15 | DESEMPREGADO 😶 |
@@ -214,8 +214,17 @@
 - [x] ✅ **ATRIBUIÇÃO_DE_ENDEREÇO**
 - [x] ✅ **COMPREENSÃO_DE_ARQUITETURA**
 - [x] ✅ **DECLARAÇÃO_TIPO_PONTEIRO (*)**
+- [x] ✅ **DESREFERENCIAÇÃO (*)**
 - [x] ✅ **IDENTIFICAÇÃO_DE_ENDEREÇO**
+- [x] ✅ **LÓGICA_DE_PERMUTAÇÃO**
+- [x] ✅ **MANIPULAÇÃO_DE_VALOR_VIA_ENDEREÇO**
 - [x] ✅ **OPERADOR_SIZEOF**
+- [x] ✅ **OPERAÇÕES_MATEMÁTICAS_COM_PONTEIROS**
+- [x] ✅ **PONTEIRO_DE_STRING**
+- [x] ✅ **PRECEDÊNCIA_DE_OPERADORES**
+- [x] ✅ **SUBSTITUIÇÃO_DE_CONTEÚDO**
+- [x] ✅ **USO_DE_CIN_COM_DESREFERENCIAÇÃO**
+- [x] ✅ **USO_DE_VARIÁVEL_TEMPORÁRIA**
 - [x] ✅ **USO_DO_OPERADOR_&**
 - [ ] ⏳ ACESSO_INDIRETO
 - [ ] ⏳ ACESSO_MÉMBROS_VIA_PONTEIRO
@@ -231,7 +240,6 @@
 - [ ] ⏳ COMPREENSÃO_DE_SALTOS (sizeof)
 - [ ] ⏳ CONSTRUTOR
 - [ ] ⏳ DELETE_ARRAY (delete[])
-- [ ] ⏳ DESREFERENCIAÇÃO (*)
 - [ ] ⏳ DESTRUTOR (~)
 - [ ] ⏳ DINAMISMO_DE_OBJETOS
 - [ ] ⏳ ENDEREÇAMENTO_DE_OBJETOS
@@ -240,25 +248,17 @@
 - [ ] ⏳ ITERAÇÃO_COM_PONTEIROS
 - [ ] ⏳ ITERAÇÃO_SOBRE_OBJETOS_AGREGADOS
 - [ ] ⏳ LOGICA_DE_CONTROLE
-- [ ] ⏳ LÓGICA_DE_PERMUTAÇÃO
 - [ ] ⏳ MANIPULAÇÃO_DE_CSTRINGS
-- [ ] ⏳ MANIPULAÇÃO_DE_VALOR_VIA_ENDEREÇO
 - [ ] ⏳ NEW_ARRAY ([])
 - [ ] ⏳ NOTAÇÃO_DE_COLCHETES_EM_PONTEIROS
 - [ ] ⏳ OPERADOR_DELETE
 - [ ] ⏳ OPERADOR_NEW
-- [ ] ⏳ OPERAÇÕES_MATEMÁTICAS_COM_PONTEIROS
 - [ ] ⏳ OVERFLOW_DE_MEMORIA
 - [ ] ⏳ PASSAGEM_DE_PONTEIRO_COMO_PARAMETRO
 - [ ] ⏳ PONTEIRO_DE_CHAR
-- [ ] ⏳ PONTEIRO_DE_STRING
-- [ ] ⏳ PRECEDÊNCIA_DE_OPERADORES
 - [ ] ⏳ RELACIONAMENTO_ENTRE_CLASSES
 - [ ] ⏳ SINTAXE_->
-- [ ] ⏳ SUBSTITUIÇÃO_DE_CONTEÚDO
 - [ ] ⏳ TRABALHO_COM_CHARS
-- [ ] ⏳ USO_DE_CIN_COM_DESREFERENCIAÇÃO
-- [ ] ⏳ USO_DE_VARIÁVEL_TEMPORÁRIA
 ### 📂 03 - LISTA ENCADEADA
 - [ ] ⏳ ACESSO_A_DADOS
 - [ ] ⏳ ATUALIZAÇÃO_DE_HEAD

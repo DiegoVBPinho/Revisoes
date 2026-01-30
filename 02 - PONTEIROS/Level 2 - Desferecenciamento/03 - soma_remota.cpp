@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:
@@ -29,5 +29,15 @@ using namespace std;
 
 int main()
 {
+
+    int xp = 1000;
+    int *p = &xp;
+
+    cout << "valor original de xp: " << xp << endl;
+
+    *p += 500;
+
+    cout << "novo valor de xp: " << xp << endl;
+
     return 0;
 }

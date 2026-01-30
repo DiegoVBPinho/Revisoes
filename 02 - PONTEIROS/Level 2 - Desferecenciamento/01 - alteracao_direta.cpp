@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:
@@ -31,7 +31,14 @@ using namespace std;
 
 int main()
 {
-    // Desenvolva aqui:
+    int vida = 100;
+    int *p = &vida;
+
+    cout << *p << endl;
+
+    *p = 50;
+
+    cout << *p << endl;
 
     return 0;
 }

@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:
@@ -31,5 +31,25 @@ using namespace std;
 
 int main()
 {
+
+    int itemA = 10;
+    int itemB = 20;
+    int aux = 0;
+
+    int *ptrA = &itemA;
+    int *ptrB = &itemB;
+
+    cout << "Antes: " << endl;
+    cout << *ptrA << endl;
+    cout << *ptrB << endl;
+
+    aux = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = aux;
+
+    cout << "Depois: " << endl;
+    cout << *ptrA << endl;
+    cout << *ptrB << endl;
+
     return 0;
 }

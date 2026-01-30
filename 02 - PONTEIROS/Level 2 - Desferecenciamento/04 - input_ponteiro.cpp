@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 DIFICULDADE: Médio (Level 2)
 
 COMPETENCIAS:
@@ -27,5 +27,14 @@ using namespace std;
 
 int main()
 {
+
+    int level = 1;
+    int *p = &level;
+
+    cout << "Digite o novo level: ";
+    cin >> *p;
+
+    cout << *p;
+
     return 0;
 }
