@@ -3,7 +3,7 @@
 📘 01 - POO - EXERCICIO 12: Carrinho de Compras
 ==================================================
 
-STATUS: TODO
+STATUS: DONE
 
 COMPETENCIAS:
 - ARRAYS_DE_OBJETOS

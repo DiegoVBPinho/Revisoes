@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 11/13 | 84% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 12/13 | 92% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -40,6 +40,7 @@
 - ✅ **LOGICA_DE_COMBATE** (Concluído)
 - ✅ **LOGICA_DE_METODOS** (Concluído)
 - ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS** (Concluído)
+- ✅ **LOGICA_OPERACIONAL** (Concluído)
 - ✅ **MANIPULACAO_DE_ATRIBUTOS** (Concluído)
 - ✅ **MEMORIA_INDEPENDENTE** (Concluído)
 - ✅ **MODELAGEM_COMPLEXA** (Concluído)
@@ -51,6 +52,7 @@
 - ✅ **PASSAGEM_POR_REFERENCIA** (Concluído)
 - ✅ **REFERENCIA_DE_INSTANCIAS** (Concluído)
 - ✅ **REPRESENTACAO_UML** (Concluído)
+- ✅ **SIMULACAO_AVANCADA** (Concluído)
 - ✅ **SIMULACAO_SISTEMAS** (Concluído)
 - ✅ **TIPAGEM_EM_CLASSES** (Concluído)
 - ✅ **VISIBILIDADE_MÉTODOS** (Concluído)
@@ -124,7 +126,6 @@
 - 💡 LOGICA_DE_TESTE (Pendente)
 - 💡 LOGICA_DE_VALIDACAO (Pendente)
 - 💡 LOGICA_GENERICA (PONTEIROS PARA CLASSE PAI) (Pendente)
-- 💡 LOGICA_OPERACIONAL (Pendente)
 - 💡 LOGICA_PARALELA (Pendente)
 - 💡 LOG_DE_ERRO (Pendente)
 - 💡 LOOPS_ANINHADOS (FOR DENTRO DE FOR) (Pendente)
@@ -163,7 +164,6 @@
 - 💡 ROBUSTEZ (Pendente)
 - 💡 ROBUSTEZ_AVANCADA (Pendente)
 - 💡 SEGURANCA_DE_DADOS (Pendente)
-- 💡 SIMULACAO_AVANCADA (Pendente)
 - 💡 SIMULACAO_DE_SISTEMA (Pendente)
 - 💡 SINCRONIZACAO_BASICA (Pendente)
 - 💡 SINGLETON (Gerenciador de Sistema) (Pendente)

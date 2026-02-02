@@ -1,6 +1,6 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 11/13
+### 📊 STATUS: 12/13
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
@@ -16,7 +16,7 @@
 | ✅ | 09 - Ex 5 - Jogo_Dano.cpp |
 | ✅ | 10 - Ex 6 - Mario_Kart.cpp |
 | ✅ | 11 - Exercicio - Zoologico.cpp |
-| 🔨 | 12 - Carrinho de Compras.cpp |
+| ✅ | 12 - Carrinho de Compras.cpp |
 | 🔨 | 13  - Array de Classes Pokemons (União de Conceitos).cpp |
 
 ### 🧬 Competências do Nível
@@ -40,6 +40,7 @@
 - ✅ LOGICA_DE_COMBATE
 - ✅ LOGICA_DE_METODOS
 - ✅ LOGICA_DE_SISTEMAS_COOPERATIVOS
+- ✅ LOGICA_OPERACIONAL
 - ✅ MANIPULACAO_DE_ATRIBUTOS
 - ✅ MEMORIA_INDEPENDENTE
 - ✅ MODELAGEM_COMPLEXA
@@ -51,11 +52,10 @@
 - ✅ PASSAGEM_POR_REFERENCIA
 - ✅ REFERENCIA_DE_INSTANCIAS
 - ✅ REPRESENTACAO_UML
+- ✅ SIMULACAO_AVANCADA
 - ✅ SIMULACAO_SISTEMAS
 - ✅ TIPAGEM_EM_CLASSES
 - ✅ VISIBILIDADE_MÉTODOS
 - ⏳ ACESSO_VIA_SETA (->)
 - ⏳ AGREGAÇÃO_MUITOS_PARA_UM
 - ⏳ ARRAY_DE_PONTEIROS
-- ⏳ LOGICA_OPERACIONAL
-- ⏳ SIMULACAO_AVANCADA

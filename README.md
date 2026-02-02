@@ -1,12 +1,12 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 240
+### 👑 XP TOTAL: 250
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
 | [00 - BASE DE PROG](./00 - BASE DE PROG) | 4/60 | ESTAGIÁRIO 📋 |
-| [01 - POO](./01 - POO) | 11/62 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 12/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 9/25 | JUNIOR 🛠️ |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
 | [04 - PILHAS (STACKS)](./04 - PILHAS (STACKS)) | 0/15 | DESEMPREGADO 😶 |
@@ -64,6 +64,7 @@
 - [x] ✅ **LOGICA_DE_COMBATE**
 - [x] ✅ **LOGICA_DE_METODOS**
 - [x] ✅ **LOGICA_DE_SISTEMAS_COOPERATIVOS**
+- [x] ✅ **LOGICA_OPERACIONAL**
 - [x] ✅ **MANIPULACAO_DE_ATRIBUTOS**
 - [x] ✅ **MEMORIA_INDEPENDENTE**
 - [x] ✅ **MODELAGEM_COMPLEXA**
@@ -75,6 +76,7 @@
 - [x] ✅ **PASSAGEM_POR_REFERENCIA**
 - [x] ✅ **REFERENCIA_DE_INSTANCIAS**
 - [x] ✅ **REPRESENTACAO_UML**
+- [x] ✅ **SIMULACAO_AVANCADA**
 - [x] ✅ **SIMULACAO_SISTEMAS**
 - [x] ✅ **TIPAGEM_EM_CLASSES**
 - [x] ✅ **VISIBILIDADE_MÉTODOS**
@@ -148,7 +150,6 @@
 - [ ] ⏳ LOGICA_DE_TESTE
 - [ ] ⏳ LOGICA_DE_VALIDACAO
 - [ ] ⏳ LOGICA_GENERICA (PONTEIROS PARA CLASSE PAI)
-- [ ] ⏳ LOGICA_OPERACIONAL
 - [ ] ⏳ LOGICA_PARALELA
 - [ ] ⏳ LOG_DE_ERRO
 - [ ] ⏳ LOOPS_ANINHADOS (FOR DENTRO DE FOR)
@@ -187,7 +188,6 @@
 - [ ] ⏳ ROBUSTEZ
 - [ ] ⏳ ROBUSTEZ_AVANCADA
 - [ ] ⏳ SEGURANCA_DE_DADOS
-- [ ] ⏳ SIMULACAO_AVANCADA
 - [ ] ⏳ SIMULACAO_DE_SISTEMA
 - [ ] ⏳ SINCRONIZACAO_BASICA
 - [ ] ⏳ SINGLETON (Gerenciador de Sistema)
