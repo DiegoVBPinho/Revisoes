@@ -1,6 +1,6 @@
 # 🎯 FOCO: Level 01 - Introducao_a_POO
 
-### 📊 STATUS: 12/13
+### 📊 STATUS: 13/13
 ---
 ### 📝 Exercícios
 | Status | Arquivo |
@@ -17,12 +17,15 @@
 | ✅ | 10 - Ex 6 - Mario_Kart.cpp |
 | ✅ | 11 - Exercicio - Zoologico.cpp |
 | ✅ | 12 - Carrinho de Compras.cpp |
-| 🔨 | 13  - Array de Classes Pokemons (Uniao de Conceitos).cpp |
+| ✅ | 13  - Array de Classes Pokemons (Uniao de Conceitos).cpp |
 
 ### 🧬 Competências do Nível
 - ✅ ACESSO_A_MEMBROS
+- ✅ ACESSO_VIA_SETA (->)
+- ✅ AGREGAÇÃO_MUITOS_PARA_UM
 - ✅ ALTERACAO_DE_ESTADO
 - ✅ ARRAYS_DE_OBJETOS
+- ✅ ARRAY_DE_PONTEIROS
 - ✅ ATRIBUTOS_BASICOS
 - ✅ ATRIBUTOS_CALCULADOS
 - ✅ CALCULOS_EM_METODOS
@@ -56,6 +59,3 @@
 - ✅ SIMULACAO_SISTEMAS
 - ✅ TIPAGEM_EM_CLASSES
 - ✅ VISIBILIDADE_MÉTODOS
-- ⏳ ACESSO_VIA_SETA (->)
-- ⏳ AGREGAÇÃO_MUITOS_PARA_UM
-- ⏳ ARRAY_DE_PONTEIROS

@@ -1,12 +1,12 @@
 # 🚀 CENTRAL DE COMANDO C++
 
-### 👑 XP TOTAL: 250
+### 👑 XP TOTAL: 260
 
 ## 📊 DASHBOARD DE TEMAS
 | Tema | Status | Rank |
 | :--- | :---: | :--- |
 | [00 - BASE DE PROG](./00 - BASE DE PROG) | 4/60 | ESTAGIÁRIO 📋 |
-| [01 - POO](./01 - POO) | 12/62 | ESTAGIÁRIO 📋 |
+| [01 - POO](./01 - POO) | 13/62 | ESTAGIÁRIO 📋 |
 | [02 - PONTEIROS](./02 - PONTEIROS) | 9/25 | JUNIOR 🛠️ |
 | [03 - LISTA ENCADEADA](./03 - LISTA ENCADEADA) | 0/15 | DESEMPREGADO 😶 |
 | [04 - PILHAS (STACKS)](./04 - PILHAS (STACKS)) | 0/15 | DESEMPREGADO 😶 |
@@ -45,8 +45,11 @@
 - [ ] ⏳ VETOR_DE_OBJETOS
 ### 📂 01 - POO
 - [x] ✅ **ACESSO_A_MEMBROS**
+- [x] ✅ **ACESSO_VIA_SETA (->)**
+- [x] ✅ **AGREGAÇÃO_MUITOS_PARA_UM**
 - [x] ✅ **ALTERACAO_DE_ESTADO**
 - [x] ✅ **ARRAYS_DE_OBJETOS**
+- [x] ✅ **ARRAY_DE_PONTEIROS**
 - [x] ✅ **ATRIBUTOS_BASICOS**
 - [x] ✅ **ATRIBUTOS_CALCULADOS**
 - [x] ✅ **CALCULOS_EM_METODOS**
@@ -84,13 +87,10 @@
 - [ ] ⏳ ABSTRACAO_DE_INSTANCIA
 - [ ] ⏳ ABSTRACAO_DE_SISTEMA
 - [ ] ⏳ ACESSO_SEM_INSTANCIA
-- [ ] ⏳ ACESSO_VIA_SETA (->)
 - [ ] ⏳ AGREGACAO (Biblioteca tem lista de Livros)
-- [ ] ⏳ AGREGAÇÃO_MUITOS_PARA_UM
 - [ ] ⏳ ARQUITETURA_C++17
 - [ ] ⏳ ARQUITETURA_DE_CLASSES
 - [ ] ⏳ ARRAY_DE_OBJETOS
-- [ ] ⏳ ARRAY_DE_PONTEIROS
 - [ ] ⏳ ARRAY_PRIMITIVO
 - [ ] ⏳ ASSERT_CONCEITO
 - [ ] ⏳ ASSOCIACAO_DE_METODOS (Pessoa interage com Livro)

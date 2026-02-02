@@ -4,7 +4,7 @@
 ==================================================
 [ORIGEM: Inteligência Artificial]
 
-STATUS: TO DO
+STATUS: DONE
 
 COMPETENCIAS:
 - AGREGAÇÃO_MUITOS_PARA_UM

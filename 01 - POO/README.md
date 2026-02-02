@@ -3,7 +3,7 @@
 ## 📈 Níveis
 | Level | Progresso | % |
 | :--- | :---: | :---: |
-| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 12/13 | 92% |
+| [Level 01 - Introducao_a_POO](./Level 01 - Introducao_a_POO) | 13/13 | 100% |
 | [Level 02 - Estrutura_de_Dados](./Level 02 - Estrutura_de_Dados) | 0/11 | 0% |
 | [Level 03 - Pacotes_e_Organizacao](./Level 03 - Pacotes_e_Organizacao) | 0/3 | 0% |
 | [Level 04 - Encapsulamento](./Level 04 - Encapsulamento) | 0/3 | 0% |
@@ -21,8 +21,11 @@
 
 ## 🧬 Clusters de Domínio
 - ✅ **ACESSO_A_MEMBROS** (Concluído)
+- ✅ **ACESSO_VIA_SETA (->)** (Concluído)
+- ✅ **AGREGAÇÃO_MUITOS_PARA_UM** (Concluído)
 - ✅ **ALTERACAO_DE_ESTADO** (Concluído)
 - ✅ **ARRAYS_DE_OBJETOS** (Concluído)
+- ✅ **ARRAY_DE_PONTEIROS** (Concluído)
 - ✅ **ATRIBUTOS_BASICOS** (Concluído)
 - ✅ **ATRIBUTOS_CALCULADOS** (Concluído)
 - ✅ **CALCULOS_EM_METODOS** (Concluído)
@@ -60,13 +63,10 @@
 - 💡 ABSTRACAO_DE_INSTANCIA (Pendente)
 - 💡 ABSTRACAO_DE_SISTEMA (Pendente)
 - 💡 ACESSO_SEM_INSTANCIA (Pendente)
-- 💡 ACESSO_VIA_SETA (->) (Pendente)
 - 💡 AGREGACAO (Biblioteca tem lista de Livros) (Pendente)
-- 💡 AGREGAÇÃO_MUITOS_PARA_UM (Pendente)
 - 💡 ARQUITETURA_C++17 (Pendente)
 - 💡 ARQUITETURA_DE_CLASSES (Pendente)
 - 💡 ARRAY_DE_OBJETOS (Pendente)
-- 💡 ARRAY_DE_PONTEIROS (Pendente)
 - 💡 ARRAY_PRIMITIVO (Pendente)
 - 💡 ASSERT_CONCEITO (Pendente)
 - 💡 ASSOCIACAO_DE_METODOS (Pessoa interage com Livro) (Pendente)
