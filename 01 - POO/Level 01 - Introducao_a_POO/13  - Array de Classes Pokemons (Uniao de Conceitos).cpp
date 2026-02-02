@@ -42,40 +42,80 @@ using namespace std;
 class Pokemon
 {
 public:
-    string nome;
-    string tipo;
+    // atributos:
+    string m_nome;
+    string m_tipo;
 
+    // construtor:
     Pokemon(string n, string t)
     {
-        nome = n;
-        tipo = t;
+        m_nome = n;
+        m_tipo = t;
     }
 };
 
+// todo treinador possui um nome e um time de pokemons.
 class Treinador
 {
 public:
+    // atributos
     string nome;
-    // O molde do Array de Ponteiros:
-    Pokemon *time[3];
+    Pokemon *time[3]; // O molde do Array de Ponteiros:
 
+    // construtor para deixar o time de ponteiros sem lixo.
+    Treinador()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            time[i] = NULL; // apontando para nulo.
+        }
+    }
+
+    // método
     void mostrarEquipe()
     {
         cout << "Treinador: " << nome << endl;
         cout << "--- EQUIPE ---" << endl;
         // Desenvolva o loop for aqui para mostrar os nomes:
-    }
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (time[i] != NULL) // segurança
+            {
+
+                cout << i + 1 << " : " << time[i]->m_nome << " ( " << time[i]->m_tipo << " ) ." << endl;
+            }
+            else
+            {
+                cout << "Slot vazio" << endl;
+            }
+        }
+    };
 };
 
 int main()
 {
     // 1. Instancie os Pokemons (ex: p1, p2, p3)
 
+    Pokemon p1("Pikachu", "Eletrico");
+    Pokemon p2("Charmander", "Fogo");
+    Pokemon p3("Bulbassauro", "Planta");
+
     // 2. Instancie o Treinador
 
-    // 3. Associe usando o endereço: t.time[0] = &p1;
+    Treinador t;
+    t.nome = "Ash";
+    // 3. Associe usando o endereço: t.time[0] = &p1;  -- AGREGAÇÃO
+    t.time[0] = &p1;
+    t.time[1] = &p2;
+    t.time[2] = &p3;
 
     // 4. Chame a função de mostrar equipe
 
+    t.mostrarEquipe();
+
     return 0;
 }
+
+// Todo ponteiro que não aponta imediatamente para algo válido
+// DEVE ser inicializado com NULL.

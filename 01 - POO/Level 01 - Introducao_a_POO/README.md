@@ -17,7 +17,7 @@
 | ✅ | 10 - Ex 6 - Mario_Kart.cpp |
 | ✅ | 11 - Exercicio - Zoologico.cpp |
 | ✅ | 12 - Carrinho de Compras.cpp |
-| 🔨 | 13  - Array de Classes Pokemons (União de Conceitos).cpp |
+| 🔨 | 13  - Array de Classes Pokemons (Uniao de Conceitos).cpp |
 
 ### 🧬 Competências do Nível
 - ✅ ACESSO_A_MEMBROS
