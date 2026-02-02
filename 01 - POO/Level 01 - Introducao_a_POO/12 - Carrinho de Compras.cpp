@@ -27,11 +27,41 @@ Isso permite processar grandes volumes de dados de uma só vez.
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 // Desenvolva sua classe aqui:
 
+class Produto
+{
+public:
+    std::string nome;
+    float preco;
+};
+
 int main()
 {
+    // criando array
+    Produto produtos[3];
+
+    // instancias
+
+    produtos[0].nome = "Abacate";
+    produtos[0].preco = 5.00;
+
+    produtos[1].nome = "Laranja";
+    produtos[1].preco = 6.00;
+
+    produtos[2].nome = "Maca";
+    produtos[2].preco = 7.00;
+
+    float resultado = 0;
+
+    for (int i = 0; i < 3; i++)
+    {
+        resultado += produtos[i].preco;
+    }
+
+    std::cout << std::fixed << std::setprecision(2) << "a soma total eh: " << resultado;
 
     return 0;
 }
