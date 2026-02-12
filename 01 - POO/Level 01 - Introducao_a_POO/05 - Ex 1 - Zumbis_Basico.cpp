@@ -45,7 +45,7 @@ public:
 
    void receberDano(int dano)
    {
-      return vida -= dano;
+      vida -= dano;
    }
 
    void exibirStatus()

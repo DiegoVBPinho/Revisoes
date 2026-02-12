@@ -36,8 +36,26 @@ lista[0].nome = "Teclado"; // Acessando o primeiro item
 #include <iostream>
 #include <string>
 
-int main()
+class Aluno
 {
+public:
+    // argumentos
+
+    std::string nome;
+    float nota;
+};
+
+main()
+{
+
+    Aluno alunos[3];
+
+    alunos[0].nome = ;
+    alunos[0].nota = ;
+    alunos[1].nome = ;
+    alunos[1].nota = ;
+    alunos[2].nome = ;
+    alunos[2].nota = ;
 
     return 0;
 }
